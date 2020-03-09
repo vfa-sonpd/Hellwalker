@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1216724263553607}
+  m_IsPrefabParent: 1
+--- !u!1 &1216724263553607
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4027963708351249}
+  - component: {fileID: 33357791519145804}
+  - component: {fileID: 23805543011902629}
+  - component: {fileID: 95256398900056470}
+  - component: {fileID: 65469250046940381}
+  - component: {fileID: 54431476887523130}
+  - component: {fileID: 114256026621802930}
+  - component: {fileID: 114267773522288937}
+  - component: {fileID: 114246253094425932}
+  - component: {fileID: 114383148259304531}
+  m_Layer: 0
+  m_Name: placeablegib
+  m_TagString: PickUpObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4027963708351249
+Transform:
+  m_GameObject: {fileID: 1216724263553607}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -160, y: -248.75, z: 995.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33357791519145804
+MeshFilter:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Mesh: {fileID: 4300000, guid: ab18904bd7021784193eae69c2d62f62, type: 2}
+--- !u!23 &23805543011902629
+MeshRenderer:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7792d74200216684596d1b4d45ed252d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95256398900056470
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a4a4d15deac43d6409138a9567829775, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!65 &65469250046940381
+BoxCollider:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19686, y: 0.145692, z: 0.09312502}
+  m_Center: {x: 0.026333, y: 0.02808101, z: -0.002828502}
+--- !u!54 &54431476887523130
+Rigidbody:
+  m_GameObject: {fileID: 1216724263553607}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &114256026621802930
+MonoBehaviour:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb9a802fc9a784da7c8d409070dd57, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  myname: Lift Viscera
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!114 &114267773522288937
+MonoBehaviour:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68dd3d54fb780947b6b679ebf248820, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  lightanchor: {fileID: 0}
+  masterscript: {fileID: 0}
+  lightupdatetimer: 0
+  rend: {fileID: 0}
+  myloc: {x: 0, y: 0, z: 0}
+  shade: {fileID: 0}
+  lastlocation: {x: 0, y: 0, z: 0}
+  triggersinrange:
+--- !u!114 &114246253094425932
+MonoBehaviour:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn: []
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 1
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 0
+  impactdamage: 1
+  throwdamage: 1
+  damagecolor: {r: 0, g: 0, b: 0, a: 0}
+  damagesound: {fileID: 0}
+  myhealth: 1
+  dampen: 0
+  dampenvelocity: 0
+  gibs: {fileID: 0}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 1475255648612433, guid: 2deca58c5ef520b45abc3964cc8f1b65, type: 2}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 1
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0
+--- !u!114 &114383148259304531
+MonoBehaviour:
+  m_GameObject: {fileID: 1216724263553607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a64290dcdc523458cc95e6ad1c3cfa, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  cookedgib: {fileID: 1056092124472619, guid: 3a199d1eac4fe2d408512ae1c7e4c341, type: 2}
+  cooktimer: 0
+  d: {fileID: 0}

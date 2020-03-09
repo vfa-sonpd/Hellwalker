@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1064320376066550}
+  m_IsPrefabParent: 1
+--- !u!1 &1064320376066550
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4486958181607946}
+  - component: {fileID: 33332330576844010}
+  - component: {fileID: 23728497623969620}
+  - component: {fileID: 95600294526026113}
+  - component: {fileID: 64806109300610576}
+  - component: {fileID: 114702456041673021}
+  - component: {fileID: 114902602643158550}
+  m_Layer: 0
+  m_Name: worklight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4486958181607946
+Transform:
+  m_GameObject: {fileID: 1064320376066550}
+  m_LocalRotation: {x: -0.226117, y: 0.6699784, z: 0.6699784, w: 0.226117}
+  m_LocalPosition: {x: 8.75, y: -33.5, z: -7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: -37.29896, z: 180}
+--- !u!33 &33332330576844010
+MeshFilter:
+  m_GameObject: {fileID: 1064320376066550}
+  m_Mesh: {fileID: 4300000, guid: a35add12ecbf4fc42a14f5f307d2d10d, type: 2}
+--- !u!23 &23728497623969620
+MeshRenderer:
+  m_GameObject: {fileID: 1064320376066550}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4939ce8c79742924fa0081482f738f6c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95600294526026113
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1064320376066550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a2bad141071c2ef4fb52d8b368e3620f, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!64 &64806109300610576
+MeshCollider:
+  m_GameObject: {fileID: 1064320376066550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: a35add12ecbf4fc42a14f5f307d2d10d, type: 2}
+--- !u!114 &114702456041673021
+MonoBehaviour:
+  m_GameObject: {fileID: 1064320376066550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68dd3d54fb780947b6b679ebf248820, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  lightanchor: {fileID: 0}
+  masterscript: {fileID: 0}
+  lightupdatetimer: 0
+  rend: {fileID: 0}
+  myloc: {x: 0, y: 0, z: 0}
+  shade: {fileID: 0}
+  lastlocation: {x: 0, y: 0, z: 0}
+  triggersinrange:
+--- !u!114 &114902602643158550
+MonoBehaviour:
+  m_GameObject: {fileID: 1064320376066550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn:
+  - {fileID: 1333230440898424, guid: e59f84e39cad740468705e8dcf4dfec2, type: 2}
+  - {fileID: 1483251267151260, guid: 9b8636175371e2c4fab81ad7910002a7, type: 2}
+  - {fileID: 1101817688591816, guid: 85c17e95d3d32554d9bb6140a90a74f2, type: 2}
+  - {fileID: 1508348677356790, guid: 54aac3f42ea255946b20b0ce07e2182e, type: 2}
+  - {fileID: 1564390182690297, guid: 8c517ee523c96534ea2fcf70eb423ac7, type: 2}
+  - {fileID: 1564034758552407, guid: 5175fa48c8263b84387ec52fb2f05196, type: 2}
+  - {fileID: 1476335669952307, guid: 8a2fd314f67b19f409ac4df7c01945ca, type: 2}
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 0
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 0
+  impactdamage: 0
+  throwdamage: 600
+  damagecolor: {r: 1, g: 0.9310344, b: 0, a: 1}
+  damagesound: {fileID: 8300000, guid: 1878301d690ec6e4c91653233e934799, type: 3}
+  myhealth: 150
+  dampen: 0
+  dampenvelocity: 5
+  gibs: {fileID: 1244153451359021, guid: 8be8352c5a28d834aac2b884fdd90625, type: 2}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 0}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 0
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1103532803158115}
+  m_IsPrefabParent: 1
+--- !u!1 &1103532803158115
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4369077434387855}
+  - component: {fileID: 114050175977976132}
+  m_Layer: 0
+  m_Name: SmartEndlessSpawner
+  m_TagString: EndlessNodeTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4369077434387855
+Transform:
+  m_GameObject: {fileID: 1103532803158115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.98, y: -37.42, z: -1.746329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114050175977976132
+MonoBehaviour:
+  m_GameObject: {fileID: 1103532803158115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9844875af36db418b2c3659f60c8c2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  indicator: {fileID: 1453615006508324, guid: baf3cd082a717b84abe06fc1fbc139bc, type: 2}
+  spawnparts: {fileID: 1850531721336121, guid: 11f047703f336ee4b9548bf091e4affb, type: 2}
+  controller: {fileID: 0}
+  spawn: -1
+  spawnedenemy: {fileID: 0}
+  spawnindex: 0
+  spawntimer: 0
+  spawndelay: 3
+  dospawn: 0
+  lastallowed: 0
+  disallowedtypes:
+  firstwave: 0

@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: 6509db722815daf4bbd02a101e10f7cf
+timeCreated: 1583508268
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pistol
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 12
+  maxTextureSize: 32
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pistol
+      rect:
+        serializedVersion: 2
+        x: 2.07612
+        y: 2.051317
+        width: 28.77453
+        height: 27.93577
+      alignment: 9
+      pivot: {x: 0.483896, y: 0.4993126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.53661, y: 8.980798}
+        - {x: 9.536614, y: 11.9808}
+        - {x: 11.53661, y: 13.9808}
+        - {x: 14.53662, y: 12.9808}
+        - {x: 14.53662, y: 9.980798}
+      - - {x: 5.536614, y: -9.019202}
+        - {x: -14.46339, y: -9.019202}
+        - {x: -14.46339, y: 7.980798}
+        - {x: -8.463386, y: 8.980798}
+        - {x: 5.536614, y: 8.980798}
+        - {x: 11.53661, y: 3.980798}
+        - {x: 11.53661, y: -1.019202}
+        - {x: 8.536614, y: -6.019202}
+      - - {x: 11.53661, y: -14.0192}
+        - {x: 9.536614, y: -11.0192}
+        - {x: 11.53661, y: -9.019202}
+        - {x: 14.53662, y: -10.0192}
+        - {x: 14.53662, y: -13.0192}
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag:
+  userData:
+  assetBundleName:
+  assetBundleVariant:

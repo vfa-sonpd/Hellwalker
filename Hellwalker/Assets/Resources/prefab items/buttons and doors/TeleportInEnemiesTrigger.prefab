@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1730421712523798}
+  m_IsPrefabParent: 1
+--- !u!1 &1730421712523798
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4435329824669497}
+  - component: {fileID: 114328089614017552}
+  - component: {fileID: 135315787876124247}
+  - component: {fileID: 114134074433093236}
+  m_Layer: 19
+  m_Name: TeleportInEnemiesTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4435329824669497
+Transform:
+  m_GameObject: {fileID: 1730421712523798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -155.23, y: -248.731, z: 910.223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4566967887707493}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114328089614017552
+MonoBehaviour:
+  m_GameObject: {fileID: 1730421712523798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e664cd1deb55d484a8dc88046bd507fe, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  parts: {fileID: 1850531721336121, guid: 11f047703f336ee4b9548bf091e4affb, type: 2}
+  mybutton: {fileID: 0}
+  enemies:
+  - {fileID: 0}
+  goals:
+  - {fileID: 1973808901327897}
+  buttontrigger: 0
+  awakenEnemies: 0
+--- !u!135 &135315787876124247
+SphereCollider:
+  m_GameObject: {fileID: 1730421712523798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.71
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114134074433093236
+MonoBehaviour:
+  m_GameObject: {fileID: 1730421712523798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaba80ad039f4c4dbdda3862adc379e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!1 &1973808901327897
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4566967887707493}
+  - component: {fileID: 135689108422417313}
+  - component: {fileID: 114927083739825813}
+  m_Layer: 0
+  m_Name: Goal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4566967887707493
+Transform:
+  m_GameObject: {fileID: 1973808901327897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.178, y: 1.19, z: -6.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4435329824669497}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &135689108422417313
+SphereCollider:
+  m_GameObject: {fileID: 1973808901327897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.34
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114927083739825813
+MonoBehaviour:
+  m_GameObject: {fileID: 1973808901327897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec74dad88ea21c94684683b51c2b4546, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  dogibfloat: 0
+  ignorethisthing: {fileID: 0}

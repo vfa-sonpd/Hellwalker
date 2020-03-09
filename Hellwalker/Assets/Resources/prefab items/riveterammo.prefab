@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1009638326542848}
+  m_IsPrefabParent: 1
+--- !u!1 &1009638326542848
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4493331987206247}
+  - component: {fileID: 33952780333143702}
+  - component: {fileID: 23995093762774477}
+  - component: {fileID: 95387878946643665}
+  - component: {fileID: 114917233203308273}
+  - component: {fileID: 114622476022100883}
+  - component: {fileID: 135644192203323829}
+  - component: {fileID: 114182107826312376}
+  - component: {fileID: 114174355891768953}
+  - component: {fileID: 54270510629430617}
+  m_Layer: 12
+  m_Name: riveterammo
+  m_TagString: Weapon Pickup
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4493331987206247
+Transform:
+  m_GameObject: {fileID: 1009638326542848}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -92.52124, y: -175.5, z: 375.8662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4844706398469229}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33952780333143702
+MeshFilter:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Mesh: {fileID: 4300000, guid: 5d80838a9f932224c948e7f1fd0df35b, type: 2}
+--- !u!23 &23995093762774477
+MeshRenderer:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6a377922941d6c441a6c233460076fa1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95387878946643665
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0a3fd407de7ba6c4cb0f875ddb376571, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114917233203308273
+MonoBehaviour:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91988470876ec143ab7e6b72a67b029, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rotationspeed: 90
+  amountx: 0
+  amounty: 0
+  amountz: 1
+  rotation: {x: 0, y: 0, z: 0}
+  rigid: {fileID: 0}
+  deltaRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114622476022100883
+MonoBehaviour:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5112f7728e98c41a096e9badf48c7a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  giveweapon: 0
+  weaponcontent: 8
+  ammocontent: 1
+  message: +1 Rivet
+--- !u!135 &135644192203323829
+SphereCollider:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.01449301, z: 0.006003001}
+--- !u!114 &114182107826312376
+MonoBehaviour:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec3f04a9c38e82439e1579ea3983335, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  targetHeight: 1.1
+  fallSpeed: 1
+  layers:
+    serializedVersion: 2
+    m_Bits: 67108865
+  updatetimer: 0
+--- !u!114 &114174355891768953
+MonoBehaviour:
+  m_GameObject: {fileID: 1009638326542848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaba80ad039f4c4dbdda3862adc379e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!54 &54270510629430617
+Rigidbody:
+  m_GameObject: {fileID: 1009638326542848}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &1520847810134201
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4844706398469229}
+  - component: {fileID: 114671749489912415}
+  m_Layer: 0
+  m_Name: BlobShadowProjector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4844706398469229
+Transform:
+  m_GameObject: {fileID: 1520847810134201}
+  m_LocalRotation: {x: 1, y: 0, z: -2.009718E-14, w: 1.192093E-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4493331987206247}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: -2.302967E-12, z: 2.745351E-19}
+--- !u!114 &114671749489912415
+MonoBehaviour:
+  m_GameObject: {fileID: 1520847810134201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d47dfacafb943341ad46542ed567907, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:

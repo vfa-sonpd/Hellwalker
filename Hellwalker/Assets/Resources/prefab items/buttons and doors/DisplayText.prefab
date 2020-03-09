@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1551396691308826}
+  m_IsPrefabParent: 1
+--- !u!1 &1551396691308826
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4328958775381676}
+  - component: {fileID: 135243874493894717}
+  - component: {fileID: 114946344575481171}
+  - component: {fileID: 114461683363174232}
+  m_Layer: 19
+  m_Name: DisplayText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4328958775381676
+Transform:
+  m_GameObject: {fileID: 1551396691308826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -95.002, y: -249.839, z: 1006.338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &135243874493894717
+SphereCollider:
+  m_GameObject: {fileID: 1551396691308826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.21
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114946344575481171
+MonoBehaviour:
+  m_GameObject: {fileID: 1551396691308826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe421eef8691f414bb1c56ea4e3f6d52, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mytext: WHAT A MASSACRE
+  displaytime: 3
+--- !u!114 &114461683363174232
+MonoBehaviour:
+  m_GameObject: {fileID: 1551396691308826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaba80ad039f4c4dbdda3862adc379e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}

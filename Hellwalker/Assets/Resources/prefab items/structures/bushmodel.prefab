@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1691857711691589}
+  m_IsPrefabParent: 1
+--- !u!1 &1691857711691589
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4797036600602311}
+  - component: {fileID: 33697449945885251}
+  - component: {fileID: 23104983599224516}
+  - component: {fileID: 95299025014016954}
+  - component: {fileID: 65254740292970563}
+  - component: {fileID: 114906566405940480}
+  m_Layer: 11
+  m_Name: bushmodel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4797036600602311
+Transform:
+  m_GameObject: {fileID: 1691857711691589}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -21.375, y: -189.5, z: 420.375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33697449945885251
+MeshFilter:
+  m_GameObject: {fileID: 1691857711691589}
+  m_Mesh: {fileID: 4300000, guid: 2ea3ed85872b4324fab78eae1e1fce96, type: 2}
+--- !u!23 &23104983599224516
+MeshRenderer:
+  m_GameObject: {fileID: 1691857711691589}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 2b837cdfc8a2a0e49ab0f4be5623c83d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95299025014016954
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1691857711691589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 78d1a98cedda2fc45898fa095ff37cc2, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!65 &65254740292970563
+BoxCollider:
+  m_GameObject: {fileID: 1691857711691589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.464395, y: 2.306584, z: 2.141854}
+  m_Center: {x: -0.1181895, y: 0.001800955, z: 0.04877151}
+--- !u!114 &114906566405940480
+MonoBehaviour:
+  m_GameObject: {fileID: 1691857711691589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn: []
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 0
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 10
+  impactdamage: 0
+  throwdamage: 0
+  damagecolor: {r: 0.4292991, g: 0.5808823, b: 0.2263733, a: 1}
+  damagesound: {fileID: 0}
+  myhealth: 50
+  dampen: 0
+  dampenvelocity: 0
+  gibs: {fileID: 1945227491553480, guid: 6bbf8076446905443856dfb592bc318d, type: 2}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 1220232222404056, guid: b3366e1ac01b16742b24d4f54314cf4b, type: 2}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 1
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0

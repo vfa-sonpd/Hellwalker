@@ -1,0 +1,407 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1069793270231355}
+  m_IsPrefabParent: 1
+--- !u!1 &1069793270231355
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4110687460478373}
+  - component: {fileID: 65454833087160542}
+  - component: {fileID: 114387380124005789}
+  - component: {fileID: 114147632814239281}
+  m_Layer: 0
+  m_Name: FireplaceWood
+  m_TagString: FireWoodTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4110687460478373
+Transform:
+  m_GameObject: {fileID: 1069793270231355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -162, y: -249, z: 996.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 4123649044403529}
+  - {fileID: 4500228130151126}
+  - {fileID: 4611757047820858}
+  - {fileID: 4155742811566176}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65454833087160542
+BoxCollider:
+  m_GameObject: {fileID: 1069793270231355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.4, z: 0.6}
+  m_Center: {x: 0.03, y: 0, z: -0.16}
+--- !u!114 &114387380124005789
+MonoBehaviour:
+  m_GameObject: {fileID: 1069793270231355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn: []
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 0
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 0
+  impactdamage: 0
+  throwdamage: 0
+  damagecolor: {r: 0.6985294, g: 0.6587855, b: 0.5290333, a: 1}
+  damagesound: {fileID: 0}
+  myhealth: 50
+  dampen: 0
+  dampenvelocity: 5
+  gibs: {fileID: 1258453830356482, guid: dbf107d36dd68ab4786ac1a8f56994c5, type: 2}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 1090400558117092, guid: ba874ce4efec6094a8b50dcf0b169edd, type: 2}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 1
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0
+--- !u!114 &114147632814239281
+MonoBehaviour:
+  m_GameObject: {fileID: 1069793270231355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb9a802fc9a784da7c8d409070dd57, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  myname: Light Fire
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!1 &1207530524208951
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4123649044403529}
+  - component: {fileID: 33646635767857933}
+  - component: {fileID: 23466150508954802}
+  - component: {fileID: 95564421779569938}
+  m_Layer: 0
+  m_Name: fireplacelog (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4123649044403529
+Transform:
+  m_GameObject: {fileID: 1207530524208951}
+  m_LocalRotation: {x: -0.4921665, y: -0.3482938, z: -0.5066818, w: 0.6162282}
+  m_LocalPosition: {x: 0.105999, y: 0.01800537, z: -0.1489868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4110687460478373}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -42.90068, y: 68.12524, z: 49.10258}
+--- !u!33 &33646635767857933
+MeshFilter:
+  m_GameObject: {fileID: 1207530524208951}
+  m_Mesh: {fileID: 4300000, guid: 3ee4f8328dab077439abeef7b871e3eb, type: 2}
+--- !u!23 &23466150508954802
+MeshRenderer:
+  m_GameObject: {fileID: 1207530524208951}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 799f9f29f9b1f0a49bb0cd69f85f7b5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95564421779569938
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1207530524208951}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ac01dc0ac749148ac161982c6a8883, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1907955452855424
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4500228130151126}
+  - component: {fileID: 33850278974035808}
+  - component: {fileID: 23712227704062022}
+  - component: {fileID: 95061577082215169}
+  m_Layer: 0
+  m_Name: fireplacelog (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4500228130151126
+Transform:
+  m_GameObject: {fileID: 1907955452855424}
+  m_LocalRotation: {x: 0.0256181, y: 0.806907, z: 0.5737246, w: -0.1381482}
+  m_LocalPosition: {x: 0.06562424, y: -0.1492157, z: -0.03222656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4110687460478373}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 108.28, y: 14.61608, z: 173.0448}
+--- !u!33 &33850278974035808
+MeshFilter:
+  m_GameObject: {fileID: 1907955452855424}
+  m_Mesh: {fileID: 4300000, guid: 3ee4f8328dab077439abeef7b871e3eb, type: 2}
+--- !u!23 &23712227704062022
+MeshRenderer:
+  m_GameObject: {fileID: 1907955452855424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 799f9f29f9b1f0a49bb0cd69f85f7b5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95061577082215169
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1907955452855424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ac01dc0ac749148ac161982c6a8883, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1777437008747810
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4611757047820858}
+  - component: {fileID: 33384347693233605}
+  - component: {fileID: 23724490090762077}
+  - component: {fileID: 95403909006408581}
+  m_Layer: 0
+  m_Name: fireplacelog (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4611757047820858
+Transform:
+  m_GameObject: {fileID: 1777437008747810}
+  m_LocalRotation: {x: -0.5720128, y: 0.6443658, z: 0.3789381, w: 0.3376387}
+  m_LocalPosition: {x: -0.09986877, y: 0.02389526, z: -0.1227722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4110687460478373}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 168.1095, y: -60.30106, z: 103.7313}
+--- !u!33 &33384347693233605
+MeshFilter:
+  m_GameObject: {fileID: 1777437008747810}
+  m_Mesh: {fileID: 4300000, guid: 3ee4f8328dab077439abeef7b871e3eb, type: 2}
+--- !u!23 &23724490090762077
+MeshRenderer:
+  m_GameObject: {fileID: 1777437008747810}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 799f9f29f9b1f0a49bb0cd69f85f7b5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95403909006408581
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1777437008747810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ac01dc0ac749148ac161982c6a8883, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1099242227080732
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4155742811566176}
+  - component: {fileID: 33306463933717486}
+  - component: {fileID: 23239455047942192}
+  - component: {fileID: 95361769422650520}
+  m_Layer: 0
+  m_Name: fireplacelog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4155742811566176
+Transform:
+  m_GameObject: {fileID: 1099242227080732}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.04701614, y: -0.1203918, z: -0.1944885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4110687460478373}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33306463933717486
+MeshFilter:
+  m_GameObject: {fileID: 1099242227080732}
+  m_Mesh: {fileID: 4300000, guid: 3ee4f8328dab077439abeef7b871e3eb, type: 2}
+--- !u!23 &23239455047942192
+MeshRenderer:
+  m_GameObject: {fileID: 1099242227080732}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 799f9f29f9b1f0a49bb0cd69f85f7b5b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95361769422650520
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1099242227080732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ac01dc0ac749148ac161982c6a8883, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

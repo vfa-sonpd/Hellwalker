@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4607D0DB-DC95-45D7-8526-A6A4312D4130}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assembly-UnityScript</RootNamespace>
+    <AssemblyName>Assembly-UnityScript</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="ES2">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\ES2.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>..\..\DUSK Episode 1\DUSK_Data\Managed\UnityScript.Lang.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertTriggerScript.cs" />
+    <Compile Include="AmbientSoundNodeScript.cs" />
+    <Compile Include="AmbientSoundPlayerScript.cs" />
+    <Compile Include="AnimatedRagdollScript.cs" />
+    <Compile Include="ArrowHitScript.cs" />
+    <Compile Include="ArrowScript.cs" />
+    <Compile Include="AttackScript.cs" />
+    <Compile Include="AuthenticFlashlightScript.cs" />
+    <Compile Include="BasicAIScript.cs" />
+    <Compile Include="BasicEnemyProjectileScript.cs" />
+    <Compile Include="BerserkScript.cs" />
+    <Compile Include="BindButtonScript.cs" />
+    <Compile Include="BindControlsScript.cs" />
+    <Compile Include="BlowingDustScript.cs" />
+    <Compile Include="BlurDecrease.cs" />
+    <Compile Include="BossControllerScript.cs" />
+    <Compile Include="BounceSparks.cs" />
+    <Compile Include="ButtonScript.cs" />
+    <Compile Include="BuzzSawHitScript.cs" />
+    <Compile Include="BuzzSawInteractScript.cs" />
+    <Compile Include="ChangePitchOverTime.cs" />
+    <Compile Include="CheatScript.cs" />
+    <Compile Include="ClearMessageAfterTime.cs" />
+    <Compile Include="CreateFileNamesScript.cs" />
+    <Compile Include="CreateIniFile.cs" />
+    <Compile Include="CrosshairBasedOnWeaponScript.cs" />
+    <Compile Include="CrosshairColorScript.cs" />
+    <Compile Include="CrosshairSizeScript.cs" />
+    <Compile Include="CrosshairStyleScript.cs" />
+    <Compile Include="CrouchCollisionDetection.cs" />
+    <Compile Include="CupboardDestroyScript.cs" />
+    <Compile Include="CupboardScript.cs" />
+    <Compile Include="DecreaseBarOverTime.cs" />
+    <Compile Include="DecreaseUIAlphaOverTime.cs" />
+    <Compile Include="DelayObjectMove.cs" />
+    <Compile Include="DemoEndKeySenseScript.cs" />
+    <Compile Include="DestroyObjectAfterTime.cs" />
+    <Compile Include="DestroyParticleOnDeath.cs" />
+    <Compile Include="DestructibleObjectScript.cs" />
+    <Compile Include="DisableAfterTime.cs" />
+    <Compile Include="DisableFogForCamera.cs" />
+    <Compile Include="DisableForLowSpecModeScript.cs" />
+    <Compile Include="DisableLightForLowSpecMode.cs" />
+    <Compile Include="DisableSoundAfterTime.cs" />
+    <Compile Include="DisableSoundIfNotOutside.cs" />
+    <Compile Include="DisplayPlayerCoors.cs" />
+    <Compile Include="DoDamageOverTime.cs" />
+    <Compile Include="DoorScript.cs" />
+    <Compile Include="DukeBrothersSpawnerScript.cs" />
+    <Compile Include="Endless3DPointsScript.cs" />
+    <Compile Include="EndlessModeSpawnerControllerScript.cs" />
+    <Compile Include="EndlessModeSpawnNodeScript.cs" />
+    <Compile Include="EndLevelTriggerScript.cs" />
+    <Compile Include="EndTextMusicSCript.cs" />
+    <Compile Include="EnemyDeathSensorScript.cs" />
+    <Compile Include="EnemyIndicatorObjectScript.cs" />
+    <Compile Include="EnemySpawnerScript.cs" />
+    <Compile Include="EnergyProjectileScript.cs" />
+    <Compile Include="ExplosionScript.cs" />
+    <Compile Include="ExplosionWallScript.cs" />
+    <Compile Include="FadeInCanvasGroup.cs" />
+    <Compile Include="FadeOutCanvasGroup.cs" />
+    <Compile Include="FadeTriggerScript.cs" />
+    <Compile Include="FakeDosLoading.cs" />
+    <Compile Include="FileButtonScript.cs" />
+    <Compile Include="FilteringSwitcherScript.cs" />
+    <Compile Include="FireAnomolyScript.cs" />
+    <Compile Include="FirstSceneScript.cs" />
+    <Compile Include="FlashlightOnOffScript.cs" />
+    <Compile Include="FloatingPointNumbersScript.cs" />
+    <Compile Include="FollowOb.cs" />
+    <Compile Include="FramerateLock.cs" />
+    <Compile Include="FreezePlayerScript.cs" />
+    <Compile Include="FromMapToMenuScript.cs" />
+    <Compile Include="GameMenuButtonsScript.cs" />
+    <Compile Include="GrappleTracerScript.cs" />
+    <Compile Include="grinderscript.cs" />
+    <Compile Include="HandScript.cs" />
+    <Compile Include="Headbobber.cs" />
+    <Compile Include="HealthPickupScript.cs" />
+    <Compile Include="HorFovScript.cs" />
+    <Compile Include="ImageFadeScript.cs" />
+    <Compile Include="ImagePulseScript.cs" />
+    <Compile Include="InGameMenuScript.cs" />
+    <Compile Include="InheritText.cs" />
+    <Compile Include="InteractScript.cs" />
+    <Compile Include="InteractText.cs" />
+    <Compile Include="ItemSpawnerScript.cs" />
+    <Compile Include="JumpBob.cs" />
+    <Compile Include="JumpPadScript.cs" />
+    <Compile Include="LadderUseScript.cs" />
+    <Compile Include="LevelNameScript.cs" />
+    <Compile Include="LevelWinStuffScript.cs" />
+    <Compile Include="LightTriggerMASTERSCRIPT.cs" />
+    <Compile Include="LightTriggerNODE.cs" />
+    <Compile Include="LightTriggerOBJECTSCRIPT.cs" />
+    <Compile Include="LightTriggerPHYSICSScript.cs" />
+    <Compile Include="LightTriggerScript.cs" />
+    <Compile Include="LoadingBarScript.cs" />
+    <Compile Include="LoadingScreenAudioScript.cs" />
+    <Compile Include="LoadoutEntryScript.cs" />
+    <Compile Include="LoadoutStuffScript.cs" />
+    <Compile Include="LockOnScript.cs" />
+    <Compile Include="LogoStuffScript.cs" />
+    <Compile Include="LowSpecModeScript.cs" />
+    <Compile Include="MainMenuEnableController.cs" />
+    <Compile Include="MainMenuFilterDisable.cs" />
+    <Compile Include="MainMenuPressAnyKeyScript.cs" />
+    <Compile Include="MapNodeScript.cs" />
+    <Compile Include="MenuButtonsScript.cs" />
+    <Compile Include="MenuCursorScript.cs" />
+    <Compile Include="MirrorColorSettings.cs" />
+    <Compile Include="MirrorMainCameraFov.cs" />
+    <Compile Include="MusicNodeGHOSTScript.cs" />
+    <Compile Include="MusicNodeScript.cs" />
+    <Compile Include="MusicPlayerScript.cs" />
+    <Compile Include="MyControllerScript.cs" />
+    <Compile Include="MyInputManager.cs" />
+    <Compile Include="MyMouseLook.cs" />
+    <Compile Include="NameDisplayScript.cs" />
+    <Compile Include="NarrativeTextScript.cs" />
+    <Compile Include="NormalDoorScript.cs" />
+    <Compile Include="ObjectButtonActivation.cs" />
+    <Compile Include="OldSchoolPixelFX.cs" />
+    <Compile Include="OldSchoolPixelFXDither.cs" />
+    <Compile Include="OldSchoolPixelFXDitherMobile.cs" />
+    <Compile Include="OldSchoolPixelFXMobile.cs" />
+    <Compile Include="PersistScript.cs" />
+    <Compile Include="PickupGravity.cs" />
+    <Compile Include="PickUpScriptV2.cs" />
+    <Compile Include="PitcheBasedOnTimescale.cs" />
+    <Compile Include="PlayerHealthManagement.cs" />
+    <Compile Include="PlayerPickupScript.cs" />
+    <Compile Include="PlayerSaveScript.cs" />
+    <Compile Include="PlayMenuShotgunSound.cs" />
+    <Compile Include="PlaySoundObjectDestroyScript.cs" />
+    <Compile Include="PlaySoundOnUseSCript.cs" />
+    <Compile Include="PlayVideo.cs" />
+    <Compile Include="ProjectileSpawnerScript.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PulseMaterials.cs" />
+    <Compile Include="RestartMusic.cs" />
+    <Compile Include="RivetHitScript.cs" />
+    <Compile Include="RotateConstantly.cs" />
+    <Compile Include="RotateConstantlyLoading.cs" />
+    <Compile Include="RotationPulseScript.cs" />
+    <Compile Include="SaveFileHighlightSCript.cs" />
+    <Compile Include="SaveManagerScript.cs" />
+    <Compile Include="SavePickupScript.cs" />
+    <Compile Include="ScarecrowPostSCript.cs" />
+    <Compile Include="ScreenshotImageScript.cs" />
+    <Compile Include="ScreenSizeScript.cs" />
+    <Compile Include="ScrollScript.cs" />
+    <Compile Include="SelectionScript.cs" />
+    <Compile Include="SetAudioSourceVolumeScript.cs" />
+    <Compile Include="SetFilteringModeScript.cs" />
+    <Compile Include="SetFogColor.cs" />
+    <Compile Include="SetImageAlphaZeroAfterTime.cs" />
+    <Compile Include="SetListenerVolumeBasedOnVolume.cs" />
+    <Compile Include="SetObjectInactiveAfterTime.cs" />
+    <Compile Include="SetPlayerHealthScript.cs" />
+    <Compile Include="SetRandomSeed.cs" />
+    <Compile Include="SetRigidVelocityToZilch.cs" />
+    <Compile Include="ShaderScript.cs" />
+    <Compile Include="ShadowProjectorScripts.cs" />
+    <Compile Include="ShowerScript.cs" />
+    <Compile Include="SinkScript.cs" />
+    <Compile Include="SkyColorScript.cs" />
+    <Compile Include="SkyScript.cs" />
+    <Compile Include="SlowdownHandlerScript.cs" />
+    <Compile Include="StatScript.cs" />
+    <Compile Include="StingerScript.cs" />
+    <Compile Include="StrafeOffsetScript.cs" />
+    <Compile Include="SwitchRoomAfterTime.cs" />
+    <Compile Include="TeleportEnemiesInScript.cs" />
+    <Compile Include="TeleporterGoalScript.cs" />
+    <Compile Include="TeleporterScript.cs" />
+    <Compile Include="TextTriggerScript.cs" />
+    <Compile Include="TextureAnimation.cs" />
+    <Compile Include="ThumperScript.cs" />
+    <Compile Include="ToggleLightScript.cs" />
+    <Compile Include="ToggleUIScript.cs" />
+    <Compile Include="ToiletBowlScript.cs" />
+    <Compile Include="ToiletScript.cs" />
+    <Compile Include="ToolTipScript.cs" />
+    <Compile Include="TouchSecretScript.cs" />
+    <Compile Include="TracerScript.cs" />
+    <Compile Include="TreasureChestScript.cs" />
+    <Compile Include="TutorialMessageOnObjectDestroy.cs" />
+    <Compile Include="UIFadeScript.cs" />
+    <Compile Include="UnlockMouseScript.cs" />
+    <Compile Include="UpdateSettingsScript.cs" />
+    <Compile Include="visceracookscript.cs" />
+    <Compile Include="WaterAnimator.cs" />
+    <Compile Include="WaterMovementScript.cs" />
+    <Compile Include="WaterScrollerScript.cs" />
+    <Compile Include="WeaponFlashScript.cs" />
+    <Compile Include="WeaponPickupScript.cs" />
+    <Compile Include="WeaponScaleScript.cs" />
+    <Compile Include="ZoomScript.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

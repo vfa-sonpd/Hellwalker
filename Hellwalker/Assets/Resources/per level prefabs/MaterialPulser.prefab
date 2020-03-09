@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1504359039309020}
+  m_IsPrefabParent: 1
+--- !u!1 &1504359039309020
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4388082800554453}
+  - component: {fileID: 114400160171769009}
+  - component: {fileID: 114567290424180255}
+  - component: {fileID: 114854598022866556}
+  - component: {fileID: 114068914425553110}
+  m_Layer: 0
+  m_Name: MaterialPulser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388082800554453
+Transform:
+  m_GameObject: {fileID: 1504359039309020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -63.69287, y: -187.5788, z: 370.7748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114400160171769009
+MonoBehaviour:
+  m_GameObject: {fileID: 1504359039309020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ab7d5087f55994fb2bc13164ff54a8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mats:
+  - {fileID: 2100000, guid: 64e9939b3277a994580a9fd938282cc9, type: 2}
+  - {fileID: 2100000, guid: ac7ccda885d30f64c91e57ad6a68d462, type: 2}
+  - {fileID: 2100000, guid: 9b6341adb904c8a4cbd689101e5f0a8e, type: 2}
+  - {fileID: 2100000, guid: 728baf6975a4bc94b8b2db42cb932adf, type: 2}
+  - {fileID: 2100000, guid: 1cf85d88e17038945a2deb3e7acdcfa5, type: 2}
+  - {fileID: 2100000, guid: 85303b8369a70534db72f295e1856579, type: 2}
+  - {fileID: 2100000, guid: 6a377922941d6c441a6c233460076fa1, type: 2}
+  - {fileID: 2100000, guid: 7aecfcbe8d0af204a98c6fed74d71e8d, type: 2}
+  - {fileID: 2100000, guid: 2f096e904210d684c946cd594d5c061e, type: 2}
+  - {fileID: 2100000, guid: 8542c217cb5a6484bb1a017c5b54c25e, type: 2}
+  - {fileID: 2100000, guid: 17160280cca47fc4d9e1ed9eebd23651, type: 2}
+  - {fileID: 2100000, guid: fd8e2c19f9adfb345879152ac93fa886, type: 2}
+  - {fileID: 2100000, guid: 1399d38234803524f9dfb2c97f349b64, type: 2}
+  - {fileID: 2100000, guid: 1e2aa4aa8ae17cb43b7a1429975b3d4b, type: 2}
+  - {fileID: 2100000, guid: ac2347e0ebeb2b14097e6c44e35b88f6, type: 2}
+  - {fileID: 2100000, guid: acfe41bcf13ead34b8b2a9ff035e5c14, type: 2}
+  - {fileID: 2100000, guid: f0ad7efba90951041bf3ecc09b94f085, type: 2}
+  - {fileID: 2100000, guid: 0d7ee883d99eba64aa6efa7e39c490b4, type: 2}
+  - {fileID: 2100000, guid: 932fc643082fb96469722ab9dbad089a, type: 2}
+  - {fileID: 2100000, guid: da1caf6eb8b7dec4ba3abc3a41d7370d, type: 2}
+  - {fileID: 2100000, guid: 1f9d506e1a76e264eaf69a7d42345ace, type: 2}
+  - {fileID: 2100000, guid: 49612efb8c4542745b7ec269c17ab6af, type: 2}
+  - {fileID: 2100000, guid: 6872d767cb25b6e4e8ba85a570dbd37f, type: 2}
+  - {fileID: 2100000, guid: 784b0494de883b54882f4612cb861ea9, type: 2}
+  - {fileID: 2100000, guid: d4a0b7dcc6cffef40a1211192ac88d93, type: 2}
+  - {fileID: 2100000, guid: f4c51a6666d1bab4b86fa9698dfcf9e4, type: 2}
+  - {fileID: 2100000, guid: 5c745d85518f399468c3592062479085, type: 2}
+  - {fileID: 2100000, guid: dbb407f1fe2b81a498d308da08cb40c3, type: 2}
+  - {fileID: 2100000, guid: 0ed364df3d877694786ec049588b72f2, type: 2}
+  - {fileID: 2100000, guid: 14e60d6942fcb7e488c481c6b221a9fb, type: 2}
+  - {fileID: 2100000, guid: 3cf9087853c86b746956763165d67a54, type: 2}
+  pulseSpeed: 2
+  currentEmissionAmount: 0
+--- !u!114 &114567290424180255
+MonoBehaviour:
+  m_GameObject: {fileID: 1504359039309020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ea0933c17e7814cbbc204e2004d8fb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  watermat: {fileID: 2100000, guid: 04d6181ee8cc8ed4bbf27bf9483de766, type: 2}
+  waterspeed: 0
+  wateranimatespeed: 0.2
+  waterframes:
+  - {fileID: 2800000, guid: fa45019e5f23a3d4c93f9c86069cc3d0, type: 3}
+  - {fileID: 2800000, guid: 6435ec1246c6c5a4f9d6ffa64801f530, type: 3}
+  - {fileID: 2800000, guid: 15115a6beba8e854c94daa7a98a2db56, type: 3}
+  currentframe: 0
+  frametimer: 0
+--- !u!114 &114854598022866556
+MonoBehaviour:
+  m_GameObject: {fileID: 1504359039309020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6daac8cb20a3a43b3075295b7c3413, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  waterspeed: 1
+  watermat: {fileID: 2100000, guid: c2f1e48ccd7ceec43a09a012958aa274, type: 2}
+--- !u!114 &114068914425553110
+MonoBehaviour:
+  m_GameObject: {fileID: 1504359039309020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6daac8cb20a3a43b3075295b7c3413, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  waterspeed: 2
+  watermat: {fileID: 2100000, guid: c6d26cf4b3049cc41a9d52c0938cd2be, type: 2}

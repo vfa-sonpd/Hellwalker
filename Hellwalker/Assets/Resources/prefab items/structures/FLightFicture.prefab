@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1681344531050418}
+  m_IsPrefabParent: 1
+--- !u!1 &1681344531050418
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4057949297772804}
+  - component: {fileID: 33139154173538853}
+  - component: {fileID: 23592489850443657}
+  - component: {fileID: 95411939805914781}
+  - component: {fileID: 65490418148474218}
+  m_Layer: 1
+  m_Name: FLightFicture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4057949297772804
+Transform:
+  m_GameObject: {fileID: 1681344531050418}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -48.99, y: -180.046, z: 381.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4677094969708511}
+  - {fileID: 4674026873022943}
+  - {fileID: 4383345285101595}
+  - {fileID: 4688011836981152}
+  - {fileID: 4568924691403487}
+  - {fileID: 4764231357440090}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33139154173538853
+MeshFilter:
+  m_GameObject: {fileID: 1681344531050418}
+  m_Mesh: {fileID: 4300000, guid: 45376e6e06ea8b34e89f9bee9f60b280, type: 2}
+--- !u!23 &23592489850443657
+MeshRenderer:
+  m_GameObject: {fileID: 1681344531050418}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 9a84ce1b886c5f64db770fdddbef036f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95411939805914781
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1681344531050418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e103314c2a510924c9bbd0b63d95bf12, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!65 &65490418148474218
+BoxCollider:
+  m_GameObject: {fileID: 1681344531050418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.462463, y: 2.438836, z: 0.222598}
+  m_Center: {x: -0.0001434982, y: -5.364419E-07, z: -0.03408601}
+--- !u!1 &1577853080436427
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4677094969708511}
+  m_Layer: 0
+  m_Name: Flare1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4677094969708511
+Transform:
+  m_GameObject: {fileID: 1577853080436427}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.043, y: 1.029, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1781307679504681
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4674026873022943}
+  m_Layer: 0
+  m_Name: Flare1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4674026873022943
+Transform:
+  m_GameObject: {fileID: 1781307679504681}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.043, y: 0.634, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1004585181654265
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4383345285101595}
+  m_Layer: 0
+  m_Name: Flare1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383345285101595
+Transform:
+  m_GameObject: {fileID: 1004585181654265}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.043, y: 0.179, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1755434161333821
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4688011836981152}
+  m_Layer: 0
+  m_Name: Flare1 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4688011836981152
+Transform:
+  m_GameObject: {fileID: 1755434161333821}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.04299927, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1679251802704127
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4568924691403487}
+  m_Layer: 0
+  m_Name: Flare1 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4568924691403487
+Transform:
+  m_GameObject: {fileID: 1679251802704127}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.04299927, y: -0.607, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1984184862030097
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4764231357440090}
+  m_Layer: 0
+  m_Name: Flare1 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4764231357440090
+Transform:
+  m_GameObject: {fileID: 1984184862030097}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.04299927, y: -1.056, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057949297772804}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}

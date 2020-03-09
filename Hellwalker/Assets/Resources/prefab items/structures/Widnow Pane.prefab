@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1371617570483845}
+  m_IsPrefabParent: 1
+--- !u!1 &1371617570483845
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4547909032481130}
+  - component: {fileID: 33907707463613230}
+  - component: {fileID: 23593584476581972}
+  - component: {fileID: 114646094809687434}
+  - component: {fileID: 114935766286627451}
+  - component: {fileID: 114961232047125717}
+  - component: {fileID: 65335187712624135}
+  m_Layer: 1
+  m_Name: Widnow Pane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4547909032481130
+Transform:
+  m_GameObject: {fileID: 1371617570483845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -106.96, y: -160.5, z: 452.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33907707463613230
+MeshFilter:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Mesh: {fileID: 0}
+--- !u!23 &23593584476581972
+MeshRenderer:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4231d19143fef0843998d4abca1e9288, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114646094809687434
+MonoBehaviour:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f34ce9372cd9834ea3e54941d9cb874, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _entityType: 4
+--- !u!114 &114935766286627451
+MonoBehaviour:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7501b24489a29d44b06c934e7e31e2c, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _quads:
+  - _indices: 000000000100000002000000010000000300000002000000
+    _distinctIndices: 00000000010000000200000003000000
+    _edges:
+    - x: 0
+      y: 1
+    - x: 2
+      y: 0
+    - x: 1
+      y: 3
+    - x: 3
+      y: 2
+    _smoothingGroup: 0
+    _uv:
+      useWorldSpace: 0
+      flipU: 0
+      flipV: 0
+      swapUV: 0
+      fill: 1
+      scale: {x: 0.5, y: 0.5}
+      offset: {x: 0, y: 0}
+      rotation: 0
+      justify: 5
+      localPivot: {x: 1, y: 1}
+      localSize: {x: 1, y: 1}
+      anchor: 9
+    _mat: {fileID: 2100000, guid: 4231d19143fef0843998d4abca1e9288, type: 2}
+    manualUV: 0
+    elementGroup: -1
+    textureGroup: -1
+  _sharedIndices:
+  - array: 00000000
+  - array: 01000000
+  - array: 02000000
+  - array: 03000000
+  _vertices:
+  - {x: -1, y: -1, z: 0.2399902}
+  - {x: 1, y: -1, z: 0.2399902}
+  - {x: -1, y: 1, z: 0.2399902}
+  - {x: 1, y: 1, z: 0.2399902}
+  _uv:
+  - {x: 1.5, y: 0.5}
+  - {x: 0.5, y: 0.5}
+  - {x: 1.5, y: 1.5}
+  - {x: 0.5, y: 1.5}
+  _uv3: []
+  _uv4: []
+  _tangents: []
+  _sharedIndicesUV: []
+  _colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  userCollisions: 0
+  isSelectable: 1
+  unwrapParameters:
+    hardAngle: 88
+    packMargin: 4
+    angleError: 8
+    areaError: 15
+  asset_guid:
+  dontDestroyMeshOnDelete: 0
+  m_selectedFaces:
+  m_SelectedEdges: []
+  m_selectedTriangles:
+--- !u!114 &114961232047125717
+MonoBehaviour:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn: []
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 0
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 0
+  impactdamage: 0
+  throwdamage: 0
+  damagecolor: {r: 0, g: 0, b: 0, a: 0}
+  damagesound: {fileID: 0}
+  myhealth: 1
+  dampen: 0
+  dampenvelocity: 0
+  gibs: {fileID: 1024477590025775, guid: 9a16d42cddcc50f4591b70aca74aaef5, type: 2}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 0}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 0
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0
+--- !u!65 &65335187712624135
+BoxCollider:
+  m_GameObject: {fileID: 1371617570483845}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.2399902}

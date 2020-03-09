@@ -1,0 +1,356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1488711852549894}
+  m_IsPrefabParent: 1
+--- !u!1 &1488711852549894
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4622905580486047}
+  - component: {fileID: 95518938407486817}
+  - component: {fileID: 65537568997711134}
+  - component: {fileID: 114947693584179055}
+  - component: {fileID: 114050584348491890}
+  - component: {fileID: 82651991951843048}
+  - component: {fileID: 114720909532042447}
+  m_Layer: 0
+  m_Name: treasurechest
+  m_TagString: TreasureChestTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4622905580486047
+Transform:
+  m_GameObject: {fileID: 1488711852549894}
+  m_LocalRotation: {x: 0, y: -0.7303975, z: 0, w: 0.6830223}
+  m_LocalPosition: {x: -80.291, y: -184.85, z: 365.807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4031747384609631}
+  - {fileID: 4419502393051899}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 86.16054, z: 180}
+--- !u!95 &95518938407486817
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1488711852549894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d189a521f9a6e3b458e2071ad0de610f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 054e5e44b96406b49844f4a214a41bf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!65 &65537568997711134
+BoxCollider:
+  m_GameObject: {fileID: 1488711852549894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.72, y: 0.99, z: 1.09}
+  m_Center: {x: 0, y: 0.31, z: 0}
+--- !u!114 &114947693584179055
+MonoBehaviour:
+  m_GameObject: {fileID: 1488711852549894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb9a802fc9a784da7c8d409070dd57, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  myname: Loot
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!114 &114050584348491890
+MonoBehaviour:
+  m_GameObject: {fileID: 1488711852549894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36780f4718032e94ab4398409981e753, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  myitem: {fileID: 1333230440898424, guid: e59f84e39cad740468705e8dcf4dfec2, type: 2}
+  alreadyused: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!82 &82651991951843048
+AudioSource:
+  m_GameObject: {fileID: 1488711852549894}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 093b9c66039d9d84dbaee340a6b9e0b9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.739
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114720909532042447
+MonoBehaviour:
+  m_GameObject: {fileID: 1488711852549894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1953333758e06484fa89d3f5ec45ff0d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  spawnitems: 0
+  itemstospawn: []
+  spawnenemies: 0
+  enemytospawn: {fileID: 0}
+  maxenemyoffset: {x: 0, y: 0, z: 0}
+  numenemies: 0
+  spawnoffset: 0
+  invincible: 0
+  onfire: 0
+  fireondamage: 0
+  firedamagepersecond: 10
+  impactdamage: 0
+  throwdamage: 0
+  damagecolor: {r: 0.5955882, g: 0.5390496, b: 0.4379325, a: 1}
+  damagesound: {fileID: 0}
+  myhealth: 50
+  dampen: 0
+  dampenvelocity: 5
+  gibs: {fileID: 1258453830356482, guid: dbf107d36dd68ab4786ac1a8f56994c5, type: 2}
+  ragdoll: {fileID: 0}
+  fire: {fileID: 1220232222404056, guid: b3366e1ac01b16742b24d4f54314cf4b, type: 2}
+  doragdoll: 0
+  allowragdoll: 0
+  allowfire: 1
+  ragdollvelocity: {x: 0, y: 0, z: 0}
+  firesystem: {fileID: 0}
+  candodamage: 0
+  wasdamaged: 0
+  damageamount: 0
+  healthlastframe: 0
+  orighealth: 0
+  inwater: 0
+  invincibilityframes: 0
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+  persist: {fileID: 0}
+  aud: {fileID: 0}
+  rigid: {fileID: 0}
+  lastvelocity: 0
+  playimpactsound: 0
+  impactsoundtimer: 0
+  stopvelocity: 0
+--- !u!1 &1153185977486664
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4031747384609631}
+  - component: {fileID: 33313681332327115}
+  - component: {fileID: 23377098868611076}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4031747384609631
+Transform:
+  m_GameObject: {fileID: 1153185977486664}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.114069, z: 4.986114E-09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4622905580486047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33313681332327115
+MeshFilter:
+  m_GameObject: {fileID: 1153185977486664}
+  m_Mesh: {fileID: 4300000, guid: c07e39a65f5453941bbf64b7843e24e6, type: 2}
+--- !u!23 &23377098868611076
+MeshRenderer:
+  m_GameObject: {fileID: 1153185977486664}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 0eee30fe426ee08458a955e17f163129, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 4622905580486047}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1595834896779409
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4419502393051899}
+  m_Layer: 0
+  m_Name: ChestHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4419502393051899
+Transform:
+  m_GameObject: {fileID: 1595834896779409}
+  m_LocalRotation: {x: -0.7071068, y: 7.45058E-09, z: 7.45058E-09, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.3296967, z: 0.529}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4639763815984519}
+  m_Father: {fileID: 4622905580486047}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: -1.207418E-06, z: 0}
+--- !u!1 &1063757620424093
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4639763815984519}
+  - component: {fileID: 33146070671535908}
+  - component: {fileID: 23933752748461388}
+  m_Layer: 0
+  m_Name: Cube_001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4639763815984519
+Transform:
+  m_GameObject: {fileID: 1063757620424093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.523, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4419502393051899}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33146070671535908
+MeshFilter:
+  m_GameObject: {fileID: 1063757620424093}
+  m_Mesh: {fileID: 4300000, guid: ded670aea07a15f42babb57af72443af, type: 2}
+--- !u!23 &23933752748461388
+MeshRenderer:
+  m_GameObject: {fileID: 1063757620424093}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c745c14cd8a7e5548a822afcb4d31e6e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 4622905580486047}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

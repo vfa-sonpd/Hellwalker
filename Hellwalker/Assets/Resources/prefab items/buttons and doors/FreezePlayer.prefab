@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1641861722622525}
+  m_IsPrefabParent: 1
+--- !u!1 &1641861722622525
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4837769312797778}
+  - component: {fileID: 135614869035687244}
+  - component: {fileID: 114838514647187032}
+  - component: {fileID: 114894570380199879}
+  m_Layer: 19
+  m_Name: FreezePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4837769312797778
+Transform:
+  m_GameObject: {fileID: 1641861722622525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -89.977, y: -190.56, z: 388.789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &135614869035687244
+SphereCollider:
+  m_GameObject: {fileID: 1641861722622525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.92
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114838514647187032
+MonoBehaviour:
+  m_GameObject: {fileID: 1641861722622525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24a2d04e5c90f344bc7e858dda1d842, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  freezetime: 2.5
+--- !u!114 &114894570380199879
+MonoBehaviour:
+  m_GameObject: {fileID: 1641861722622525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaba80ad039f4c4dbdda3862adc379e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}

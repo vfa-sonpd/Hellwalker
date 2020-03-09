@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1150113601740140}
+  m_IsPrefabParent: 1
+--- !u!1 &1150113601740140
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4682413890649579}
+  - component: {fileID: 33160300043920493}
+  - component: {fileID: 23964149741244095}
+  - component: {fileID: 95606430814565890}
+  - component: {fileID: 135811584229565037}
+  - component: {fileID: 114544501257577508}
+  - component: {fileID: 114386616133745846}
+  - component: {fileID: 114086213572612170}
+  m_Layer: 12
+  m_Name: AmuletPickup
+  m_TagString: Weapon Pickup
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4682413890649579
+Transform:
+  m_GameObject: {fileID: 1150113601740140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -70.19798, y: -183.85, z: 362.9614}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33160300043920493
+MeshFilter:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Mesh: {fileID: 4300000, guid: fc28f0db07323414ab7579e2763f1c40, type: 2}
+--- !u!23 &23964149741244095
+MeshRenderer:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 0d7ee883d99eba64aa6efa7e39c490b4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95606430814565890
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1150113601740140}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2eda1f0da1ebba040a4972d876d051f9, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &135811584229565037
+SphereCollider:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: -0.026587, z: 0.008733511}
+--- !u!114 &114544501257577508
+MonoBehaviour:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91988470876ec143ab7e6b72a67b029, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rotationspeed: 90
+  amountx: 0
+  amounty: 1
+  amountz: 0
+  rotation: {x: 0, y: 0, z: 0}
+  rigid: {fileID: 0}
+  deltaRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114386616133745846
+MonoBehaviour:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5112f7728e98c41a096e9badf48c7a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  giveweapon: 1
+  weaponcontent: 6
+  ammocontent: 100
+  message: You found the Claw
+--- !u!114 &114086213572612170
+MonoBehaviour:
+  m_GameObject: {fileID: 1150113601740140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec3f04a9c38e82439e1579ea3983335, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  targetHeight: 1.1
+  fallSpeed: 1
+  layers:
+    serializedVersion: 2
+    m_Bits: 67108865
+  updatetimer: 0

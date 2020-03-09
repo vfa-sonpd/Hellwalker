@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1704002824277235}
+  m_IsPrefabParent: 1
+--- !u!1 &1704002824277235
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4323272039517999}
+  - component: {fileID: 114819427905001147}
+  - component: {fileID: 82936782861539901}
+  m_Layer: 0
+  m_Name: Endless Mode Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4323272039517999
+Transform:
+  m_GameObject: {fileID: 1704002824277235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.164737, y: -23.75, z: -6.580819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114819427905001147
+MonoBehaviour:
+  m_GameObject: {fileID: 1704002824277235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bac2fcdb6d70a4e81171ca83cbb925, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  seednudge: 3
+  currentwave: 0
+  spawns:
+  - {fileID: 1493357049518329, guid: f3c7e768644088e4bb5b14ccbf762ec4, type: 2}
+  - {fileID: 1104731517716410, guid: 41e9c6eb8925e1b4aa5b6916c648cb55, type: 2}
+  - {fileID: 1807545595727844, guid: 504f70f09a762514580c4d9c85597473, type: 2}
+  - {fileID: 1022021318516479, guid: 94c16c466489ce54ab8525ad5ee9cf5c, type: 2}
+  - {fileID: 1813069400928130, guid: 814e4cc9b6e09f2458a89c332a272bac, type: 2}
+  numupgrades: 3
+--- !u!82 &82936782861539901
+AudioSource:
+  m_GameObject: {fileID: 1704002824277235}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6ae0fcd19df8de745bbd0cd8dddfadbf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0

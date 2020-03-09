@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weapon Pickup
+  - PickUpObject
+  - Health Pickup
+  - EnemyTag
+  - HolyHealthTag
+  - WeaponEnhanceTag
+  - AltarTag
+  - BottleTag
+  - TableLightTag
+  - BedTag
+  - SwordTag
+  - RedKeyTag
+  - BlueKeyTag
+  - YellowKeyTag
+  - ButtonTag
+  - TreasureChestTag
+  - CanTag
+  - FireWoodTag
+  - CupboardTag
+  - SecretTag
+  - SuperShotgunTag
+  - GrappleTag
+  - EndButtonTag
+  - NormalDoorTag
+  - ExplosionDestroyWallTag
+  - EndlessNodeTag
+  - ToiletTag
+  - ScarecrowSpawnerTag
+  - ExplosionTag
+  - Weapon Speed Pickup
+  - CookedViscera
+  - Superhot Powerup
+  - IgnoreSunLightTag
+  - IgnoreThisInTriggerLighting
+  - GravePlotTag
+  - FileButtonTag
+  - LotionTag
+  - LookAtNodeTag
+  - HolyHealthNoSoundTag
+  - ClimbingPickupTag
+  - IgnoreSpoder
+  - FlashlightPickupTag
+  - DisallowDecals
+  - LavaSuitPickup
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  -
+  - Water
+  - UI
+  -
+  -
+  - WeaponLayer
+  - RagdollLayer
+  - PlayerLayer
+  - DoNotCollideWithPlayer
+  - PickupLayer
+  - ProjectileLayer
+  - EnemyLayer
+  - EnemyProjectileLayer
+  - SpecialRiveterLayer
+  - SkyLayer
+  - LadderLayer
+  - ShootThroughLayer
+  - WaterLayer
+  - PutOutFireLayer
+  - SecretTriggerLayer
+  - RagdollOnGroundLayer
+  - MainCameraLayer
+  - outsizecameraviewportlayer
+  - LightBlockingLayer
+  - PassThroughLightBlockingLayer
+  -
+  -
+  -
+  -
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 1875791173
+    locked: 0

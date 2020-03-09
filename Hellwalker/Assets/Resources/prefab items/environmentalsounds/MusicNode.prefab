@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1880642568670958}
+  m_IsPrefabParent: 1
+--- !u!1 &1880642568670958
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4718478860457008}
+  - component: {fileID: 65293563394473674}
+  - component: {fileID: 114115671715797189}
+  m_Layer: 19
+  m_Name: MusicNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4718478860457008
+Transform:
+  m_GameObject: {fileID: 1880642568670958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -89.546, y: -255.476, z: 957.1909}
+  m_LocalScale: {x: 2.75, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65293563394473674
+BoxCollider:
+  m_GameObject: {fileID: 1880642568670958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114115671715797189
+MonoBehaviour:
+  m_GameObject: {fileID: 1880642568670958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887193e1b2c7a944abd831e15ed57c4c, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  destroy: 1
+  mytrack: 0000000001000000
+  myvolume:
+  - 1
+  - 1
+  fadeinmultiplier:
+  - 1000
+  - 1000
+  looping: 0001
+  mymastername: MusicPlayer
+  dotriggerwhenobjectsdead: 0
+  objects: []
+  buttontrigger: 0
+  mybutton: {fileID: 0}
+  master: {fileID: 0}

@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  m_Name: pb_Mesh317548
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 24
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 10
+    localAABB:
+      m_Center: {x: 18.25, y: 1, z: 0.2499795}
+      m_Extent: {x: 17.25, y: 0, z: 4.00002}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes:
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200000002000300040005000600050007000600080004000600090008000600030005000000030007000500
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 159
+    m_VertexCount: 10
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 48
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 56
+      format: 0
+      dimension: 4
+    m_DataSize: 720
+    _typelessdata: "0300dc410000803fbdff8740000000000000803f000000000000803f0000803f0000803f0000803f03809c412300a040e1cb783e11cc783e0000803f0000000011008033000080bf00000e420000803fabff8740000000000000803f000000000000803f0000803f0000803f0000803f0280ac411e00a0400bd7a33c03cc783e0000803f0000000010000034000080bfffff0d420000803fa80070c0000000000000803f000000000000803f0000803f0000803f0000803f0280ac413e00404036d7a33c0bd7a33c0000803f0000000011008033000080bffeffdb410000803f850070c0000000000000803f000000000000803f0000803f0000803f0000803f02809c4146004040fecb783e3dd8a33c0000803f0000000000000000000080bf000030410000803ffeff8740000000000000803f000000000000803f0000803f0000803f0000803f050077413300a040bdec333f34cc783e0000803f00000000ba899db3000080bf0200c0410000803fd0ff8740000000000000803f000000000000803f0000803f0000803f0000803f038095412800a040ad57ae3e27cc783e0000803f00000000b6899db2000080bf000030410000803f000070c0000000000000803f000000000000803f0000803f0000803f0000803f0500774168004040c0ec333f5fd9a33c0000803f00000000b6899db2000080bffeffbf410000803f\
+ 5e0070c000000000ffff7f3f000000000000803f0000803f0000803f0000803f0280954150004040b957ae3ee6d8a33c0000803f00000000be891d33000080bf4e00803f0000803ffcff8740000000000000803f000000000000803f0000803f0000803f0000803f08004f413300a04010467b3f4ccc783e0000803f00000000feffdf29000080bf73ff7f3f0000803f040070c0000000000000803f000000000000803f0000803f0000803f0000803f03004f41660040401a467b3f21daa33c0000803f00000000beccccb3000080bf"
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 18.25, y: 1, z: 0.2499795}
+    m_Extent: {x: 17.25, y: 0, z: 4.00002}
+  m_MeshUsageFlags: 4
+  m_BakedConvexCollisionMesh:
+  m_BakedTriangleCollisionMesh:
+  m_MeshOptimized: 1

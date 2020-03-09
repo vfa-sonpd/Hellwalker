@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1817593555791089}
+  m_IsPrefabParent: 1
+--- !u!1 &1817593555791089
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4557259084166919}
+  - component: {fileID: 33635298495655396}
+  - component: {fileID: 23871287442929776}
+  - component: {fileID: 95644686041347718}
+  - component: {fileID: 135668043442293770}
+  - component: {fileID: 114286889003566529}
+  - component: {fileID: 114980312573851360}
+  - component: {fileID: 114968110682014426}
+  - component: {fileID: 114859510739841451}
+  - component: {fileID: 54657951709506427}
+  m_Layer: 12
+  m_Name: BuzzSawPickup
+  m_TagString: Weapon Pickup
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4557259084166919
+Transform:
+  m_GameObject: {fileID: 1817593555791089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.96301, y: -162, z: 398.5093}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33635298495655396
+MeshFilter:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Mesh: {fileID: 4300000, guid: 5f1766395f4e86d47920c473eed35d39, type: 2}
+--- !u!23 &23871287442929776
+MeshRenderer:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f0ad7efba90951041bf3ecc09b94f085, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95644686041347718
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2eda1f0da1ebba040a4972d876d051f9, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &135668043442293770
+SphereCollider:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: -0.026587, z: 0.008733511}
+--- !u!114 &114286889003566529
+MonoBehaviour:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91988470876ec143ab7e6b72a67b029, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rotationspeed: 90
+  amountx: 0
+  amounty: 1
+  amountz: 0
+  rotation: {x: 0, y: 0, z: 0}
+  rigid: {fileID: 0}
+  deltaRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114980312573851360
+MonoBehaviour:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5112f7728e98c41a096e9badf48c7a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  giveweapon: 1
+  weaponcontent: 7
+  ammocontent: 10
+  message: Made off with a Mortar
+--- !u!114 &114968110682014426
+MonoBehaviour:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec3f04a9c38e82439e1579ea3983335, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  targetHeight: 1.1
+  fallSpeed: 1
+  layers:
+    serializedVersion: 2
+    m_Bits: 67108865
+  updatetimer: 0
+--- !u!114 &114859510739841451
+MonoBehaviour:
+  m_GameObject: {fileID: 1817593555791089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaba80ad039f4c4dbdda3862adc379e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sav: {fileID: 0}
+  origcoors: {x: 0, y: 0, z: 0}
+--- !u!54 &54657951709506427
+Rigidbody:
+  m_GameObject: {fileID: 1817593555791089}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

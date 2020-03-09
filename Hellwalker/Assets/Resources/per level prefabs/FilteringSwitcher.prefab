@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1319377901493640}
+  m_IsPrefabParent: 1
+--- !u!1 &1319377901493640
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4088746875391666}
+  - component: {fileID: 114068722285241979}
+  - component: {fileID: 114151159487549632}
+  - component: {fileID: 114305136293469883}
+  - component: {fileID: 114644066891862488}
+  m_Layer: 0
+  m_Name: FilteringSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4088746875391666
+Transform:
+  m_GameObject: {fileID: 1319377901493640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -87.28851, y: -259.9237, z: 916.9648}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114068722285241979
+MonoBehaviour:
+  m_GameObject: {fileID: 1319377901493640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5ff6dcd7d5d7c418f34d83d2d4c6e2, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  exceptions:
+  - {fileID: 2800000, guid: 04ac8872593a1644bb69639aa76d024f, type: 3}
+  - {fileID: 2800000, guid: 614fd37775af54643beb560f717fc3f5, type: 3}
+  - {fileID: 2800000, guid: 1d1b21406ab8b6d45a11a210c174da1f, type: 3}
+  - {fileID: 2800000, guid: d3ce97794bfd82c49a2b62b4e4572b5b, type: 3}
+  - {fileID: 2800000, guid: d59c0f72545d28c4eb039f2606d75c4c, type: 3}
+  menubuttons: {fileID: 0}
+--- !u!114 &114151159487549632
+MonoBehaviour:
+  m_GameObject: {fileID: 1319377901493640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7f25473793dcb489f3ca4bbd5629d1, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  donormalmaps: 0
+  dospecular: 0
+  dodetailmaps: 0
+  dynamiclighting: 0
+  dynamiclight: {fileID: 1059220984646026, guid: 6af2291fb0758104d8caa846bf63a9e5, type: 2}
+  blacklightmap: {fileID: 2800000, guid: 9d07679801fe1c64390c4fc763d495a1, type: 3}
+  realtimeLights: []
+--- !u!114 &114305136293469883
+MonoBehaviour:
+  m_GameObject: {fileID: 1319377901493640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523ce4c37bb8d2341945b993f0f426af, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  triggerlocation: []
+  triggercolor: []
+  triggerrange: []
+  triggersun:
+  overridesun:
+  blockinglayers:
+    serializedVersion: 2
+    m_Bits: 201326592
+  useambient: 0
+  ambientcolor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &114644066891862488
+MonoBehaviour:
+  m_GameObject: {fileID: 1319377901493640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d071ea2c25386e147ac489f2c8ec2fac, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  dolowspecmode: 0
+  obs: []
+  attack: {fileID: 0}
