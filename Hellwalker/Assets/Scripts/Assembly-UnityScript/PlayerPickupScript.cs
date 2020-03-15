@@ -1,4 +1,5 @@
-﻿using System;
+﻿using com.ootii.Messages;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,73 +8,96 @@ using UnityEngine.UI;
 [Serializable]
 public class PlayerPickupScript : MonoBehaviour
 {
-	// Token: 0x0600037F RID: 895 RVA: 0x000208CC File Offset: 0x0001EACC
-	public virtual void OnTriggerStay(Collider hit)
-	{
-		if (!Physics.Raycast(this.transform.position, (hit.transform.position - this.transform.position).normalized, Vector3.Distance(this.transform.position, hit.transform.position), this.pickupblockinglayers))
-		{
-			GameObject gameObject = hit.transform.gameObject;
-			if (gameObject.tag == "Weapon Pickup")
-			{
-				this.pickupweapon(gameObject);
-			}
-			if (gameObject.tag == "Health Pickup")
-			{
-				this.pickuphealth(gameObject);
-			}
-			if (gameObject.tag == "HolyHealthTag")
-			{
-				this.pickupholyhealth(gameObject);
-			}
-			if (gameObject.tag == "SwordTag")
-			{
-				this.PickUpSword(gameObject);
-			}
-			if (gameObject.tag == "WeaponEnhanceTag")
-			{
-				this.pickupenhance(gameObject);
-			}
-			if (gameObject.tag == "RedKeyTag")
-			{
-				this.pickupredkey(gameObject);
-			}
-			if (gameObject.tag == "BlueKeyTag")
-			{
-				this.pickupbluekey(gameObject);
-			}
-			if (gameObject.tag == "YellowKeyTag")
-			{
-				this.pickupyellowkey(gameObject);
-			}
-			if (gameObject.tag == "SuperShotgunTag")
-			{
-				this.pickupweapon(gameObject);
-			}
-			if (gameObject.tag == "Weapon Speed Pickup")
-			{
-				this.weaponspeedpickup(gameObject);
-			}
-			if (gameObject.tag == "ClimbingPickupTag")
-			{
-				this.climbpickup(gameObject);
-			}
-			if (gameObject.tag == "Superhot Powerup")
-			{
-				this.superhotpickup(gameObject);
-			}
-			if (gameObject.tag == "FlashlightPickupTag")
-			{
-				this.flashlightpickup(gameObject);
-			}
-			if (gameObject.tag == "LavaSuitPickup")
-			{
-				this.lavasuitpickup(gameObject);
-			}
-		}
-	}
+    // Token: 0x0600037F RID: 895 RVA: 0x000208CC File Offset: 0x0001EACC
+    //public virtual void OnTriggerStay(Collider hit)
+    //{
+    //	if (!Physics.Raycast(this.transform.position, (hit.transform.position - this.transform.position).normalized, Vector3.Distance(this.transform.position, hit.transform.position), this.pickupblockinglayers))
+    //	{
+    //		GameObject gameObject = hit.transform.gameObject;
+    //		//if (gameObject.tag == "Weapon Pickup")
+    //		//{
+    //		//	this.pickupweapon(gameObject);
+    //		//}
+    //		if (gameObject.tag == "Health Pickup")
+    //		{
+    //			this.pickuphealth(gameObject);
+    //		}
+    //		if (gameObject.tag == "HolyHealthTag")
+    //		{
+    //			this.pickupholyhealth(gameObject);
+    //		}
+    //		if (gameObject.tag == "SwordTag")
+    //		{
+    //			this.PickUpSword(gameObject);
+    //		}
+    //		if (gameObject.tag == "WeaponEnhanceTag")
+    //		{
+    //			this.pickupenhance(gameObject);
+    //		}
+    //		if (gameObject.tag == "RedKeyTag")
+    //		{
+    //			this.pickupredkey(gameObject);
+    //		}
+    //		if (gameObject.tag == "BlueKeyTag")
+    //		{
+    //			this.pickupbluekey(gameObject);
+    //		}
+    //		if (gameObject.tag == "YellowKeyTag")
+    //		{
+    //			this.pickupyellowkey(gameObject);
+    //		}
+    //		if (gameObject.tag == "SuperShotgunTag")
+    //		{
+    //			this.pickupweapon(gameObject);
+    //		}
+    //		if (gameObject.tag == "Weapon Speed Pickup")
+    //		{
+    //			this.weaponspeedpickup(gameObject);
+    //		}
+    //		if (gameObject.tag == "ClimbingPickupTag")
+    //		{
+    //			this.climbpickup(gameObject);
+    //		}
+    //		if (gameObject.tag == "Superhot Powerup")
+    //		{
+    //			this.superhotpickup(gameObject);
+    //		}
+    //		if (gameObject.tag == "FlashlightPickupTag")
+    //		{
+    //			this.flashlightpickup(gameObject);
+    //		}
+    //		if (gameObject.tag == "LavaSuitPickup")
+    //		{
+    //			this.lavasuitpickup(gameObject);
+    //		}
+    //	}
+    //}
 
-	// Token: 0x06000380 RID: 896 RVA: 0x00020ACC File Offset: 0x0001ECCC
-	public virtual void flashlightpickup(GameObject ob)
+    private void Awake()
+    {
+        MessageDispatcher.AddListener(GameEvent.pickUpWeapon, OnPickupWeapon);
+    }
+
+    void OnPickupWeapon(IMessage message)
+    {
+        if(message.Data is WeaponPickupData)
+        {
+            WeaponPickupData data = message.Data as WeaponPickupData;
+
+            SelectionScript selectionScript = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
+
+            selectionScript.weaponinventory[data.weaponcontent] = true;
+
+            if (selectionScript.ammoinventory[data.weaponcontent] < selectionScript.maxammo[data.weaponcontent])
+            {
+                selectionScript.ammoinventory[data.weaponcontent] = selectionScript.maxammo[data.weaponcontent];
+            }
+        }
+
+    }
+
+    // Token: 0x06000380 RID: 896 RVA: 0x00020ACC File Offset: 0x0001ECCC
+    public virtual void flashlightpickup(GameObject ob)
 	{
 		((StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript))).brokenflashlight = false;
 		((TextMeshProUGUI)GameObject.Find("TutorialMessageText").GetComponent(typeof(TextMeshProUGUI))).text = "YOU FOUND A WORKING FLASHLIGHT";
@@ -262,6 +286,7 @@ public class PlayerPickupScript : MonoBehaviour
 		SelectionScript selectionScript = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
 		if (weaponPickupScript.giveweapon)
 		{
+            // If weapon is a pistol and player is not having 2 pistols already and player already has 1 pistol, activate dual wield pistol
 			if (weaponPickupScript.weaponcontent == 1 && !selectionScript.havedualpistols && selectionScript.weaponinventory[1])
 			{
 				((TextMeshProUGUI)GameObject.Find("MessageText").GetComponent(typeof(TextMeshProUGUI))).text = "You found another Pistol";
