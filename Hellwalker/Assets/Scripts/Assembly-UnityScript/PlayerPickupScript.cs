@@ -73,8 +73,12 @@ public class PlayerPickupScript : MonoBehaviour
     //	}
     //}
 
+    SelectionScript selectionScript; // Reference to SelectionScript
+
     private void Awake()
     {
+        selectionScript = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
+
         MessageDispatcher.AddListener(GameEvent.pickUpWeapon, OnPickupWeapon);
     }
 
@@ -84,16 +88,20 @@ public class PlayerPickupScript : MonoBehaviour
         {
             WeaponPickupData data = message.Data as WeaponPickupData;
 
-            SelectionScript selectionScript = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
-
-            selectionScript.weaponinventory[data.weaponcontent] = true;
-
-            if (selectionScript.ammoinventory[data.weaponcontent] < selectionScript.maxammo[data.weaponcontent])
+            try
             {
-                selectionScript.ammoinventory[data.weaponcontent] = selectionScript.maxammo[data.weaponcontent];
+                selectionScript.weaponinventory[data.weaponcontent] = true;
+
+                if (selectionScript.ammoinventory[data.weaponcontent] < selectionScript.maxammo[data.weaponcontent])
+                {
+                    selectionScript.ammoinventory[data.weaponcontent] = selectionScript.maxammo[data.weaponcontent];
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
             }
         }
-
     }
 
     // Token: 0x06000380 RID: 896 RVA: 0x00020ACC File Offset: 0x0001ECCC
@@ -412,23 +420,6 @@ public class PlayerPickupScript : MonoBehaviour
 		Color color2 = ((Image)GameObject.Find("GetPowerOverlay").GetComponent(typeof(Image))).color = color;
 		((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 1.5f;
 		((AudioSource)this.holyhealthpickupsound.GetComponent(typeof(AudioSource))).Play();
-		((Collider)ob.GetComponent(typeof(Collider))).enabled = false;
-		UnityEngine.Object.Destroy(ob);
-	}
-
-	// Token: 0x0600038C RID: 908 RVA: 0x00022350 File Offset: 0x00020550
-	public virtual void pickupenhance(GameObject ob)
-	{
-		SelectionScript selectionScript = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
-		selectionScript.weaponenhance = true;
-		selectionScript.enhancetimer = (float)30;
-		((TextMeshProUGUI)GameObject.Find("MessageText").GetComponent(typeof(TextMeshProUGUI))).text = "You found the Weapon Enhancer";
-		((ClearMessageAfterTime)GameObject.Find("MessageText").GetComponent(typeof(ClearMessageAfterTime))).timer = ((ClearMessageAfterTime)GameObject.Find("MessageText").GetComponent(typeof(ClearMessageAfterTime))).defaulttime;
-		float a = 0.3f;
-		Color color = ((Image)GameObject.Find("GetPowerOverlay").GetComponent(typeof(Image))).color;
-		float num = color.a = a;
-		Color color2 = ((Image)GameObject.Find("GetPowerOverlay").GetComponent(typeof(Image))).color = color;
-		((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 1.5f;
 		((Collider)ob.GetComponent(typeof(Collider))).enabled = false;
 		UnityEngine.Object.Destroy(ob);
 	}

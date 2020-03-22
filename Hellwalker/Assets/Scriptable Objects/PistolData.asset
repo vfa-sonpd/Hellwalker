@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55c92867f1d9514b8e61ee572308fec, type: 3}
+  m_Name: PistolData
+  m_EditorClassIdentifier: 
+  maxAmmo: 0
+  ammo: 30
+  pickedUp: 1
+  equipped: 1
+  tracerobject: {fileID: 1433386132710876, guid: aba8fc9620263544782c8fc382d5f215,
+    type: 2}
+  hitlayers:
+    serializedVersion: 2
+    m_Bits: 4286794238
+  bloodarcs: {fileID: 1496266995615193, guid: baa4d44ad79ecf74392a4bba4f4aecd8, type: 2}
+  defaultparticlecolor: {r: 0.8235294, g: 0.7254902, b: 0.5764706, a: 1}
+  defaulthitsound: {fileID: 8300000, guid: aacda219baede6a4c9e5c4f178b7d2dd, type: 3}
+  spawndust: 0
+  spawndecals: 0
+  ragdollbloodcolor: {r: 0.6117647, g: 0, b: 0, a: 0.62352943}
+  hitparticles: {fileID: 1235954377352856, guid: c660014e37ba1334ea911eb0ac9205da,
+    type: 2}
+  bloodsplatlayers:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletholes: {fileID: 1869727255983958, guid: 4291337de5ea04e4883065736ed8f7dc,
+    type: 2}
+  dynamicbloodsplats: {fileID: 1240201520744944, guid: 7b47a1b7dcbcb7d479e6f7dfe05d5493,
+    type: 2}
+  traceroffset: 0.1
+  inputmanager: {fileID: 0}
+  AttackDelayTimer: 0
+  FireSpeed: 1
+  WeaponSpeed: 0.26
+  AttackFrame: 0.22
+  Buck: -2
+  Inaccuracy: 0.017
+  Damage: 25
+  pauseafterthrowing: 0
+  doattack: 0
+  didattack: 0
+  weaponPrefab: {fileID: 1026456066036750, guid: afebb85f051c7da4b87a4be6003c535b,
+    type: 2}
+  gunObject: {fileID: 1026456066036750, guid: afebb85f051c7da4b87a4be6003c535b, type: 2}
+  rightPistolPrefab: {fileID: 0}
+  leftPistolPrefab: {fileID: 0}
+  rightpistolparticles: {fileID: 0}
+  rightpistolshells: {fileID: 0}
