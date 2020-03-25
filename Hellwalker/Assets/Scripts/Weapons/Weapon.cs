@@ -38,7 +38,7 @@ public class Weapon : MonoBehaviour {
         selectionScript = WeaponAnimator.GetComponent<SelectionScript>();
         animator = WeaponAnimator.GetComponent<Animator>();
         // End initialize to scene objects
-
+        AttackDelayTimer = .25f;
     }
 
     protected virtual void Update()

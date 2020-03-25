@@ -65,4 +65,5 @@ public abstract class WeaponData : ScriptableObject
     public bool didattack;
 
     public GameObject weaponPrefab;
+
 }

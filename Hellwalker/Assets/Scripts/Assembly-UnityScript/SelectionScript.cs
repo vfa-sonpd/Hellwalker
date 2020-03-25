@@ -21,7 +21,7 @@ public class SelectionScript : MonoBehaviour
 	public virtual void Start()
 	{
 		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.weapontogetto = 1;
+		this.weapontogetto = 0;
 		this.lastselectedweapon = 1;
 		this.havedaikatana = false;
 		this.ammocounter = GameObject.Find("AmmoCounter");
@@ -31,7 +31,8 @@ public class SelectionScript : MonoBehaviour
 		{
 			((AudioSource)this.sickledrawsound.GetComponent(typeof(AudioSource))).Play();
 		}
-	}
+
+    }
 
     // Reference to the current holding weapon
     private WeaponData currentWeapon;
@@ -113,6 +114,11 @@ public class SelectionScript : MonoBehaviour
 	// Token: 0x060003E0 RID: 992 RVA: 0x000252A8 File Offset: 0x000234A8
 	public virtual void Update()
 	{
+        if (this.inputmanager.GetKeyInput("pistol / pistols", 1))
+        {
+            Pistol();
+        }
+
         if (this.inputmanager.GetKeyInput("holster", 1))
 		{
 			if (this.selectedweapon != 0)
@@ -152,10 +158,7 @@ public class SelectionScript : MonoBehaviour
 		//{
   //          Pistol();
   //      }
-        if (this.inputmanager.GetKeyInput("pistol / pistols", 1))
-        {
-            Pistol();
-        }
+
         if (this.inputmanager.GetKeyInput("shotgun / shotguns", 1) && this.weaponinventory[2])
 		{
 			if (this.selectedweapon != 3)
@@ -235,6 +238,7 @@ public class SelectionScript : MonoBehaviour
 			this.lastselectedweapon = this.selectedweapon;
 		}
 		this.scroll();
+       // print("this.selectedweapon  " + this.selectedweapon);
 		if (((AttackScript)this.GetComponent(typeof(AttackScript))).attackdelaytimer <= (float)0)
 		{
             if (this.selectedweapon != this.weapontogetto)
@@ -396,19 +400,19 @@ public class SelectionScript : MonoBehaviour
 		((Renderer)this.shotgunmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.shotgunlevermodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.supershotgunmodel.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.pistolmodel.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.pistolmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.riflemodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.chainsawmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.m16model.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.buzzsawmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.rivetermodel.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.leftpistolmodel.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.rightpistolmodel.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.leftpistolmodel.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.rightpistolmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.amuletmodel.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.cigarmodel.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.pistolslide.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.leftpistolslide.GetComponent(typeof(Renderer))).enabled = false;
-		((Renderer)this.rightpistolslide.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.pistolslide.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.leftpistolslide.GetComponent(typeof(Renderer))).enabled = false;
+		//((Renderer)this.rightpistolslide.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.dualshotgunmodelleft.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.dualshotgunmodelleftlever.GetComponent(typeof(Renderer))).enabled = false;
 		((Renderer)this.dualshotgunmodelright.GetComponent(typeof(Renderer))).enabled = false;

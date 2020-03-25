@@ -37,7 +37,6 @@ MonoBehaviour:
     type: 2}
   traceroffset: 0.1
   inputmanager: {fileID: 0}
-  AttackDelayTimer: 0
   FireSpeed: 1
   WeaponSpeed: 0.26
   AttackFrame: 0.22
@@ -49,6 +48,7 @@ MonoBehaviour:
   didattack: 0
   weaponPrefab: {fileID: 1026456066036750, guid: afebb85f051c7da4b87a4be6003c535b,
     type: 2}
+  equipTime: 0.5
   gunObject: {fileID: 1026456066036750, guid: afebb85f051c7da4b87a4be6003c535b, type: 2}
   rightPistolPrefab: {fileID: 0}
   leftPistolPrefab: {fileID: 0}
