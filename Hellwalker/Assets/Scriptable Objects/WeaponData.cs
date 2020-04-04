@@ -1,7 +1,17 @@
 ﻿using UnityEngine;
 
-public abstract class WeaponData : ScriptableObject
+public enum WeaponType
 {
+    Pistol = 2,
+    HuntingRifle = 6,
+}
+
+[CreateAssetMenu(fileName = "WeaponData", menuName = "Weapons/Weapon Data", order = 1)]
+public class WeaponData : ScriptableObject
+{
+    // What kind of weapon is this ?
+    public WeaponType weaponType;
+
     // Maximum ammo this weapon can have
     public int maxAmmo;
 
@@ -66,4 +76,24 @@ public abstract class WeaponData : ScriptableObject
 
     public GameObject weaponPrefab;
 
+    public GameObject weaponObject;
+
+    public void Equip(Transform transformParent)
+    {
+        if(weaponObject)
+        {
+            weaponObject.SetActive(true);
+            return;
+        }
+        // Create weapon prefab, as child of this transform
+        weaponObject = Instantiate(weaponPrefab, transformParent);
+    }
+
+    public void Unequip()
+    {
+        if (weaponObject)
+        {
+            weaponObject.SetActive(false);
+        }
+    }
 }

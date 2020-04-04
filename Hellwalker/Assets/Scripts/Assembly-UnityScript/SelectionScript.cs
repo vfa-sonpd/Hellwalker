@@ -7,7 +7,8 @@ using UnityEngine.UI;
 [Serializable]
 public class SelectionScript : MonoBehaviour
 {
-    public WeaponData[] weapons;
+    public Inventory inventory;
+
 	// Token: 0x060003DE RID: 990 RVA: 0x00024F30 File Offset: 0x00023130
 	public SelectionScript()
 	{
@@ -37,78 +38,32 @@ public class SelectionScript : MonoBehaviour
     // Reference to the current holding weapon
     private WeaponData currentWeapon;
 
-    void Equip(WeaponData weapon)
-    {
-        print("equipping pistol");
-        // Create weapon prefab, as child of this transform
-        GameObject go = Instantiate(weapon.weaponPrefab,transform);
-        // Set current weapon
-        currentWeapon = weapon;
-    }
-
-    void Pistol()
+    void Equip(WeaponType weaponType)
     {
         print("pistol");
 
         // If current weapon is already pistol, return
-        if(currentWeapon is PistolData)
+        if(currentWeapon && currentWeapon.weaponType == weaponType)
         {
             return;
         }
 
-        // Get the correct weapon data in inventory
-        foreach (WeaponData weapon in weapons)
+        InventoryMessage invMessage = inventory.GetWeapon(weaponType);
+
+        if(invMessage.status == InventoryStatus.WEAPON_IS_IN_INVENTORY)
         {
-            // If weapon is marked as picked up, start the euip process
-            if(weapon is PistolData && weapon.pickedUp)
+            // If the current weapon is null, DON'T start the unequip process
+            if(currentWeapon)
             {
-                Equip(weapon);
-                break;
+                currentWeapon.Unequip();
             }
-            else
-            {
-                // The rest, unequip
-            
-            }
+
+            currentWeapon = invMessage.GetWeapon();
+            currentWeapon.Equip(transform);
         }
 
         this.deactivateall();
         ((Animator)this.GetComponent(typeof(Animator))).SetTrigger("StopAll");
-
-        //if (this.selectedweapon != 2)
-        //{
-        //    this.lastselectedweapon = this.selectedweapon;
-        //}
-        ////((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
-        //this.weapontogetto = 2;
-
-        //this.deactivateall();
-
-        //if (!this.havedualpistols)
-        //{
-        //    ((Renderer)this.pistolmodel.GetComponent(typeof(Renderer))).enabled = true;
-        //    ((Renderer)this.pistolslide.GetComponent(typeof(Renderer))).enabled = true;
-        //}
-        //else
-        //{
-        //    ((Renderer)this.leftpistolmodel.GetComponent(typeof(Renderer))).enabled = true;
-        //    ((Renderer)this.rightpistolmodel.GetComponent(typeof(Renderer))).enabled = true;
-        //    ((Renderer)this.leftpistolslide.GetComponent(typeof(Renderer))).enabled = true;
-        //    ((Renderer)this.rightpistolslide.GetComponent(typeof(Renderer))).enabled = true;
-        //}
-    }
-
-    void HungtingRifle()
-    {
-        if (this.selectedweapon != 6)
-        {
-            this.lastselectedweapon = this.selectedweapon;
-        }
-            ((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
-        this.weapontogetto = 6;
-
-        this.deactivateall();
-        ((Renderer)this.riflemodel.GetComponent(typeof(Renderer))).enabled = true;
     }
 
 	// Token: 0x060003E0 RID: 992 RVA: 0x000252A8 File Offset: 0x000234A8
@@ -116,7 +71,12 @@ public class SelectionScript : MonoBehaviour
 	{
         if (this.inputmanager.GetKeyInput("pistol / pistols", 1))
         {
-            Pistol();
+            Equip(WeaponType.Pistol);
+        }
+
+        if (this.inputmanager.GetKeyInput("hunting rifle", 1))
+        {
+            Equip(WeaponType.HuntingRifle);
         }
 
         if (this.inputmanager.GetKeyInput("holster", 1))
@@ -192,10 +152,10 @@ public class SelectionScript : MonoBehaviour
 			((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
 			this.weapontogetto = 5;
 		}
-		if (this.inputmanager.GetKeyInput("hunting rifle", 1) && this.weaponinventory[5])
-		{
-            HungtingRifle();
-        }
+		//if (this.inputmanager.GetKeyInput("hunting rifle", 1) && this.weaponinventory[5])
+		//{
+  //          HungtingRifle();
+  //      }
 		if (this.inputmanager.GetKeyInput("crossbow", 1) && this.weaponinventory[6])
 		{
 			if (this.selectedweapon != 7)

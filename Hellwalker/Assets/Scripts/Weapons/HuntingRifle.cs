@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pistol : Weapon
+public class HuntingRifle : Weapon
 {
     // References to scene objects
-    public ParticleSystem rightpistolparticles; //References to the RIGHT pistol particles
-    public ParticleSystem rightpistolshells; //References to the RIGHT pistol particles
+    public ParticleSystem rifleparticles; //References to the RIGHT pistol particles
+    public ParticleSystem rifleshells; //References to the RIGHT pistol particles
 
     // Use this for initialization
-    protected override void Start () {
+    protected override void Start()
+    {
         base.Start();
 
-        rightpistolparticles = GetComponentInChildren<ParticleSystem>();
+        rifleparticles = GetComponentInChildren<ParticleSystem>();
 
         this.didattack = true;
     }
 
-    // Update is called once per frame
-    protected override void Update () {
 
+    // Update is called once per frame
+    protected override void Update()
+    {
         bool keyInput = this.inputmanager.GetKeyInput("fire", 2);
 
         if (this.inputmanager.GetKeyInput("fire", 0))
@@ -56,9 +58,9 @@ public class Pistol : Weapon
             {
                 ((MyMouseLook)Camera.main.GetComponent(typeof(MyMouseLook))).buck = weaponData.Buck;
 
-                rightpistolparticles.Play();
+                rifleparticles.Play();
 
-                rightpistolshells.Emit(1);
+                rifleshells.Emit(1);
 
                 GameObject go = this.shootbullet(weaponData.Inaccuracy, (float)1000, 1, weaponData.Damage, 0, (float)3, (float)1, true, false);
 
@@ -67,6 +69,4 @@ public class Pistol : Weapon
             }
         }
     }
-
-
 }
