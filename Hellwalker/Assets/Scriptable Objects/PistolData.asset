@@ -44,8 +44,10 @@ MonoBehaviour:
   Buck: -2
   Inaccuracy: 0.017
   Damage: 25
+  Pellet: 1
   pauseafterthrowing: 0
   doattack: 0
   didattack: 0
   weaponPrefab: {fileID: 1026456066036750, guid: afebb85f051c7da4b87a4be6003c535b,
     type: 2}
+  weaponObject: {fileID: 0}

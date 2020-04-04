@@ -4,6 +4,7 @@ public enum WeaponType
 {
     Pistol = 2,
     HuntingRifle = 6,
+    Shotgun = 3,
 }
 
 [CreateAssetMenu(fileName = "WeaponData", menuName = "Weapons/Weapon Data", order = 1)]
@@ -69,6 +70,7 @@ public class WeaponData : ScriptableObject
     public float Buck;
     public float Inaccuracy;
     public float Damage;
+    public int Pellet = 1;
 
     public bool pauseafterthrowing;
     public bool doattack;

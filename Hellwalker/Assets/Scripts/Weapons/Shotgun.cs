@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HuntingRifle : Weapon
+public class Shotgun : Weapon
 {
+    public int shotgunpellets;
     // References to scene objects
-    public ParticleSystem rifleparticles; //References to the RIGHT pistol particles
-    public ParticleSystem rifleshells; //References to the RIGHT pistol particles
+    public ParticleSystem shotgunparticles; //References to the Shotgun particles
+    public ParticleSystem shotgunshells; //References to the Shotgun shell particles
 
-    // Use this for initialization
-    protected override void Start()
-    {
+    protected override void Start () {
+
         base.Start();
 
-        rifleparticles = GetComponentInChildren<ParticleSystem>();
+        animator = this.GetComponent<Animator>();
 
         this.didattack = true;
-    }
 
+    }
 
     // Update is called once per frame
     protected override void Update()
@@ -38,6 +38,7 @@ public class HuntingRifle : Weapon
 
         if (this.AttackDelayTimer < (float)0)
         {
+            print("heck");
             this.AttackDelayTimer = (float)0;
         }
 
@@ -45,8 +46,8 @@ public class HuntingRifle : Weapon
         {
             if (doattack)
             {
-                animator.SetTrigger("RifleFireTrigger");
-                weaponData.traceroffset = 0.1f;
+                animator.SetTrigger("RightShotgunTrigger");
+                weaponData.traceroffset = 0.25f;
                 this.AttackDelayTimer = weaponData.WeaponSpeed / weaponData.FireSpeed;
                 this.didattack = false;
             }
@@ -58,9 +59,9 @@ public class HuntingRifle : Weapon
             {
                 ((MyMouseLook)Camera.main.GetComponent(typeof(MyMouseLook))).buck = weaponData.Buck;
 
-                rifleparticles.Play();
+                shotgunparticles.Play();
 
-                rifleshells.Emit(1);
+                shotgunshells.Emit(1);
 
                 GameObject go = this.shootbullet(weaponData.Inaccuracy, (float)1000, weaponData.Pellet, weaponData.Damage, 0, (float)3, (float)1, true, false);
 

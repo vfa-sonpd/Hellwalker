@@ -79,6 +79,11 @@ public class SelectionScript : MonoBehaviour
             Equip(WeaponType.HuntingRifle);
         }
 
+        if (this.inputmanager.GetKeyInput("shotgun / shotguns", 1))
+        {
+            Equip(WeaponType.Shotgun);
+        }
+
         if (this.inputmanager.GetKeyInput("holster", 1))
 		{
 			if (this.selectedweapon != 0)
@@ -121,18 +126,18 @@ public class SelectionScript : MonoBehaviour
 
         if (this.inputmanager.GetKeyInput("shotgun / shotguns", 1) && this.weaponinventory[2])
 		{
-			if (this.selectedweapon != 3)
-			{
-				this.lastselectedweapon = this.selectedweapon;
-			}
-			((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
-			this.weapontogetto = 3;
-			if (this.selectedweapon == 3 && this.permshotguns)
-			{
-				this.havedualshotguns = !this.havedualshotguns;
-				((Animator)this.GetComponent(typeof(Animator))).SetTrigger("StopAll");
-				((AudioSource)this.shotgundrawsound.GetComponent(typeof(AudioSource))).Play();
-			}
+			//if (this.selectedweapon != 3)
+			//{
+			//	this.lastselectedweapon = this.selectedweapon;
+			//}
+			//((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
+			//this.weapontogetto = 3;
+			//if (this.selectedweapon == 3 && this.permshotguns)
+			//{
+			//	this.havedualshotguns = !this.havedualshotguns;
+			//	((Animator)this.GetComponent(typeof(Animator))).SetTrigger("StopAll");
+			//	((AudioSource)this.shotgundrawsound.GetComponent(typeof(AudioSource))).Play();
+			//}
 		}
 		if (this.inputmanager.GetKeyInput("super shotgun", 1) && this.weaponinventory[3])
 		{
