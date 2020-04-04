@@ -45,7 +45,7 @@ public class HuntingRifle : Weapon
         {
             if (doattack)
             {
-                animator.SetTrigger("PistolFireTrigger");
+                animator.SetTrigger("RifleFireTrigger");
                 weaponData.traceroffset = 0.1f;
                 this.AttackDelayTimer = weaponData.WeaponSpeed / weaponData.FireSpeed;
                 this.didattack = false;
