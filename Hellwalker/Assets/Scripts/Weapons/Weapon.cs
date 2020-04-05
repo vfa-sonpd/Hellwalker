@@ -6,6 +6,10 @@ public class Weapon : MonoBehaviour {
 
     public WeaponData weaponData;
 
+    // Variables that are unique to this weapon
+    [SerializeField]
+    protected int ammo; // how much ammo this weapon has
+
     // References to scene objects
     public GameObject smoke;    // Reference to SmokeSystem
     public GameObject locke;    // Reference to LockonAimer
@@ -46,6 +50,30 @@ public class Weapon : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Can this weapon be fired, right now ?
+    /// </summary>
+    /// <returns></returns>
+    protected virtual bool CanFire()
+    {
+        // No ammo case
+        if(ammo == 0)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    protected virtual void AddAmmo(int amount)
+    {
+        ammo += amount;
+
+        if(ammo >= weaponData.maxAmmo)
+        {
+            ammo = weaponData.maxAmmo;
+        }
+    }
     public virtual GameObject shootbullet(float inaccuracy, float range, int numberofbullets, float damage, int deathstyle, float forwardpower, float uppower, bool doricnoise, bool ignoretracer)
     {
         ((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 0.7f;

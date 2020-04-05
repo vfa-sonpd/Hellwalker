@@ -16,9 +16,6 @@ public class WeaponData : ScriptableObject
     // Maximum ammo this weapon can have
     public int maxAmmo;
 
-    //current ammo this weapon has
-    public int ammo;
-
     // Is this weapon picked up by player ?
     public bool pickedUp;
 
@@ -98,4 +95,5 @@ public class WeaponData : ScriptableObject
             weaponObject.SetActive(false);
         }
     }
+
 }

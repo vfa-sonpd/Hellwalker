@@ -24,9 +24,12 @@ public class Shotgun : Weapon
     {
         bool keyInput = this.inputmanager.GetKeyInput("fire", 2);
 
-        if (this.inputmanager.GetKeyInput("fire", 0))
+        if (this.inputmanager.GetKeyInput("fire", 0) )
         {
-            this.doattack = true;
+            if(CanFire())
+            {
+                this.doattack = true;
+            }
         }
 
         if (keyInput)
@@ -38,7 +41,6 @@ public class Shotgun : Weapon
 
         if (this.AttackDelayTimer < (float)0)
         {
-            print("heck");
             this.AttackDelayTimer = (float)0;
         }
 
@@ -67,6 +69,9 @@ public class Shotgun : Weapon
 
                 ((WeaponFlashScript)GameObject.Find("WeaponFlash").GetComponent(typeof(WeaponFlashScript))).flash = (float)20;
                 this.didattack = true;
+
+                // deduct ammo
+                ammo--;
             }
         }
     }

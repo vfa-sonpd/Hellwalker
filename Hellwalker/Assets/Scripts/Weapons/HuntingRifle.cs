@@ -26,7 +26,10 @@ public class HuntingRifle : Weapon
 
         if (this.inputmanager.GetKeyInput("fire", 0))
         {
-            this.doattack = true;
+            if (CanFire())
+            {
+                this.doattack = true;
+            }
         }
 
         if (keyInput)
@@ -66,6 +69,9 @@ public class HuntingRifle : Weapon
 
                 ((WeaponFlashScript)GameObject.Find("WeaponFlash").GetComponent(typeof(WeaponFlashScript))).flash = (float)20;
                 this.didattack = true;
+
+                // deduct ammo
+                ammo--;
             }
         }
     }
