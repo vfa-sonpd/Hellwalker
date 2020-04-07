@@ -2,32 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shotgun : Weapon
+public class MachineGun : Weapon
 {
     // References to scene objects
-    public ParticleSystem shotgunparticles; //References to the Shotgun particles
-    public ParticleSystem shotgunshells; //References to the Shotgun shell particles
+    public ParticleSystem machinegunparticles; //References to the MachineGun particles
+    public ParticleSystem machinegunshellls; //References to the MachineGun shell particles
 
-    protected override void Start () {
+    public float currentm16spread;
 
+    protected override void Start()
+    {
         base.Start();
 
-        animator = this.GetComponent<Animator>();
-
         this.didattack = true;
-
     }
 
     // Update is called once per frame
     protected override void Update()
     {
+
         bool keyInput = this.inputmanager.GetKeyInput("fire", 2);
 
-        if (this.inputmanager.GetKeyInput("fire", 0) )
+        if (this.inputmanager.GetKeyInput("fire", 0))
         {
-            if(CanFire())
+            if (CanFire())
             {
                 this.doattack = true;
+            }
+        }
+
+        // reduce spread when not firing ?
+        if (!this.inputmanager.GetKeyInput("fire", 0))
+        {
+            if (this.currentm16spread > (float)0)
+            {
+                this.currentm16spread -= Time.deltaTime * (float)7;
+            }
+            if (this.currentm16spread < (float)0)
+            {
+                this.currentm16spread = (float)0;
             }
         }
 
@@ -47,8 +60,8 @@ public class Shotgun : Weapon
         {
             if (doattack)
             {
-                animator.SetTrigger("RightShotgunTrigger");
-                weaponData.traceroffset = 0.25f;
+                animator.SetTrigger("M16FireTrigger");
+                weaponData.traceroffset = 0.1f;
                 this.AttackDelayTimer = weaponData.WeaponSpeed / weaponData.FireSpeed;
                 this.didattack = false;
             }
@@ -60,14 +73,20 @@ public class Shotgun : Weapon
             {
                 ((MyMouseLook)Camera.main.GetComponent(typeof(MyMouseLook))).buck = weaponData.Buck;
 
-                shotgunparticles.Play();
+                machinegunparticles.Play();
 
-                shotgunshells.Emit(1);
+                machinegunshellls.Emit(1);
 
-                GameObject go = this.shootbullet(weaponData.Inaccuracy, (float)1000, weaponData.Pellet, weaponData.Damage, 0, (float)3, (float)1, true, false);
+                GameObject go = this.shootbullet(currentm16spread, (float)1000, 1, weaponData.Damage, 0, (float)3, (float)1, true, false);
 
                 ((WeaponFlashScript)GameObject.Find("WeaponFlash").GetComponent(typeof(WeaponFlashScript))).flash = (float)20;
                 this.didattack = true;
+
+                this.currentm16spread += Time.deltaTime * (float)3;
+                if (this.currentm16spread > weaponData.Inaccuracy)
+                {
+                    this.currentm16spread = weaponData.Inaccuracy;
+                }
 
                 // deduct ammo
                 ammo--;

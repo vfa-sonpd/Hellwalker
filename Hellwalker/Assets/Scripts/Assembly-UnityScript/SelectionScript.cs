@@ -84,6 +84,11 @@ public class SelectionScript : MonoBehaviour
             Equip(WeaponType.Shotgun);
         }
 
+        if (this.inputmanager.GetKeyInput("assault rifle", 1))
+        {
+            Equip(WeaponType.MachineGun);
+        }
+
         if (this.inputmanager.GetKeyInput("holster", 1))
 		{
 			if (this.selectedweapon != 0)
@@ -148,15 +153,15 @@ public class SelectionScript : MonoBehaviour
 			((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
 			this.weapontogetto = 4;
 		}
-		if (this.inputmanager.GetKeyInput("assault rifle", 1) && this.weaponinventory[4])
-		{
-			if (this.selectedweapon != 5)
-			{
-				this.lastselectedweapon = this.selectedweapon;
-			}
-			((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
-			this.weapontogetto = 5;
-		}
+		//if (this.inputmanager.GetKeyInput("assault rifle", 1) && this.weaponinventory[4])
+		//{
+		//	if (this.selectedweapon != 5)
+		//	{
+		//		this.lastselectedweapon = this.selectedweapon;
+		//	}
+		//	((PickUpScriptV2)GameObject.Find("MainCamera").GetComponent(typeof(PickUpScriptV2))).dropobject(false);
+		//	this.weapontogetto = 5;
+		//}
 		//if (this.inputmanager.GetKeyInput("hunting rifle", 1) && this.weaponinventory[5])
 		//{
   //          HungtingRifle();

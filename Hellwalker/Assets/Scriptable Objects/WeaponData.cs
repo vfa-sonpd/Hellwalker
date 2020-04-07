@@ -3,8 +3,12 @@
 public enum WeaponType
 {
     Pistol = 2,
-    HuntingRifle = 6,
+ 
     Shotgun = 3,
+
+    MachineGun = 4,
+
+    HuntingRifle = 6,
 }
 
 [CreateAssetMenu(fileName = "WeaponData", menuName = "Weapons/Weapon Data", order = 1)]

@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 882e2beaad0ad3242ad2a5f59b10ea13, type: 2}
+  ammo: 500
   smoke: {fileID: 0}
   locke: {fileID: 0}
   wanimate: {fileID: 0}
