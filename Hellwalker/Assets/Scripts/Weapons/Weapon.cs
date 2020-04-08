@@ -45,6 +45,15 @@ public class Weapon : MonoBehaviour {
         AttackDelayTimer = .25f;
     }
 
+    /// <summary>
+    /// Reset var to prevent lingering 
+    /// </summary>
+    public void Reset()
+    {
+        this.doattack = false;
+        this.didattack = true;
+    }
+
     protected virtual void Update()
     {
 

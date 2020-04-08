@@ -86,6 +86,7 @@ public class WeaponData : ScriptableObject
         if(weaponObject)
         {
             weaponObject.SetActive(true);
+            weaponObject.GetComponent<Weapon>().Reset();
             return;
         }
         // Create weapon prefab, as child of this transform
