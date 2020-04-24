@@ -157,10 +157,19 @@ public class Weapon : MonoBehaviour {
                     }
                     if (gameObject2.tag == "EnemyTag")
                     {
+                        print("blood!!!");
                         GameObject gameObject5 = UnityEngine.Object.Instantiate<GameObject>(weaponData.bloodarcs, raycastHit.point, Quaternion.identity);
                         gameObject5.transform.LookAt(GameObject.Find("MainCamera").transform);
                         destructibleObjectScript.wasdamaged = true;
-                        ((BasicAIScript)gameObject2.GetComponent(typeof(BasicAIScript))).BasicCheckDamage();
+
+                        try
+                        {
+                            ((BasicAIScript)gameObject2.GetComponent(typeof(BasicAIScript))).BasicCheckDamage();
+                        } catch(System.Exception e)
+                        {
+                            Debug.Log("No BasicAIScript!");
+                        }
+                       
                     }
                     //if (gameObject2.tag == "EnemyTag" && this.persist)
                     //{
@@ -205,11 +214,13 @@ public class Weapon : MonoBehaviour {
                     }
                     if (gameObject2.layer == 14)
                     {
+                        print("blood spalt!");
                         this.spawnbloodsplat(raycastHit.point, this.locke);
                     }
                 }
                 if (gameObject2.layer == 9)
                 {
+                    print("blood ragdollbloodcolor!");
                     startColor = weaponData.ragdollbloodcolor;
                 }
                 if ((Rigidbody)gameObject2.GetComponent(typeof(Rigidbody)))
