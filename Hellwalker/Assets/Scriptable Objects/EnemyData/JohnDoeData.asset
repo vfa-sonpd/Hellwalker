@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: JohnDoeData
   m_EditorClassIdentifier: 
   rangeOfAttack: 2
+  speed: 2.5
   idleClip: {fileID: 7400000, guid: 995834030f46bdf4ea4db532515c6932, type: 3}
   walkingClip: {fileID: 7400000, guid: 185573a32d7517b41b3529d02fc96f56, type: 3}
   attackClip: {fileID: 7400000, guid: 170fe84d0ed7dd843811ceafd592120b, type: 3}
+  flinchClip: {fileID: 7400000, guid: c089c347161e9e94db564b19fbe736d4, type: 3}

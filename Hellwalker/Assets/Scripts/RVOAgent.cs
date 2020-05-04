@@ -37,9 +37,10 @@ public class RVOAgent : MonoBehaviour {
     }
 
     /// <summary>Set the point to move to</summary>
-    public void SetTarget(Transform target)
+    public void SetTarget(Transform target,float speed = 10)
     {
         this.target = target;
+        maxSpeed = speed;
         RecalculatePath();
     }
 

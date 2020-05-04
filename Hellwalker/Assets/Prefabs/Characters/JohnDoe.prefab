@@ -1919,8 +1919,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541289309077998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.701, y: 0.01, z: 0.39}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4641592441129234}
   - {fileID: 4728735067830476}
@@ -2178,17 +2178,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c7cf5d9bc01124e9b3c0c5f19a0479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   currentState: {fileID: 11400000, guid: ae1b6c464e407bf4c9ed8f87664892cd, type: 2}
+  lastState: {fileID: 0}
   nextState: {fileID: 0}
   remainState: {fileID: 11400000, guid: 2ed5d20c638818e4aaac999ed8a9c3db, type: 2}
+  flinchState: {fileID: 0}
   aiActive: 1
   eyes: {fileID: 4278427570453170}
-  target: {fileID: 0}
-  initialized: 0
   enemyData: {fileID: 11400000, guid: dca085daa049f834abd0ceff46b0c739, type: 2}
+  bloodMistParticle: {fileID: 0}
   animancer: {fileID: 0}
-  rvoAgent: {fileID: 0}
-  characterController: {fileID: 0}
+  isFlinching: 0
+  initialized: 0
 --- !u!114 &114390057524410660
 MonoBehaviour:
   m_ObjectHideFlags: 1

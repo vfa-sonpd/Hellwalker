@@ -10,6 +10,8 @@ public class State : ScriptableObject
 
     public Color sceneGizmoColor = Color.grey;
 
+    public bool Interupptable;
+
     public void UpdateState(Enemy controller)
     {
         DoActions(controller);
@@ -38,6 +40,14 @@ public class State : ScriptableObject
             {
                 controller.TransitionToState(transitions[i].falseState);
             }
+        }
+    }
+
+    public void Interrupt(Enemy controller)
+    {
+        for (int i = 0; i < actions.Length; i++)
+        {
+            actions[i].OnInterrupt(controller);
         }
     }
 }

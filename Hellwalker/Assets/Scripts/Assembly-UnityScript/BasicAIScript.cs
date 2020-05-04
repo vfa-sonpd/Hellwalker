@@ -308,7 +308,8 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x0600005D RID: 93 RVA: 0x00008694 File Offset: 0x00006894
 	public virtual void BasicSetGoal()
 	{
-		GameObject myTarget = this.MyTarget;
+        print("alachol 4");
+        GameObject myTarget = this.MyTarget;
 		NavMeshAgent navMeshAgent = (NavMeshAgent)this.GetComponent(typeof(NavMeshAgent));
 		this.mygoal = myTarget.transform.position;
 		navMeshAgent.destination = this.mygoal;
@@ -317,7 +318,8 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x0600005E RID: 94 RVA: 0x000086DC File Offset: 0x000068DC
 	public virtual void TrackCheckDistanceFromGoal()
 	{
-		GameObject myTarget = this.MyTarget;
+        print("alachol 5");
+        GameObject myTarget = this.MyTarget;
 		NavMeshAgent navMeshAgent = (NavMeshAgent)this.GetComponent(typeof(NavMeshAgent));
 		if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance + 0.5f && Vector3.Distance(this.transform.position, myTarget.transform.position) > navMeshAgent.stoppingDistance + 0.5f)
 		{
@@ -339,7 +341,8 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000060 RID: 96 RVA: 0x00008794 File Offset: 0x00006994
 	public virtual void SetNearGoal()
 	{
-		GameObject myTarget = this.MyTarget;
+        print("alachol 6");
+        GameObject myTarget = this.MyTarget;
 		int num = UnityEngine.Random.Range(3, 60);
 		Vector3 vector = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
 		RaycastHit raycastHit = default(RaycastHit);
@@ -503,6 +506,7 @@ public class BasicAIScript : MonoBehaviour
 							}
 							if (raycastHit2.transform.gameObject.tag == "EnemyTag")
 							{
+                                print("alachol 1");
 								BasicAIScript basicAIScript = (BasicAIScript)raycastHit2.transform.gameObject.GetComponent(typeof(BasicAIScript));
 								basicAIScript.MyTarget = this.transform.gameObject;
 							}
@@ -573,7 +577,8 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000063 RID: 99 RVA: 0x00009340 File Offset: 0x00007540
 	public virtual bool CheckLoS()
 	{
-		RaycastHit raycastHit = default(RaycastHit);
+        print("alachol 8");
+        RaycastHit raycastHit = default(RaycastHit);
 		GameObject myTarget = this.MyTarget;
 		bool result = false;
 		Vector3 vector = this.transform.position + new Vector3((float)0, this.visionyoffset, (float)0);
@@ -600,7 +605,8 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000064 RID: 100 RVA: 0x000093FC File Offset: 0x000075FC
 	public virtual bool CheckFoV()
 	{
-		GameObject myTarget = this.MyTarget;
+        print("alachol 9");
+        GameObject myTarget = this.MyTarget;
 		bool result = false;
 		Vector3 from = myTarget.transform.position - this.transform.position;
 		float num = Vector3.Angle(from, this.transform.forward);
@@ -642,7 +648,8 @@ public class BasicAIScript : MonoBehaviour
 					BasicAIScript basicAIScript = (BasicAIScript)hit.transform.gameObject.GetComponent(typeof(BasicAIScript));
 					if (basicAIScript)
 					{
-						basicAIScript.MyTarget = this.transform.gameObject;
+                        print("alachol 2");
+                        basicAIScript.MyTarget = this.transform.gameObject;
 					}
 				}
 			}
@@ -1082,7 +1089,7 @@ public class BasicAIScript : MonoBehaviour
 	public float prefiretimer;
 
 	// Token: 0x0400013A RID: 314
-	[HideInInspector]
+
 	public GameObject MyTarget;
 
 	// Token: 0x0400013B RID: 315

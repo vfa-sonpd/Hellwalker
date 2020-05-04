@@ -7,12 +7,16 @@ public class EnemyData : ScriptableObject
 {
     public float rangeOfAttack = 1;
 
+    public float speed = 10;
+
     [SerializeField]
     private AnimationClip idleClip;
     [SerializeField]
     private AnimationClip walkingClip;
     [SerializeField]
     private AnimationClip attackClip;
+    [SerializeField]
+    private AnimationClip flinchClip;
 
     public AnimationClip GetWalkingClip()
     {
@@ -27,5 +31,10 @@ public class EnemyData : ScriptableObject
     public AnimationClip GetAttackClip()
     {
         return attackClip;
+    }
+
+    public AnimationClip GetFlinchClip()
+    {
+        return flinchClip;
     }
 }

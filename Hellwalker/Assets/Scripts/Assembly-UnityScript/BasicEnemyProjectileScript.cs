@@ -67,8 +67,17 @@ public class BasicEnemyProjectileScript : MonoBehaviour
 			}
 			if (hit.transform.gameObject.tag == "EnemyTag")
 			{
-				BasicAIScript basicAIScript = (BasicAIScript)hit.transform.gameObject.GetComponent(typeof(BasicAIScript));
-				basicAIScript.MyTarget = this.whospawnedme;
+                try
+                {
+                    print("alachol 3");
+                    BasicAIScript basicAIScript = (BasicAIScript)hit.transform.gameObject.GetComponent(typeof(BasicAIScript));
+                    basicAIScript.MyTarget = this.whospawnedme;
+                }
+                catch(Exception e)
+                {
+                    Debug.Log("no BasicAIScript!");
+                }
+
 			}
 			UnityEngine.Object.Destroy(this.transform.gameObject);
 		}

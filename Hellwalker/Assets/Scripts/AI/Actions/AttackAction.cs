@@ -17,12 +17,19 @@ public class AttackAction : Action
         }
 
         // check if fight animation is over
-        if (controller.animancerState.NormalizedTime >= 1)
+        if (controller.animancerState_layer1.NormalizedTime >= 1)
         {
             controller.PlayAttack();
         }
+
+        controller.LookAtAtarget();
+    }
+
+    public override void OnInterrupt(Enemy controller)
+    {
+        Debug.Log("CALL OnInterrupt");
+        //controller.animancerState_layer1.NormalizedTime = 0;
     }
 
 
-    
 }

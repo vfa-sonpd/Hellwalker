@@ -2,7 +2,7 @@
 public class GameEvent {
 
     public static string pickUpWeapon = "game:pick_up_weapon";
-
+    public static string SPANW_BLOOD_MIST = "game:spawn_blood_mist";
 }
 
 public class WeaponPickupData
