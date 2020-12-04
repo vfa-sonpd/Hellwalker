@@ -36,7 +36,7 @@ public class MyMouseLook : MonoBehaviour
 		this.inputmanager = Essential.Instance.inputManager;
         this.spawnlocktimer = 0.4f;
 		this.flipamount = (float)0;
-		this.cont = (MyControllerScript)GameObject.Find("Player").GetComponent(typeof(MyControllerScript));
+        this.cont = GameObject.FindObjectOfType<MyControllerScript>();
 		//this.hel = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
 		this.select = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
 		this.drunkincreasex = (float)1;

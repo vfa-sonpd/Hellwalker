@@ -701,7 +701,7 @@ public class AttackScript : MonoBehaviour
 	// Token: 0x0600004B RID: 75 RVA: 0x00006C44 File Offset: 0x00004E44
 	public virtual GameObject shootbullet(float inaccuracy, float range, int numberofbullets, float damage, int deathstyle, float forwardpower, float uppower, bool doricnoise, bool ignoretracer)
 	{
-		((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 0.7f;
+		//((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 0.7f;
 		RaycastHit raycastHit = default(RaycastHit);
 		GameObject gameObject = GameObject.Find("PlayerHand");
 		Color startColor = default(Color);
@@ -961,8 +961,8 @@ public class AttackScript : MonoBehaviour
 	// Token: 0x06000050 RID: 80 RVA: 0x00007A00 File Offset: 0x00005C00
 	public virtual void superhotsuddenspeedup()
 	{
-		MyControllerScript myControllerScript = (MyControllerScript)GameObject.Find("Player").GetComponent(typeof(MyControllerScript));
-		Time.timeScale = (float)1;
+		MyControllerScript myControllerScript = GameObject.FindObjectOfType<MyControllerScript>();
+        Time.timeScale = (float)1;
 		Time.fixedDeltaTime = myControllerScript.originaltimestep;
 		myControllerScript.gravityslowmultiplier = (float)1;
 	}

@@ -40,8 +40,6 @@ public class SelectionScript : MonoBehaviour
 
     void Equip(WeaponType weaponType)
     {
-        print("pistol");
-
         // If current weapon is already pistol, return
         if(currentWeapon && currentWeapon.weaponType == weaponType)
         {
@@ -444,8 +442,8 @@ public class SelectionScript : MonoBehaviour
 	{
 		PersistScript persistScript = (PersistScript)GameObject.Find("PERSIST").GetComponent(typeof(PersistScript));
 		//StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
-		PlayerHealthManagement playerHealthManagement = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
-		ScreenSizeScript screenSizeScript = (ScreenSizeScript)GameObject.Find("Player").GetComponent(typeof(ScreenSizeScript));
+		//PlayerHealthManagement playerHealthManagement = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
+		//ScreenSizeScript screenSizeScript = (ScreenSizeScript)GameObject.Find("Player").GetComponent(typeof(ScreenSizeScript));
 		if (persistScript.hardcore)
 		{
 			persistScript.resetweapons();
