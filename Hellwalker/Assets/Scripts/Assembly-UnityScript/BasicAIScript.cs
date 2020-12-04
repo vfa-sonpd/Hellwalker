@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections;
 using Boo.Lang.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityScript.Lang;
 
 // Token: 0x0200000E RID: 14
 [Serializable]
@@ -432,7 +432,7 @@ public class BasicAIScript : MonoBehaviour
 					this.currentshotsequence = 0;
 					if (this.morethanoneattack)
 					{
-						this.attacktypeindex = UnityEngine.Random.Range(0, this.MORE2_mytype.length);
+						this.attacktypeindex = UnityEngine.Random.Range(0, this.MORE2_mytype.Count);
 						this.AssignAlternateAttacks();
 					}
 				}
@@ -577,7 +577,6 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000063 RID: 99 RVA: 0x00009340 File Offset: 0x00007540
 	public virtual bool CheckLoS()
 	{
-        print("alachol 8");
         RaycastHit raycastHit = default(RaycastHit);
 		GameObject myTarget = this.MyTarget;
 		bool result = false;
@@ -663,21 +662,21 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000066 RID: 102 RVA: 0x0000969C File Offset: 0x0000789C
 	public virtual void AddVarsToMoreArray()
 	{
-		this.MORE2_mytype = this.MORE_mytype;
-		this.MORE2_numshots = this.MORE_numshots;
-		this.MORE2_numshotsequence = this.MORE_numshotsequence;
-		this.MORE2_shotsequencetimer = this.MORE_shotsequencetimer;
-		this.MORE2_inaccuracy = this.MORE_inaccuracy;
-		this.MORE2_myprojectile = this.MORE_myprojectile;
-		this.MORE2_projectilespeed = this.MORE_projectilespeed;
-		this.MORE2_mydamage = this.MORE_mydamage;
-		this.MORE2_mygooddamage = this.MORE_mygooddamage;
-		this.MORE2_attackrange = this.MORE_attackrange;
-		this.MORE2_attacksound = this.MORE_attacksound;
-		this.MORE2_prefiresound = this.MORE_prefiresound;
-		this.MORE2_prefiretime = this.MORE_prefiretime;
-		this.MORE2_mymuzzleflash = this.MORE_mymuzzleflash;
-		this.MORE2_mytype.Add(this.mytype);
+        this.MORE2_mytype.AddRange(this.MORE_mytype);
+        this.MORE2_numshots.AddRange(this.MORE_numshots);
+		this.MORE2_numshotsequence.AddRange(this.MORE_numshotsequence);
+        this.MORE2_shotsequencetimer.AddRange(this.MORE_shotsequencetimer);
+        this.MORE2_inaccuracy.AddRange(this.MORE_inaccuracy);
+        this.MORE2_myprojectile.AddRange(this.MORE_myprojectile);
+        this.MORE2_projectilespeed.AddRange(this.MORE_projectilespeed);
+        this.MORE2_mydamage.AddRange(this.MORE_mydamage);
+        this.MORE2_mygooddamage.AddRange(this.MORE_mygooddamage);
+        this.MORE2_attackrange.AddRange(this.MORE_attackrange);
+        this.MORE2_attacksound.AddRange(this.MORE_attacksound);
+        this.MORE2_prefiresound.AddRange(this.MORE_prefiresound);
+        this.MORE2_prefiretime.AddRange(this.MORE_prefiretime);
+        this.MORE2_mymuzzleflash.AddRange(this.MORE_mymuzzleflash);
+        this.MORE2_mytype.Add(this.mytype);
 		this.MORE2_numshots.Add(this.numshots);
 		this.MORE2_numshotsequence.Add(this.numshotsequence);
 		this.MORE2_shotsequencetimer.Add(this.shotsequencetimer);
@@ -1015,46 +1014,46 @@ public class BasicAIScript : MonoBehaviour
 	public GameObject[] MORE_mymuzzleflash;
 
 	// Token: 0x04000124 RID: 292
-	public UnityScript.Lang.Array MORE2_mytype;
+	public ArrayList MORE2_mytype;
 
 	// Token: 0x04000125 RID: 293
-	public UnityScript.Lang.Array MORE2_numshots;
+	public ArrayList MORE2_numshots;
 
 	// Token: 0x04000126 RID: 294
-	public UnityScript.Lang.Array MORE2_numshotsequence;
+	public ArrayList MORE2_numshotsequence;
 
 	// Token: 0x04000127 RID: 295
-	public UnityScript.Lang.Array MORE2_shotsequencetimer;
+	public ArrayList MORE2_shotsequencetimer;
 
 	// Token: 0x04000128 RID: 296
-	public UnityScript.Lang.Array MORE2_inaccuracy;
+	public ArrayList MORE2_inaccuracy;
 
 	// Token: 0x04000129 RID: 297
-	public UnityScript.Lang.Array MORE2_myprojectile;
+	public ArrayList MORE2_myprojectile;
 
 	// Token: 0x0400012A RID: 298
-	public UnityScript.Lang.Array MORE2_projectilespeed;
+	public ArrayList MORE2_projectilespeed;
 
 	// Token: 0x0400012B RID: 299
-	public UnityScript.Lang.Array MORE2_mydamage;
+	public ArrayList MORE2_mydamage;
 
 	// Token: 0x0400012C RID: 300
-	public UnityScript.Lang.Array MORE2_mygooddamage;
+	public ArrayList MORE2_mygooddamage;
 
 	// Token: 0x0400012D RID: 301
-	public UnityScript.Lang.Array MORE2_attackrange;
+	public ArrayList MORE2_attackrange;
 
 	// Token: 0x0400012E RID: 302
-	public UnityScript.Lang.Array MORE2_attacksound;
+	public ArrayList MORE2_attacksound;
 
 	// Token: 0x0400012F RID: 303
-	public UnityScript.Lang.Array MORE2_prefiresound;
+	public ArrayList MORE2_prefiresound;
 
 	// Token: 0x04000130 RID: 304
-	public UnityScript.Lang.Array MORE2_prefiretime;
+	public ArrayList MORE2_prefiretime;
 
 	// Token: 0x04000131 RID: 305
-	public UnityScript.Lang.Array MORE2_mymuzzleflash;
+	public ArrayList MORE2_mymuzzleflash;
 
 	// Token: 0x04000132 RID: 306
 	[HideInInspector]

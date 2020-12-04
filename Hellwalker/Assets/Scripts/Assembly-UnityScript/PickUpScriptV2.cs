@@ -15,8 +15,8 @@ public class PickUpScriptV2 : MonoBehaviour
 	// Token: 0x06000357 RID: 855 RVA: 0x0001F898 File Offset: 0x0001DA98
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.wep = GameObject.Find("WeaponAnimator");
+		this.inputmanager = Essential.Instance.inputManager;
+        this.wep = GameObject.Find("WeaponAnimator");
 		this.plr = GameObject.Find("Player");
 		this.select = (SelectionScript)this.wep.GetComponent(typeof(SelectionScript));
 		this.namelabel = (TextMeshProUGUI)GameObject.Find("NameLabelText").GetComponent(typeof(TextMeshProUGUI));

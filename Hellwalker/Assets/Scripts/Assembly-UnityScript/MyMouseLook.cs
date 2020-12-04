@@ -33,11 +33,11 @@ public class MyMouseLook : MonoBehaviour
 		this.zrotation = (float)0;
 		this.phand = GameObject.Find("PlayerHand");
 		this.flash = GameObject.Find("Flashlight");
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.spawnlocktimer = 0.4f;
+		this.inputmanager = Essential.Instance.inputManager;
+        this.spawnlocktimer = 0.4f;
 		this.flipamount = (float)0;
 		this.cont = (MyControllerScript)GameObject.Find("Player").GetComponent(typeof(MyControllerScript));
-		this.hel = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
+		//this.hel = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
 		this.select = (SelectionScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(SelectionScript));
 		this.drunkincreasex = (float)1;
 		this.drunkincreasey = (float)1;
@@ -156,11 +156,11 @@ public class MyMouseLook : MonoBehaviour
 			this.drunkincreasex = (float)UnityEngine.Random.Range(-1, 2);
 			this.drunkincreasey = (float)UnityEngine.Random.Range(-1, 2);
 		}
-		if (this.hel.drunkness >= (float)4)
-		{
-			num += this.drunkincreasex / (float)2;
-			num2 += this.drunkincreasey / (float)2;
-		}
+		//if (this.hel.drunkness >= (float)4)
+		//{
+		//	num += this.drunkincreasex / (float)2;
+		//	num2 += this.drunkincreasey / (float)2;
+		//}
 		if (this.doroll && this.cont.CheckGrounded())
 		{
 			num = (float)0;

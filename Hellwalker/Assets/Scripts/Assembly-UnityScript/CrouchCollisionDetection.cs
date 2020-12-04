@@ -8,8 +8,8 @@ public class CrouchCollisionDetection : MonoBehaviour
 	// Token: 0x060000E9 RID: 233 RVA: 0x0000C940 File Offset: 0x0000AB40
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.origheight = ((CharacterController)this.GetComponent(typeof(CharacterController))).height;
+		this.inputmanager = Essential.Instance.inputManager;
+        this.origheight = ((CharacterController)this.GetComponent(typeof(CharacterController))).height;
 		this.cont = (MyControllerScript)this.GetComponent(typeof(MyControllerScript));
 	}
 

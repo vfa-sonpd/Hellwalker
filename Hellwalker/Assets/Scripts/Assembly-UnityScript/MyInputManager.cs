@@ -25,7 +25,7 @@ public class MyInputManager : MonoBehaviour
 	public virtual bool GetKeyInput(string action, int keystate)
 	{
 		int num = this.FindIndex(action);
-		bool result;
+        bool result;
 		if (num != -1)
 		{
 			if (keystate == 0)

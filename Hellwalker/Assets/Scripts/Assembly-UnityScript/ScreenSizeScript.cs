@@ -8,7 +8,14 @@ public class ScreenSizeScript : MonoBehaviour
 	// Token: 0x060003D1 RID: 977 RVA: 0x0002468C File Offset: 0x0002288C
 	public virtual void Awake()
 	{
-		this.togglescript = (ToggleUIScript)GameObject.Find("HUDObjects").GetComponent(typeof(ToggleUIScript));
+        try
+        {
+            this.togglescript = (ToggleUIScript)GameObject.Find("HUDObjects").GetComponent(typeof(ToggleUIScript));
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e.Message);
+        }
 	}
 
 	// Token: 0x060003D2 RID: 978 RVA: 0x000246C0 File Offset: 0x000228C0
@@ -70,6 +77,11 @@ public class ScreenSizeScript : MonoBehaviour
 	// Token: 0x060003D4 RID: 980 RVA: 0x00024908 File Offset: 0x00022B08
 	public virtual void sethudstuff()
 	{
+        if(this.togglescript == null)
+        {
+            return;
+        }
+
 		if (this.huddetail == 0)
 		{
 			this.togglescript.hidestuff(true);

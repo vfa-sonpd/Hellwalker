@@ -15,8 +15,8 @@ public class InteractScript : MonoBehaviour
 	// Token: 0x06000250 RID: 592 RVA: 0x00015D0C File Offset: 0x00013F0C
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.cross = GameObject.Find("Crosshair");
+		this.inputmanager = Essential.Instance.inputManager;
+        this.cross = GameObject.Find("Crosshair");
 		this.carry = (PickUpScriptV2)this.GetComponent(typeof(PickUpScriptV2));
 		this.toggleuiscript = (ToggleUIScript)GameObject.Find("HUDObjects").GetComponent(typeof(ToggleUIScript));
 	}

@@ -1,8 +1,6 @@
 ﻿using System;
-using Boo.Lang.Runtime;
 using TMPro;
 using UnityEngine;
-using UnityScript.Lang;
 
 // Token: 0x020000B2 RID: 178
 [Serializable]
@@ -24,70 +22,18 @@ public class StatScript : MonoBehaviour
 	// Token: 0x0600042E RID: 1070 RVA: 0x00028034 File Offset: 0x00026234
 	public virtual void Start()
 	{
-		this.addtomultiplier = 1;
-		this.addtomultiplierperwave = 0;
-		this.multiplierdecayspeed = (float)4;
-		this.multiplierlimit = 25;
-		if (GameObject.Find("SmallDifficultyLabel"))
-		{
-			this.difficultylabel = (TextMeshProUGUI)GameObject.Find("SmallDifficultyLabel").GetComponent(typeof(TextMeshProUGUI));
-		}
-		if (GameObject.Find("PERSIST"))
-		{
-			this.p = (PersistScript)GameObject.Find("PERSIST").GetComponent(typeof(PersistScript));
-		}
-		this.scoredisplay = (TextMeshProUGUI)GameObject.Find("InGameScore").GetComponent(typeof(TextMeshProUGUI));
-		this.savedtimes = new UnityScript.Lang.Array(4);
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.multiplier = (float)1;
-		this.startingenemies = this.countenemies();
-		this.startingsecrets = this.countsecrets();
-		this.disbekills = (TextMeshProUGUI)GameObject.Find("KillLabel").GetComponent(typeof(TextMeshProUGUI));
-		this.smallLevelName = (TextMeshProUGUI)GameObject.Find("SmallLevelName").GetComponent(typeof(TextMeshProUGUI));
-		this.smallLevelName.text = this.levelname;
-		this.disbesecrets = (TextMeshProUGUI)GameObject.Find("SecretsLabel").GetComponent(typeof(TextMeshProUGUI));
-		this.disbetime = (TextMeshProUGUI)GameObject.Find("LevelTime").GetComponent(typeof(TextMeshProUGUI));
-		this.disbemultiplier = (TextMeshProUGUI)GameObject.Find("MultiplierText").GetComponent(typeof(TextMeshProUGUI));
-		this.disbescore = (TextMeshProUGUI)GameObject.Find("PointScoreText").GetComponent(typeof(TextMeshProUGUI));
-		this.disbesavedtime = (TextMeshProUGUI)GameObject.Find("SavedTime").GetComponent(typeof(TextMeshProUGUI));
-		this.disbesavedtime.text = string.Empty;
-		this.sav = (SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript));
-		this.origcoors = this.transform.position;
-		int num = 0;
-		Color color = this.disbetime.color;
-		float num2 = color.a = (float)num;
-		Color color2 = this.disbetime.color = color;
-		int num3 = 0;
-		Color color3 = this.disbekills.color;
-		float num4 = color3.a = (float)num3;
-		Color color4 = this.disbekills.color = color3;
-		int num5 = 0;
-		Color color5 = this.disbesecrets.color;
-		float num6 = color5.a = (float)num5;
-		Color color6 = this.disbesecrets.color = color5;
-		int num7 = 0;
-		Color color7 = this.smallLevelName.color;
-		float num8 = color7.a = (float)num7;
-		Color color8 = this.smallLevelName.color = color7;
-		int num9 = 0;
-		Color color9 = this.disbesavedtime.color;
-		float num10 = color9.a = (float)num9;
-		Color color10 = this.disbesavedtime.color = color9;
-		int num11 = 0;
-		Color color11 = this.difficultylabel.color;
-		float num12 = color11.a = (float)num11;
-		Color color12 = this.difficultylabel.color = color11;
+
 	}
 
 	// Token: 0x0600042F RID: 1071 RVA: 0x000283D8 File Offset: 0x000265D8
-	public virtual void Update()
+	public virtual void Update2()
 	{
 		this.timerstuff();
 		this.checkbutton();
 	}
 
 	// Token: 0x06000430 RID: 1072 RVA: 0x000283E8 File Offset: 0x000265E8
-	public virtual void FixedUpdate()
+	public virtual void FixedUpdate1()
 	{
 		this.difficultylabel.text = string.Empty + this.episodeandlevel + string.Empty;
 		string rhs = string.Empty;
@@ -259,11 +205,7 @@ public class StatScript : MonoBehaviour
 				Color color24 = this.difficultylabel.color = color23;
 			}
 		}
-		if (this.inputmanager.GetKeyInput("record time", 1))
-		{
-			this.savedtimes.Push(this.minutes.ToString("00") + "." + this.seconds.ToString("00.00"));
-			this.savedtimes.RemoveAt(0);
-		}
+
 	}
 
 	// Token: 0x06000435 RID: 1077 RVA: 0x00028B50 File Offset: 0x00026D50
@@ -309,18 +251,7 @@ public class StatScript : MonoBehaviour
 	// Token: 0x06000437 RID: 1079 RVA: 0x00028C10 File Offset: 0x00026E10
 	public virtual void dosavedtimetext()
 	{
-		this.disbesavedtime.text = string.Empty;
-		for (int i = 0; i < this.savedtimes.length; i++)
-		{
-			if (i == this.savedtimes.length - 1 && !RuntimeServices.EqualityOperator(this.savedtimes[i], null))
-			{
-				this.disbesavedtime.text = this.disbesavedtime.text + ("-" + this.savedtimes[i] + "-" + "\n");
-			}
-			else
-			{
-				this.disbesavedtime.text = this.disbesavedtime.text + (" " + this.savedtimes[i] + "\n");
-			}
-		}
+
 	}
 
 	// Token: 0x06000438 RID: 1080 RVA: 0x00028CF8 File Offset: 0x00026EF8
@@ -453,10 +384,6 @@ public class StatScript : MonoBehaviour
 	// Token: 0x0400053B RID: 1339
 	[HideInInspector]
 	public MyInputManager inputmanager;
-
-	// Token: 0x0400053C RID: 1340
-	[HideInInspector]
-	public UnityScript.Lang.Array savedtimes;
 
 	// Token: 0x0400053D RID: 1341
 	[HideInInspector]

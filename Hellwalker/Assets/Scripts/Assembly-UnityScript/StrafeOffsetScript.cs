@@ -8,8 +8,8 @@ public class StrafeOffsetScript : MonoBehaviour
 	// Token: 0x06000441 RID: 1089 RVA: 0x00028F98 File Offset: 0x00027198
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.mscript = (MyMouseLook)GameObject.Find("MainCamera").GetComponent(typeof(MyMouseLook));
+		this.inputmanager = Essential.Instance.inputManager;
+        this.mscript = (MyMouseLook)GameObject.Find("MainCamera").GetComponent(typeof(MyMouseLook));
 	}
 
 	// Token: 0x06000442 RID: 1090 RVA: 0x00028FF0 File Offset: 0x000271F0

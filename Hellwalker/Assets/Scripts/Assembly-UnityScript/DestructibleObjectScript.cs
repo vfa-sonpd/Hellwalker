@@ -12,7 +12,7 @@ public class DestructibleObjectScript : MonoBehaviour
 		this.impactsoundtimer = (float)1;
 		this.rigid = (Rigidbody)this.GetComponent(typeof(Rigidbody));
 		this.aud = (AudioSource)this.GetComponent(typeof(AudioSource));
-		this.sav = (SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript));
+
 		this.origcoors = this.transform.position;
 		this.healthlastframe = this.myhealth;
 		this.orighealth = this.myhealth;
@@ -313,6 +313,7 @@ public class DestructibleObjectScript : MonoBehaviour
 	// Token: 0x0600011D RID: 285 RVA: 0x0000DA00 File Offset: 0x0000BC00
 	public virtual void dosavestuff()
 	{
+        return; 
 		string rhs = null;
 		if (this.sav.dosave || this.sav.doload)
 		{

@@ -16,8 +16,8 @@ public class MyControllerScript : MonoBehaviour
 	// Token: 0x0600031D RID: 797 RVA: 0x0001B788 File Offset: 0x00019988
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.superhot = false;
+		this.inputmanager = Essential.Instance.inputManager;
+        this.superhot = false;
 		this.originalCrouchHeight = ((CharacterController)this.GetComponent(typeof(CharacterController))).height;
 		this.currentHeight = this.originalCrouchHeight;
 		this.normalCamHeight = GameObject.Find("MainCamera").transform.localPosition.y;
@@ -261,20 +261,21 @@ public class MyControllerScript : MonoBehaviour
 				}
 			}
 		}
-		else if (!((InGameMenuScript)GameObject.Find("DasMenu").GetComponent(typeof(InGameMenuScript))).isPaused)
-		{
-			Time.timeScale += Time.deltaTime * (float)8;
-			if (Time.timeScale > (float)1)
-			{
-				Time.timeScale = (float)1;
-			}
-			Time.fixedDeltaTime = Time.timeScale * this.originaltimestep;
-			this.gravityslowmultiplier = (float)1;
-			if (((SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript))).dosave)
-			{
-				Time.timeScale = 0.01f;
-			}
-		}
+		//else 
+  //      if (!((InGameMenuScript)GameObject.Find("DasMenu").GetComponent(typeof(InGameMenuScript))).isPaused)
+		//{
+		//	Time.timeScale += Time.deltaTime * (float)8;
+		//	if (Time.timeScale > (float)1)
+		//	{
+		//		Time.timeScale = (float)1;
+		//	}
+		//	Time.fixedDeltaTime = Time.timeScale * this.originaltimestep;
+		//	this.gravityslowmultiplier = (float)1;
+		//	if (((SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript))).dosave)
+		//	{
+		//		Time.timeScale = 0.01f;
+		//	}
+		//}
 	}
 
 	// Token: 0x06000321 RID: 801 RVA: 0x0001C374 File Offset: 0x0001A574

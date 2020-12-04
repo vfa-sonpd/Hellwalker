@@ -85,7 +85,7 @@ public class Weapon : MonoBehaviour {
     }
     public virtual GameObject shootbullet(float inaccuracy, float range, int numberofbullets, float damage, int deathstyle, float forwardpower, float uppower, bool doricnoise, bool ignoretracer)
     {
-        ((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 0.7f;
+       // ((CrosshairSizeScript)GameObject.Find("Crosshair").GetComponent(typeof(CrosshairSizeScript))).plus = 0.7f;
         RaycastHit raycastHit = default(RaycastHit);
         GameObject gameObject = GameObject.Find("PlayerHand");
         Color startColor = default(Color);

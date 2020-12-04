@@ -24,8 +24,8 @@ public class AttackScript : MonoBehaviour
 		}
 		this.lockonscript = (LockOnScript)GameObject.Find("LockonAimer").GetComponent(typeof(LockOnScript));
 		this.locke = GameObject.Find("LockonAimer");
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.wcam = (Camera)GameObject.Find("WeaponCam").GetComponent(typeof(Camera));
+		this.inputmanager = Essential.Instance.inputManager;
+        this.wcam = (Camera)GameObject.Find("WeaponCam").GetComponent(typeof(Camera));
 		this.wanimate = GameObject.Find("WeaponAnimator");
 		this.msg = GameObject.Find("MessageText");
 		this.smoke = GameObject.Find("SmokeSystem");
@@ -35,7 +35,7 @@ public class AttackScript : MonoBehaviour
 		this.attackdelaytimer = (float)0;
 		this.didattack = true;
 		this.zoomedin = false;
-		this.plrhealth = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
+		//this.plrhealth = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
 		this.plr = GameObject.Find("Player");
 		this.alertfloat = (float)0;
 		this.cam = GameObject.Find("MainCamera");
@@ -186,7 +186,7 @@ public class AttackScript : MonoBehaviour
 			{
 				((SelectionScript)this.GetComponent(typeof(SelectionScript))).weapontogetto = ((SelectionScript)this.GetComponent(typeof(SelectionScript))).holsteredweapon;
 			}
-			if (selectedweapon == 1 && ((SelectionScript)this.GetComponent(typeof(SelectionScript))).havedaikatana && this.plrhealth.myhealth >= (float)100 && !this.pauseafterthrowing)
+			if (selectedweapon == 1 && ((SelectionScript)this.GetComponent(typeof(SelectionScript))).havedaikatana && !this.pauseafterthrowing)
 			{
 				this.initialswordchargetimer += Time.deltaTime;
 				if (this.initialswordchargetimer >= 0.15f)
@@ -215,7 +215,7 @@ public class AttackScript : MonoBehaviour
 			this.doattack = false;
 			this.canchargesword = true;
 			this.initialswordchargetimer = (float)0;
-			if (selectedweapon == 1 && ((SelectionScript)this.GetComponent(typeof(SelectionScript))).havedaikatana && this.plrhealth.myhealth >= (float)100 && !this.pauseafterthrowing)
+			if (selectedweapon == 1 && ((SelectionScript)this.GetComponent(typeof(SelectionScript))).havedaikatana && !this.pauseafterthrowing)
 			{
 				if (this.swordcharge >= (float)1)
 				{
@@ -430,10 +430,10 @@ public class AttackScript : MonoBehaviour
 			this.doattack = false;
 		}
 		float num = (float)1;
-		if (this.plrhealth.drunkness >= (float)4)
-		{
-			num = (float)3;
-		}
+		//if (this.plrhealth.drunkness >= (float)4)
+		//{
+		//	num = (float)3;
+		//}
 		if (!this.didattack)
 		{
 			if (selectedweapon == 1 && this.attackdelaytimer <= this.axeattackframe && !((SelectionScript)this.GetComponent(typeof(SelectionScript))).havedaikatana)

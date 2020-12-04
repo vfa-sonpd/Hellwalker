@@ -15,8 +15,8 @@ public class Headbobber : MonoBehaviour
 	// Token: 0x06000230 RID: 560 RVA: 0x00015348 File Offset: 0x00013548
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.cont = (MyControllerScript)GameObject.Find("Player").GetComponent(typeof(MyControllerScript));
+		this.inputmanager = Essential.Instance.inputManager;
+        this.cont = (MyControllerScript)GameObject.Find("Player").GetComponent(typeof(MyControllerScript));
 	}
 
 	// Token: 0x06000231 RID: 561 RVA: 0x000153A0 File Offset: 0x000135A0

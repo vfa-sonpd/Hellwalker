@@ -22,8 +22,8 @@ public class PlayerHealthManagement : MonoBehaviour
 		{
 			this.persist = (PersistScript)GameObject.Find("PERSIST").GetComponent(typeof(PersistScript));
 		}
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.healthtext = GameObject.Find("HealthText");
+		this.inputmanager = Essential.Instance.inputManager;
+        this.healthtext = GameObject.Find("HealthText");
 		this.armortext = GameObject.Find("ArmorText");
 		this.damageoverlay = GameObject.Find("DamageOverlay");
 		this.lowhealthoverlay = GameObject.Find("LowHealthOverlay");

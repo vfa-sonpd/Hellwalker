@@ -21,8 +21,8 @@ public class SelectionScript : MonoBehaviour
 	// Token: 0x060003DF RID: 991 RVA: 0x00024F48 File Offset: 0x00023148
 	public virtual void Start()
 	{
-		this.inputmanager = (MyInputManager)GameObject.Find("DasMenu").GetComponent(typeof(MyInputManager));
-		this.weapontogetto = 0;
+		this.inputmanager = Essential.Instance.inputManager;
+        this.weapontogetto = 0;
 		this.lastselectedweapon = 1;
 		this.havedaikatana = false;
 		this.ammocounter = GameObject.Find("AmmoCounter");
@@ -443,7 +443,7 @@ public class SelectionScript : MonoBehaviour
 	public virtual void startlevel()
 	{
 		PersistScript persistScript = (PersistScript)GameObject.Find("PERSIST").GetComponent(typeof(PersistScript));
-		StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
+		//StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
 		PlayerHealthManagement playerHealthManagement = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
 		ScreenSizeScript screenSizeScript = (ScreenSizeScript)GameObject.Find("Player").GetComponent(typeof(ScreenSizeScript));
 		if (persistScript.hardcore)
@@ -463,15 +463,15 @@ public class SelectionScript : MonoBehaviour
 		this.permduals = persistScript.permduals;
 		this.permshotguns = persistScript.permshotguns;
 		this.permdaikatana = persistScript.permdaikatana;
-		playerHealthManagement.myhealth = persistScript.playerhealth;
-		playerHealthManagement.myarmor = persistScript.playerarmor;
-		screenSizeScript.currentsize = persistScript.screensize;
-		screenSizeScript.huddetail = persistScript.huddetail;
+		//playerHealthManagement.myhealth = persistScript.playerhealth;
+		//playerHealthManagement.myarmor = persistScript.playerarmor;
+		//screenSizeScript.currentsize = persistScript.screensize;
+		//screenSizeScript.huddetail = persistScript.huddetail;
 		persistScript.pacifistaward = true;
 		persistScript.completionistaward = false;
 		persistScript.ninjaaward = true;
 		persistScript.lowtechaward = true;
-		screenSizeScript.sethudstuff();
+		//screenSizeScript.sethudstuff();
 	}
 
 	// Token: 0x060003E4 RID: 996 RVA: 0x000272F4 File Offset: 0x000254F4
