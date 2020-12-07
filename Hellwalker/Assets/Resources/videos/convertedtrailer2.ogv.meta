@@ -1,10 +1,18 @@
 fileFormatVersion: 2
 guid: d1ef7dc4222669b44956da2ed901697f
-timeCreated: 1583508336
-licenseType: Free
-NativeFormatImporter:
+VideoClipImporter:
   externalObjects: {}
-  mainObjectFileID: 15200000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  serializedVersion: 2
+  frameRange: 0
+  startFrame: -1
+  endFrame: -1
+  colorSpace: 0
+  deinterlace: 0
+  encodeAlpha: 0
+  flipVertical: 0
+  flipHorizontal: 0
+  importAudio: 1
+  targetSettings: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

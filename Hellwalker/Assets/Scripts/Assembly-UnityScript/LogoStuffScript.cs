@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Boo.Lang;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using UnityStandardAssets.ImageEffects;
 
 // Token: 0x02000070 RID: 112
@@ -56,46 +57,46 @@ public class LogoStuffScript : MonoBehaviour
 	// Token: 0x060002C6 RID: 710 RVA: 0x00019CBC File Offset: 0x00017EBC
 	public virtual void switchtext()
 	{
-		if (this.i < this.myimages.Length)
-		{
-			this.myimages[this.i].Stop();
-		}
-		this.i++;
-		if (this.i < this.myimages.Length)
-		{
-			this.holdtimer = this.myholdtimes[this.i];
-			((Bloom)GameObject.Find("Main Camera").GetComponent(typeof(Bloom))).bloomIntensity = this.bloomamount[this.i];
-			this.betweentimer = this.mybetweentimes[this.i];
-			int num = 1;
-			Color color = this.img.color;
-			float num2 = color.a = (float)num;
-			Color color2 = this.img.color = color;
-			this.img.texture = this.myimages[this.i];
-			this.myimages[this.i].Play();
-		}
-		else
-		{
-			this.logosdone = true;
-		}
+		//if (this.i < this.myimages.Length)
+		//{
+		//	this.myimages[this.i].Stop();
+		//}
+		//this.i++;
+		//if (this.i < this.myimages.Length)
+		//{
+		//	this.holdtimer = this.myholdtimes[this.i];
+		//	((Bloom)GameObject.Find("Main Camera").GetComponent(typeof(Bloom))).bloomIntensity = this.bloomamount[this.i];
+		//	this.betweentimer = this.mybetweentimes[this.i];
+		//	int num = 1;
+		//	Color color = this.img.color;
+		//	float num2 = color.a = (float)num;
+		//	Color color2 = this.img.color = color;
+		//	this.img.texture = this.myimages[this.i];
+		//	this.myimages[this.i].Play();
+		//}
+		//else
+		//{
+		//	this.logosdone = true;
+		//}
 	}
 
 	// Token: 0x060002C7 RID: 711 RVA: 0x00019DD0 File Offset: 0x00017FD0
 	public virtual void initialstuff()
 	{
-		this.i = 0;
-		this.holdtimer = this.myholdtimes[0];
-		this.betweentimer = this.mybetweentimes[0];
-		this.img = (RawImage)this.image.GetComponent(typeof(RawImage));
-		((Bloom)GameObject.Find("Main Camera").GetComponent(typeof(Bloom))).bloomIntensity = this.bloomamount[0];
-		int num = 1;
-		Color color = this.img.color;
-		float num2 = color.a = (float)num;
-		Color color2 = this.img.color = color;
-		this.img.texture = this.myimages[0];
-		this.myimages[0].Play();
-		AudioSource audioSource = (AudioSource)this.GetComponent(typeof(AudioSource));
-		audioSource.clip = this.mysounds[this.i];
-		audioSource.Play();
+		//this.i = 0;
+		//this.holdtimer = this.myholdtimes[0];
+		//this.betweentimer = this.mybetweentimes[0];
+		//this.img = (RawImage)this.image.GetComponent(typeof(RawImage));
+		//((Bloom)GameObject.Find("Main Camera").GetComponent(typeof(Bloom))).bloomIntensity = this.bloomamount[0];
+		//int num = 1;
+		//Color color = this.img.color;
+		//float num2 = color.a = (float)num;
+		//Color color2 = this.img.color = color;
+		//this.img.texture = this.myimages[0];
+		//this.myimages[0].Play();
+		//AudioSource audioSource = (AudioSource)this.GetComponent(typeof(AudioSource));
+		//audioSource.clip = this.mysounds[this.i];
+		//audioSource.Play();
 	}
 
     // Token: 0x060002C8 RID: 712 RVA: 0x00019ECC File Offset: 0x000180CC
@@ -117,7 +118,7 @@ public class LogoStuffScript : MonoBehaviour
 	public bool didinitialstuff;
 
 	// Token: 0x04000339 RID: 825
-	public MovieTexture[] myimages;
+	public VideoPlayer[] myimages;
 
 	// Token: 0x0400033A RID: 826
 	public float[] myfadetimes;

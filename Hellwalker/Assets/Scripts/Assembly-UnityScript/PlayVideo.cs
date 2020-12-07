@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Video;
 
 // Token: 0x0200008D RID: 141
 [Serializable]
@@ -22,5 +23,5 @@ public class PlayVideo : MonoBehaviour
 	}
 
 	// Token: 0x0400045C RID: 1116
-	public MovieTexture movtex;
+	public VideoPlayer movtex;
 }
