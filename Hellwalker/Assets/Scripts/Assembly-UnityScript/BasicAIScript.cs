@@ -310,7 +310,6 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x0600005D RID: 93 RVA: 0x00008694 File Offset: 0x00006894
 	public virtual void BasicSetGoal()
 	{
-        print("alachol 4");
         GameObject myTarget = this.MyTarget;
 		NavMeshAgent navMeshAgent = (NavMeshAgent)this.GetComponent(typeof(NavMeshAgent));
 		this.mygoal = myTarget.transform.position;
@@ -343,7 +342,6 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000060 RID: 96 RVA: 0x00008794 File Offset: 0x00006994
 	public virtual void SetNearGoal()
 	{
-        print("alachol 6");
         GameObject myTarget = this.MyTarget;
 		int num = UnityEngine.Random.Range(3, 60);
 		Vector3 vector = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
@@ -606,7 +604,6 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000064 RID: 100 RVA: 0x000093FC File Offset: 0x000075FC
 	public virtual bool CheckFoV()
 	{
-        print("alachol 9");
         GameObject myTarget = this.MyTarget;
 		bool result = false;
 		Vector3 from = myTarget.transform.position - this.transform.position;

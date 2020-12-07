@@ -5,31 +5,26 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    PlayerView playerView;
+
+    // Use this for initialization
+    void Start () {
+        CreatePlayer();
         StartCoroutine(GoForwardUnitTest());
     }
 
     public IEnumerator GoForwardUnitTest()
     {
-        PlayerFactory playerFactory = new PlayerFactory();
-        PlayerView playerView = (PlayerView)playerFactory.Create();
-
-        float seconds = 1;
-
         playerView.ControllerOverride(InputControllerOverride.FORWARD);
 
-        while (seconds > 0)
-        {
-            seconds -= Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
+        yield return new WaitForSeconds(1);
 
         playerView.ControllerOverride(InputControllerOverride.NONE);
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    void CreatePlayer()
+    {
+        PlayerFactory playerFactory = new PlayerFactory();
+        PlayerView playerView = (PlayerView)playerFactory.Create();
+    }
 }
