@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FD8F75E1-A01B-83B4-F7E1-A2D08EA38599}</ProjectGuid>
+    <ProjectGuid>{32189652-D9CA-AA41-85BC-C9F403630323}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>GameAssembly</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -62,53 +62,244 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <None Include="Assets\Shader\HiddenSeparableBlur.shader" />
-    <None Include="Assets\Shader\HiddenCameraMotionBlur.shader" />
-    <None Include="Assets\Shader\HiddenBlendForBloom.shader" />
-    <None Include="Assets\Shader\HiddenBlurAndFlares.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf.shader" />
-    <None Include="Assets\Shader\HiddenBrightPassFilterForBloom.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_bitmap.shader" />
-    <None Include="Assets\Shader\HiddenVignetting.shader" />
-    <None Include="Assets\Shader\HiddenLensFlareCreate.shader" />
-    <None Include="Assets\Shader\HiddenOldSchoolPixelFX.shader" />
-    <None Include="Assets\Shader\ProjectorMultiply.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf-surface-mobile.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_bitmap-mobile.shader" />
-    <None Include="Assets\Shader\HiddenSeparableBlurPlus.shader" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
-    <None Include="Assets\Shader\HiddenBlend.shader" />
-    <None Include="Assets\Shader\ProjectorLight.shader" />
-    <None Include="Assets\Shader\HiddenProBuilderHideVertices.shader" />
-    <None Include="Assets\Shader\HiddenBlendOneOne.shader" />
-    <None Include="Assets\Shader\HiddenContrastComposite.shader" />
-    <None Include="Assets\Shader\HiddenProBuilderFacePicker.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf-mobile overlay.shader" />
-    <None Include="Assets\Shader\HiddenBrightPassFilter2.shader" />
-    <None Include="Assets\Shader\ProBuilderStandard Vertex Color.shader" />
-    <None Include="Assets\Resources\shaders\ui-unlit-texturedfont.shader" />
-    <None Include="Assets\Shader\CustomSimpleLUT.shader" />
-    <None Include="Assets\Shader\ProBuilderUnlitVertexColor.shader" />
-    <None Include="Assets\Shader\HiddenGrayscale Effect.shader" />
-    <None Include="Assets\Shader\HiddenMotionBlurClear.shader" />
-    <None Include="Assets\Shader\HiddenMotionBlur.shader" />
-    <None Include="Assets\Resources\shaders\distortshader.shader" />
-    <None Include="Assets\Shader\HiddenMultipassHollywoodFlares.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf overlay.shader" />
-    <None Include="Assets\Shader\HiddenProBuilderVertexPicker.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf-mobile.shader" />
-    <None Include="Assets\Resources\shaders\watershader.shader" />
-    <None Include="Assets\Shader\HiddenCameraMotionBlurDX11.shader" />
-    <None Include="Assets\Shader\HiddenColor Correction Effect.shader" />
-    <None Include="Assets\Resources\shaders\tmpro_sdf-surface.shader" />
+    <Compile Include="Assets\Scripts\AI\Actions\Action.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\ApproachTargetAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\AttackAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\IdleAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Decisions\AttackAgainDecision.cs" />
+    <Compile Include="Assets\Scripts\AI\Decisions\Decision.cs" />
+    <Compile Include="Assets\Scripts\AI\Decisions\LookDecision.cs" />
+    <Compile Include="Assets\Scripts\AI\Decisions\TargetDistanceDecision.cs" />
+    <Compile Include="Assets\Scripts\AI\States\State.cs" />
+    <Compile Include="Assets\Scripts\AI\Transition.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AlertTriggerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AmbientSoundNodeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AmbientSoundPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AnimatedRagdollScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ArrowHitScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ArrowScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AttackScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\AuthenticFlashlightScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BasicAIScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BasicEnemyProjectileScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BerserkScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BindButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BindControlsScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BlowingDustScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BlurDecrease.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BossControllerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BounceSparks.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BuzzSawHitScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\BuzzSawInteractScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ChangePitchOverTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CheatScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ClearMessageAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CreateFileNamesScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CreateIniFile.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CrosshairBasedOnWeaponScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CrosshairColorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CrosshairSizeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CrosshairStyleScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CrouchCollisionDetection.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CupboardDestroyScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\CupboardScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DecreaseBarOverTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DecreaseUIAlphaOverTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DelayObjectMove.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DemoEndKeySenseScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DestroyObjectAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DestroyParticleOnDeath.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DestructibleObjectScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableFogForCamera.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableForLowSpecModeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableLightForLowSpecMode.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableSoundAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisableSoundIfNotOutside.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DisplayPlayerCoors.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DoDamageOverTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DoorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\DukeBrothersSpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EndLevelTriggerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EndTextMusicSCript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\Endless3DPointsScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EndlessModeSpawnNodeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EndlessModeSpawnerControllerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EnemyDeathSensorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EnemyIndicatorObjectScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EnemySpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\EnergyProjectileScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ExplosionScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ExplosionWallScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FadeInCanvasGroup.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FadeOutCanvasGroup.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FadeTriggerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FakeDosLoading.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FileButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FilteringSwitcherScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FireAnomolyScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FirstSceneScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FlashlightOnOffScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FloatingPointNumbersScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FollowOb.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FramerateLock.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FreezePlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\FromMapToMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\GameMenuButtonsScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\GrappleTracerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\HandScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\Headbobber.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\HealthPickupScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\HorFovScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ImageFadeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ImagePulseScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\InGameMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\InheritText.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\InteractScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\InteractText.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ItemSpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\JumpBob.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\JumpPadScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LadderUseScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LevelNameScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LevelWinStuffScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LightTriggerMASTERSCRIPT.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LightTriggerNODE.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LightTriggerOBJECTSCRIPT.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LightTriggerPHYSICSScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LightTriggerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LoadingBarScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LoadingScreenAudioScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LoadoutEntryScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LoadoutStuffScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LockOnScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LogoStuffScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\LowSpecModeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MainMenuEnableController.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MainMenuFilterDisable.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MainMenuPressAnyKeyScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MapNodeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MenuButtonsScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MenuCursorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MirrorColorSettings.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MirrorMainCameraFov.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MusicNodeGHOSTScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MusicNodeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MusicPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MyControllerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MyInputManager.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\MyMouseLook.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\NameDisplayScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\NarrativeTextScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\NormalDoorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ObjectButtonActivation.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\OldSchoolPixelFX.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\OldSchoolPixelFXDither.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\OldSchoolPixelFXDitherMobile.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\OldSchoolPixelFXMobile.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PersistScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PickUpScriptV2.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PickupGravity.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PitcheBasedOnTimescale.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlayMenuShotgunSound.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlaySoundObjectDestroyScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlaySoundOnUseSCript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlayVideo.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlayerHealthManagement.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlayerPickupScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PlayerSaveScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ProjectileSpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\PulseMaterials.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\RestartMusic.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\RivetHitScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\RotateConstantly.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\RotateConstantlyLoading.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\RotationPulseScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SaveFileHighlightSCript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SaveManagerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SavePickupScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ScarecrowPostSCript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ScreenSizeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ScreenshotImageScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ScrollScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SelectionScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetAudioSourceVolumeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetFilteringModeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetFogColor.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetImageAlphaZeroAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetListenerVolumeBasedOnVolume.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetObjectInactiveAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetPlayerHealthScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetRandomSeed.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SetRigidVelocityToZilch.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ShaderScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ShadowProjectorScripts.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ShowerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SinkScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SkyColorScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SkyScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SlowdownHandlerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\StatScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\StingerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\StrafeOffsetScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\SwitchRoomAfterTime.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TeleportEnemiesInScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TeleporterGoalScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TeleporterScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TextTriggerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TextureAnimation.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ThumperScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ToggleLightScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ToggleUIScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ToiletBowlScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ToiletScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ToolTipScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TouchSecretScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TracerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TreasureChestScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\TutorialMessageOnObjectDestroy.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\UIFadeScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\UnlockMouseScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\UpdateSettingsScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WaterAnimator.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WaterMovementScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WaterScrollerScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WeaponFlashScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WeaponPickupScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\WeaponScaleScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\ZoomScript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\grinderscript.cs" />
+    <Compile Include="Assets\Scripts\Assembly-UnityScript\visceracookscript.cs" />
+    <Compile Include="Assets\Scripts\Game\GameStart.cs" />
+    <Compile Include="Assets\Scripts\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanClassPool.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanFinger.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanPool.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanPooledRigidbody.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanPooledRigidbody2D.cs" />
+    <Compile Include="Assets\Scripts\Lean\LeanTouch.cs" />
+    <Compile Include="Assets\Scripts\Misc\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Misc\JohnDoe.cs" />
+    <Compile Include="Assets\Scripts\ObjectFactory.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\ObjectView.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerView.cs" />
+    <Compile Include="Assets\Scripts\PooledParticle.cs" />
+    <Compile Include="Assets\Scripts\RVOAgent.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\EnemyData\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\WeaponData.cs" />
+    <Compile Include="Assets\Scripts\SimpleAI.cs" />
+    <Compile Include="Assets\Scripts\Singletons\Essential.cs" />
+    <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Weapons\HuntingRifle.cs" />
+    <Compile Include="Assets\Scripts\Weapons\MachineGun.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Shotgun.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <None Include="Assets\Scripts\GameAssembly.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -291,6 +482,18 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.ClipperLib">
       <HintPath>D:/Hellwalker/Hellwalker/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
@@ -673,120 +876,17 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Monetization">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Animancer.Examples.csproj">
-      <Project>{C14EF530-C400-0EE1-2AA2-FBC9512418B1}</Project>
-      <Name>Animancer.Examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{E9AA71EF-FEC1-DE7C-1877-7728DB2AA085}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="Animancer.FSM.csproj">
-      <Project>{1A161BCF-F926-B1DF-3986-AF1A1A673D59}</Project>
-      <Name>Animancer.FSM</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{B1BA4258-39BD-FBE6-4900-34423CF29794}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{E1A83738-A042-6C5A-D5CC-8B577E13C892}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ootii.Demos.csproj">
-      <Project>{0CF98C15-1C10-0ACF-C766-AA4067A2177B}</Project>
-      <Name>ootii.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="ootii.csproj">
-      <Project>{73C3C4F9-16BA-9D76-F1C9-E1D5745E8CBA}</Project>
-      <Name>ootii</Name>
-    </ProjectReference>
-    <ProjectReference Include="ootii.Editor.csproj">
-      <Project>{45716C2C-772A-257B-F6B9-F765EA5DA6CE}</Project>
-      <Name>ootii.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Animancer.csproj">
-      <Project>{476A1543-4775-52F9-1DF7-4CA943C52FFC}</Project>
-      <Name>Animancer</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameAssembly.csproj">
-      <Project>{32189652-D9CA-AA41-85BC-C9F403630323}</Project>
-      <Name>GameAssembly</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityStandardAsset.csproj">
       <Project>{F8E6DAE2-29BE-F51B-F968-A6092D84F73A}</Project>
       <Name>UnityStandardAsset</Name>
@@ -794,6 +894,18 @@
     <ProjectReference Include="Plugins.csproj">
       <Project>{A7999B52-EF68-F644-B742-7898B51DD912}</Project>
       <Name>Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="ootii.csproj">
+      <Project>{73C3C4F9-16BA-9D76-F1C9-E1D5745E8CBA}</Project>
+      <Name>ootii</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{E9AA71EF-FEC1-DE7C-1877-7728DB2AA085}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Animancer.csproj">
+      <Project>{476A1543-4775-52F9-1DF7-4CA943C52FFC}</Project>
+      <Name>Animancer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

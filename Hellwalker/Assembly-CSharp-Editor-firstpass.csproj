@@ -764,6 +764,10 @@
       <Project>{476A1543-4775-52F9-1DF7-4CA943C52FFC}</Project>
       <Name>Animancer</Name>
     </ProjectReference>
+    <ProjectReference Include="GameAssembly.csproj">
+      <Project>{32189652-D9CA-AA41-85BC-C9F403630323}</Project>
+      <Name>GameAssembly</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
