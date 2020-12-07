@@ -6,7 +6,11 @@ public class PlayerFactory :  ObjectFactory {
     public override ObjectView Create(Context context)
     {
         //Load character
-        PlayerView playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+        PlayerView playerView = GameObject.FindObjectOfType<PlayerView>();
+        if (!playerView)
+        {
+            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+        }
         //Load context
         playerView.OnCreate(context);
 
@@ -16,7 +20,11 @@ public class PlayerFactory :  ObjectFactory {
     public override ObjectView Create()
     {
         //Load character
-        PlayerView playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+        PlayerView playerView = GameObject.FindObjectOfType<PlayerView>();
+        if(!playerView)
+        {
+            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+        }
 
         return playerView;
     }

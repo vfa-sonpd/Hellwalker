@@ -8,7 +8,7 @@ public class SavePickupScript : MonoBehaviour
 	// Token: 0x060003C5 RID: 965 RVA: 0x00024418 File Offset: 0x00022618
 	public virtual void Start()
 	{
-		this.sav = (SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript));
+		//this.sav = (SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript));
 		this.origcoors = this.transform.position;
 	}
 
@@ -21,26 +21,7 @@ public class SavePickupScript : MonoBehaviour
 	// Token: 0x060003C7 RID: 967 RVA: 0x00024464 File Offset: 0x00022664
 	public virtual void dosavestuff()
 	{
-		string rhs = null;
-		if (this.sav.dosave || this.sav.doload)
-		{
-			rhs = "?tag=" + this.transform.gameObject.name + this.origcoors.ToString();
-		}
-		if (this.sav.dosave)
-		{
-			ES2.Save<Transform>(this.transform, this.sav.filename + rhs + "tr4n5orm");
-		}
-		if (this.sav.doload)
-		{
-			if (ES2.Exists(this.sav.filename + rhs + "tr4n5orm"))
-			{
-				ES2.Load<Transform>(this.sav.filename + rhs + "tr4n5orm", this.transform);
-			}
-			else
-			{
-				UnityEngine.Object.Destroy(this.transform.gameObject);
-			}
-		}
+
 	}
 
 	// Token: 0x060003C8 RID: 968 RVA: 0x00024564 File Offset: 0x00022764

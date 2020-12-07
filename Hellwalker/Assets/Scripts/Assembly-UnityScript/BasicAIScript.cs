@@ -21,15 +21,15 @@ public class BasicAIScript : MonoBehaviour
 	}
 
 	// Token: 0x06000057 RID: 87 RVA: 0x00007B90 File Offset: 0x00005D90
-	public virtual void Start()
+	public void Start()
 	{
 		this.ThisStoresBossStartingHealth = ((DestructibleObjectScript)this.GetComponent(typeof(DestructibleObjectScript))).myhealth;
-		this.sav = (SaveManagerScript)GameObject.Find("SaveManager").GetComponent(typeof(SaveManagerScript));
+
 		this.origcoors = this.transform.position;
 		this.idlesoundtimer = UnityEngine.Random.Range(this.idlesoundactivatetimerange.x, this.idlesoundactivatetimerange.y);
-		this.AddVarsToMoreArray();
+	//	this.AddVarsToMoreArray();
 		this.sequencetimer = (float)0;
-		this.statscript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
+        this.statscript = GameObject.FindObjectOfType<StatScript>();
 		this.AITimer = UnityEngine.Random.Range(0.1f, this.AIUpdateSpeed);
 		this.attacktimer = UnityEngine.Random.Range(this.attacktime / (float)4, this.attacktime / (float)2);
 		this.MyTarget = GameObject.Find("Player");
@@ -46,10 +46,11 @@ public class BasicAIScript : MonoBehaviour
 			this.nav.enabled = false;
 			this.nav.enabled = true;
 		}
-		this.aud = (AudioSource)this.GetComponent(typeof(AudioSource));
+		//this.aud = (AudioSource)this.GetComponent(typeof(AudioSource));
 		this.disbeplayer = GameObject.Find("Player");
-		this.disbecamera = GameObject.Find("MainCamera");
-		this.disbeattack = (AttackScript)GameObject.Find("WeaponAnimator").GetComponent(typeof(AttackScript));
+        this.disbecamera = Camera.main.gameObject;
+        print(disbecamera);
+        this.disbeattack = GameObject.FindObjectOfType<AttackScript>();
 	}
 
 	// Token: 0x06000058 RID: 88 RVA: 0x00007D88 File Offset: 0x00005F88
@@ -133,7 +134,8 @@ public class BasicAIScript : MonoBehaviour
 		}
 		if (this.MyTarget == this.disbeplayer)
 		{
-			this.shottarget = this.disbecamera.transform.position;
+            this.disbecamera = Camera.main.gameObject;
+            this.shottarget = this.disbecamera.transform.position;
 		}
 		else
 		{
@@ -262,13 +264,13 @@ public class BasicAIScript : MonoBehaviour
 		{
 			animator.SetTrigger("AlertedTrigger");
 		}
-		this.aud.clip = this.alertsound;
+		//this.aud.clip = this.alertsound;
 		if (this.dootherawakesounds)
 		{
-			this.aud.clip = this.RandomAwakeSound();
+			//this.aud.clip = this.RandomAwakeSound();
 		}
-		this.aud.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
-		this.aud.Play();
+		//this.aud.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+		//this.aud.Play();
 		if (this.mymovementtype == 0 || this.mymovementtype == 1)
 		{
 			this.BasicSetGoal();
@@ -613,6 +615,12 @@ public class BasicAIScript : MonoBehaviour
 		{
 			result = true;
 		}
+
+        if(!this.disbeattack)
+        {
+            disbeattack = GameObject.FindObjectOfType<AttackScript>();
+        }
+
 		if (this.disbeattack.alertfloat > (float)0)
 		{
 			result = true;
@@ -764,46 +772,7 @@ public class BasicAIScript : MonoBehaviour
 	// Token: 0x06000069 RID: 105 RVA: 0x00009B4C File Offset: 0x00007D4C
 	public virtual void dosavestuff()
 	{
-		string rhs = null;
-		if (this.sav.dosave || this.sav.doload)
-		{
-			rhs = "?tag=" + this.transform.gameObject.name + this.origcoors.ToString();
-		}
-		if (this.sav.dosave)
-		{
-			ES2.Save<Transform>(this.transform, this.sav.filename + rhs + "tr4n5orm");
-			ES2.Save<int>(this.sav.boolToInt(this.AMAWAKE), this.sav.filename + rhs + "4w4k3");
-			ES2.Save<float>(this.awakedelay, this.sav.filename + rhs + "4w4k3d3l4y");
-			ES2.Save<float>(this.ThisStoresBossStartingHealth, this.sav.filename + rhs + "bawssh341th");
-			ES2.Save<int>(this.sav.boolToInt(this.berserkenemy), this.sav.filename + rhs + "craycray");
-		}
-		if (this.sav.doload && ES2.Exists(this.sav.filename + rhs + "tr4n5orm"))
-		{
-			ES2.Load<Transform>(this.sav.filename + rhs + "tr4n5orm", this.transform);
-			NavMeshAgent navMeshAgent = (NavMeshAgent)this.GetComponent(typeof(NavMeshAgent));
-			if (navMeshAgent)
-			{
-				navMeshAgent.Warp(this.transform.position);
-			}
-			this.AMAWAKE = this.sav.intToBool(ES2.Load<int>(this.sav.filename + rhs + "4w4k3"));
-			this.awakedelay = ES2.Load<float>(this.sav.filename + rhs + "4w4k3d3l4y");
-			this.ThisStoresBossStartingHealth = ES2.Load<float>(this.sav.filename + rhs + "bawssh341th");
-			this.berserkenemy = this.sav.intToBool(ES2.Load<int>(this.sav.filename + rhs + "craycray"));
-			Animator animator = (Animator)this.GetComponent(typeof(Animator));
-			if (animator)
-			{
-				animator.SetTrigger("AlertedTrigger");
-			}
-			if (this.isboss && (DestructibleObjectScript)this.GetComponent(typeof(DestructibleObjectScript)) && this.AMAWAKE)
-			{
-				((BossControllerScript)GameObject.Find("Player").GetComponent(typeof(BossControllerScript))).BossStartingHealth = ((BossControllerScript)GameObject.Find("Player").GetComponent(typeof(BossControllerScript))).BossStartingHealth + this.ThisStoresBossStartingHealth;
-				((BossControllerScript)GameObject.Find("Player").GetComponent(typeof(BossControllerScript))).BossName = this.bossname;
-				if (this.isboss)
-				{
-					((BossControllerScript)this.disbeplayer.GetComponent(typeof(BossControllerScript))).addtolist(this.transform.gameObject);
-				}
-			}
-		}
+
 	}
 
 	// Token: 0x0600006A RID: 106 RVA: 0x00009ED8 File Offset: 0x000080D8
@@ -1104,7 +1073,6 @@ public class BasicAIScript : MonoBehaviour
 	public float originalattacktime;
 
 	// Token: 0x0400013E RID: 318
-	[HideInInspector]
 	public NavMeshAgent nav;
 
 	// Token: 0x0400013F RID: 319
@@ -1120,7 +1088,6 @@ public class BasicAIScript : MonoBehaviour
 	public GameObject disbecamera;
 
 	// Token: 0x04000142 RID: 322
-	[HideInInspector]
 	public AttackScript disbeattack;
 
 	// Token: 0x04000143 RID: 323
@@ -1140,7 +1107,6 @@ public class BasicAIScript : MonoBehaviour
 	public float ThisStoresBossStartingHealth;
 
 	// Token: 0x04000147 RID: 327
-	[HideInInspector]
 	public StatScript statscript;
 
 	// Token: 0x04000148 RID: 328

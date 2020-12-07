@@ -30,7 +30,7 @@ public class BasicEnemyProjectileScript : MonoBehaviour
 	{
 		if (hit.transform.gameObject.name == "Player")
 		{
-			((PlayerHealthManagement)hit.transform.gameObject.GetComponent(typeof(PlayerHealthManagement))).takedamage(this.mydamage);
+			//((PlayerHealthManagement)hit.transform.gameObject.GetComponent(typeof(PlayerHealthManagement))).takedamage(this.mydamage);
 		}
 		if (hit.transform.gameObject != this.whospawnedme)
 		{

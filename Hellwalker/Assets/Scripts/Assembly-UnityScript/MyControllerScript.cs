@@ -1,12 +1,22 @@
 ﻿using System;
 using UnityEngine;
 
+public enum InputControllerOverride
+{
+    NONE,
+    FORWARD,
+    BACKWARD,
+    LEFT,
+    RIGHT
+}
+
 // Token: 0x0200007F RID: 127
 [Serializable]
 public class MyControllerScript : MonoBehaviour
 {
-	// Token: 0x0600031C RID: 796 RVA: 0x0001B768 File Offset: 0x00019968
-	public MyControllerScript()
+    InputControllerOverride inputOverride;
+    // Token: 0x0600031C RID: 796 RVA: 0x0001B768 File Offset: 0x00019968
+    public MyControllerScript()
 	{
 		this.canjump = true;
 		this.dolandbob = true;
@@ -26,6 +36,11 @@ public class MyControllerScript : MonoBehaviour
 		this.originaltimestep = Time.fixedDeltaTime;
 		this.gravityslowmultiplier = (float)1;
 	}
+
+    public void Override(InputControllerOverride inputOverride)
+    {
+        this.inputOverride = inputOverride;
+    }
 
 	// Token: 0x0600031E RID: 798 RVA: 0x0001B840 File Offset: 0x00019A40
 	public virtual void Update()
@@ -358,19 +373,19 @@ public class MyControllerScript : MonoBehaviour
 		}
 		if (!this.inwater)
 		{
-			if (this.inputmanager.GetKeyInput("right", 0))
+			if (this.inputmanager.GetKeyInput("right", 0) || inputOverride == InputControllerOverride.RIGHT)
 			{
 				this.InputDir += this.transform.right * this.InputAccel;
 			}
-			if (this.inputmanager.GetKeyInput("left", 0))
+			if (this.inputmanager.GetKeyInput("left", 0) || inputOverride == InputControllerOverride.LEFT)
 			{
 				this.InputDir -= this.transform.right * this.InputAccel;
 			}
-			if (this.inputmanager.GetKeyInput("forward", 0))
+			if (this.inputmanager.GetKeyInput("forward", 0) || inputOverride == InputControllerOverride.FORWARD)
 			{
 				this.InputDir += this.transform.forward * this.InputAccel;
 			}
-			if (this.inputmanager.GetKeyInput("backward", 0))
+			if (this.inputmanager.GetKeyInput("backward", 0) || inputOverride == InputControllerOverride.BACKWARD)
 			{
 				this.InputDir -= this.transform.forward * this.InputAccel;
 			}
@@ -681,7 +696,6 @@ public class MyControllerScript : MonoBehaviour
 	public float InputAccel;
 
 	// Token: 0x0400039A RID: 922
-	[HideInInspector]
 	public Vector3 InputDir;
 
 	// Token: 0x0400039B RID: 923
