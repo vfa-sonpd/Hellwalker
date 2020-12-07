@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animancer.FSM", "Animancer.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ootii.Demos", "ootii.Demos.csproj", "{0CF98C15-1C10-0ACF-C766-AA4067A2177B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{2C708665-8C8F-4EC5-FE98-F1867CC46223}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{E1A83738-A042-6C5A-D5CC-8B577E13C892}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{B1BA4258-39BD-FBE6-4900-34423CF29794}"
@@ -73,6 +75,10 @@ Global
 		{0CF98C15-1C10-0ACF-C766-AA4067A2177B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF98C15-1C10-0ACF-C766-AA4067A2177B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF98C15-1C10-0ACF-C766-AA4067A2177B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Release|Any CPU.ActiveCfg = Release|Any CPU
