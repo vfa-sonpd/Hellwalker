@@ -129,7 +129,7 @@ public class DestructibleObjectScript : MonoBehaviour
 			}
 		}
 		this.transform.gameObject.active = false;
-		UnityEngine.Object.Destroy(this.transform.gameObject);
+		//UnityEngine.Object.Destroy(this.transform.gameObject);
 		if (this.spawnitems)
 		{
 			this.doitemspawn();

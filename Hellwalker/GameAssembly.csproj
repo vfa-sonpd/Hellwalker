@@ -271,8 +271,12 @@
     <Compile Include="Assets\Scripts\Assembly-UnityScript\ZoomScript.cs" />
     <Compile Include="Assets\Scripts\Assembly-UnityScript\grinderscript.cs" />
     <Compile Include="Assets\Scripts\Assembly-UnityScript\visceracookscript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Soldier\SoldierFactory.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Soldier\SoldierView.cs" />
     <Compile Include="Assets\Scripts\Game\GameStart.cs" />
     <Compile Include="Assets\Scripts\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\Gibs\GibFactory.cs" />
+    <Compile Include="Assets\Scripts\Gibs\GibView.cs" />
     <Compile Include="Assets\Scripts\Lean\LeanClassPool.cs" />
     <Compile Include="Assets\Scripts\Lean\LeanFinger.cs" />
     <Compile Include="Assets\Scripts\Lean\LeanPool.cs" />

@@ -28,7 +28,7 @@ namespace Tests
                 yield return new WaitForEndOfFrame();
             }
 
-            PlayerFactory playerFactory = new PlayerFactory();
+            PlayerFactory<PlayerView> playerFactory = new PlayerFactory<PlayerView>();
             PlayerView playerView = (PlayerView)playerFactory.Create();
 
             playerView.ControllerOverride(InputControllerOverride.FORWARD);
@@ -36,6 +36,48 @@ namespace Tests
             yield return new WaitForSeconds(1);
 
             playerView.ControllerOverride(InputControllerOverride.NONE);
+
+            yield return new WaitForSeconds(3000);
+        }
+
+        [UnityTest]
+        public IEnumerator SoldierPoolingTest()
+        {
+            var asyncLoadLevel = SceneManager.LoadSceneAsync("RefractorScene", LoadSceneMode.Single);
+
+            while (!asyncLoadLevel.isDone)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            // Setup factories...
+            SoldierFactory<SoldierView> factory = new SoldierFactory<SoldierView>();
+            List<SoldierView> list = new List<SoldierView>();
+
+            float xPos = -83f;
+
+            // Start spawning soldiers...
+            for (int i = 0; i < 5; i ++)
+            {
+                list.Add( factory.Create(new Context(new Vector3(xPos, -175f, 396))) as SoldierView);
+                xPos -= 2;
+            }
+
+            yield return new WaitForSeconds(1);
+
+            // Start forcing them to suicide...
+            foreach(SoldierView soldier in list)
+            {
+                soldier.Suicide();
+                yield return new WaitForSeconds(0.5f);
+            }
+
+            // Clear the list...
+            list.Clear();
+
+            yield return new WaitForSeconds(1f);
+
+            // Start Spawning them again
 
             yield return new WaitForSeconds(3000);
         }

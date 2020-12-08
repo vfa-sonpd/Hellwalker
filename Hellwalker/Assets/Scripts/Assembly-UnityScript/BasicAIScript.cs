@@ -49,7 +49,6 @@ public class BasicAIScript : MonoBehaviour
 		//this.aud = (AudioSource)this.GetComponent(typeof(AudioSource));
 		this.disbeplayer = GameObject.Find("Player");
         this.disbecamera = Camera.main.gameObject;
-        print(disbecamera);
         this.disbeattack = GameObject.FindObjectOfType<AttackScript>();
 	}
 

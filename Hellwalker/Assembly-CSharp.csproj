@@ -70,6 +70,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\test.cs" />
     <None Include="Assets\Shader\HiddenSeparableBlur.shader" />
     <None Include="Assets\Shader\HiddenCameraMotionBlur.shader" />
     <None Include="Assets\Shader\HiddenBlendForBloom.shader" />
@@ -679,6 +680,9 @@
     <Reference Include="UnityEngine.Monetization">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -702,6 +706,9 @@
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
@@ -735,12 +742,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>D:/Hellwalker/Hellwalker/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
@@ -779,21 +780,21 @@
       <Project>{45716C2C-772A-257B-F6B9-F765EA5DA6CE}</Project>
       <Name>ootii.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Animancer.csproj">
-      <Project>{476A1543-4775-52F9-1DF7-4CA943C52FFC}</Project>
-      <Name>Animancer</Name>
-    </ProjectReference>
     <ProjectReference Include="GameAssembly.csproj">
       <Project>{32189652-D9CA-AA41-85BC-C9F403630323}</Project>
       <Name>GameAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="Plugins.csproj">
+      <Project>{A7999B52-EF68-F644-B742-7898B51DD912}</Project>
+      <Name>Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="UnityStandardAsset.csproj">
       <Project>{F8E6DAE2-29BE-F51B-F968-A6092D84F73A}</Project>
       <Name>UnityStandardAsset</Name>
     </ProjectReference>
-    <ProjectReference Include="Plugins.csproj">
-      <Project>{A7999B52-EF68-F644-B742-7898B51DD912}</Project>
-      <Name>Plugins</Name>
+    <ProjectReference Include="Animancer.csproj">
+      <Project>{476A1543-4775-52F9-1DF7-4CA943C52FFC}</Project>
+      <Name>Animancer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

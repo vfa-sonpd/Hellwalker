@@ -24,7 +24,7 @@ public class GameStart : MonoBehaviour {
 
     void CreatePlayer()
     {
-        PlayerFactory playerFactory = new PlayerFactory();
+        PlayerFactory<PlayerView> playerFactory = new PlayerFactory<PlayerView>();
         PlayerView playerView = (PlayerView)playerFactory.Create();
     }
 }

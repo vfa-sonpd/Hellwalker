@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFactory :  ObjectFactory {
+public class PlayerFactory<T> :  ObjectFactory<T>
+{
     public override ObjectView Create(Context context)
     {
         //Load character
         PlayerView playerView = GameObject.FindObjectOfType<PlayerView>();
         if (!playerView)
         {
-            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player", true);
         }
         //Load context
         playerView.OnCreate(context);
@@ -23,7 +24,7 @@ public class PlayerFactory :  ObjectFactory {
         PlayerView playerView = GameObject.FindObjectOfType<PlayerView>();
         if(!playerView)
         {
-            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player");
+            playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player", true);
         }
 
         return playerView;

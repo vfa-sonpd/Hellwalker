@@ -52,11 +52,8 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
   - Water
   - UI
-  -
-  -
   - WeaponLayer
   - RagdollLayer
   - PlayerLayer
@@ -77,10 +74,6 @@ TagManager:
   - outsizecameraviewportlayer
   - LightBlockingLayer
   - PassThroughLightBlockingLayer
-  -
-  -
-  -
-  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0
