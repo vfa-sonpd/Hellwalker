@@ -54,30 +54,29 @@ namespace Tests
             SoldierFactory<SoldierView> factory = new SoldierFactory<SoldierView>();
             List<SoldierView> list = new List<SoldierView>();
 
-            float xPos = -83f;
 
-            // Start spawning soldiers...
-            for (int i = 0; i < 5; i ++)
+            for (int j = 0; j < 5; j++)
             {
-                list.Add( factory.Create(new Context(new Vector3(xPos, -175f, 396))) as SoldierView);
-                xPos -= 2;
-            }
+                float xPos = -83f;
 
-            yield return new WaitForSeconds(1);
+                // Start spawning soldiers...
+                for (int i = 0; i < 5; i++)
+                {
+                    list.Add(factory.Create(new Context(new Vector3(xPos, -175f, 396))) as SoldierView);
+                    xPos -= 2;
+                }
 
-            // Start forcing them to suicide...
-            foreach(SoldierView soldier in list)
-            {
-                soldier.Suicide();
+                yield return new WaitForSeconds(0.5f);
+
+                // Start forcing them to suicide...
+                foreach (SoldierView soldier in list)
+                {
+                    soldier.Suicide();
+                    yield return new WaitForSeconds(0.5f);
+                }
+
                 yield return new WaitForSeconds(0.5f);
             }
-
-            // Clear the list...
-            list.Clear();
-
-            yield return new WaitForSeconds(1f);
-
-            // Start Spawning them again
 
             yield return new WaitForSeconds(3000);
         }

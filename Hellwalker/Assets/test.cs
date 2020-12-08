@@ -16,13 +16,12 @@ public class test : MonoBehaviour
         SoldierFactory<SoldierView> factory = new SoldierFactory<SoldierView>();
         List<SoldierView> list = new List<SoldierView>();
 
-
         for(int j = 0; j < 5; j++)
         {
             float xPos = -83f;
 
             // Start spawning soldiers...
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 list.Add(factory.Create(new Context(new Vector3(xPos, -175f, 396))) as SoldierView);
                 xPos -= 2;
@@ -33,15 +32,12 @@ public class test : MonoBehaviour
             // Start forcing them to suicide...
             foreach (SoldierView soldier in list)
             {
-                soldier.Suicide();
+                //soldier.Suicide(true);
                 yield return new WaitForSeconds(0.5f);
             }
 
             yield return new WaitForSeconds(0.5f);
         }
-
-
-
 
         yield return new WaitForSeconds(3000);
     }

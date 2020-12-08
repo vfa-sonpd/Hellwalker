@@ -167,29 +167,36 @@ public class DestructibleObjectScript : MonoBehaviour
         GibContext context = new GibContext(this.transform.position, Quaternion.Euler((float)-90, (float)0, (float)0), this.dampenvelocity);
         factory.Create(context);
     }
-
-	// Token: 0x06000116 RID: 278 RVA: 0x0000D40C File Offset: 0x0000B60C
-	public virtual void ragdollfunction()
+    //public virtual void ragdollfunction()
+    //{
+    //    GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.ragdoll, this.transform.position, Quaternion.identity);
+    //    gameObject.transform.eulerAngles = this.transform.eulerAngles;
+    //    if ((Rigidbody)this.GetComponent(typeof(Rigidbody)))
+    //    {
+    //        ((Rigidbody)this.GetComponent(typeof(Rigidbody))).velocity = this.ragdollvelocity;
+    //    }
+    //    int i = 0;
+    //    Component[] componentsInChildren = gameObject.GetComponentsInChildren(typeof(Rigidbody));
+    //    int length = componentsInChildren.Length;
+    //    while (i < length)
+    //    {
+    //        ((Rigidbody)componentsInChildren[i]).velocity = this.ragdollvelocity;
+    //        i++;
+    //    }
+    //    if ((AudioSource)gameObject.GetComponent(typeof(AudioSource)))
+    //    {
+    //        ((AudioSource)gameObject.GetComponent(typeof(AudioSource))).Play();
+    //    }
+    //}
+    // Token: 0x06000116 RID: 278 RVA: 0x0000D40C File Offset: 0x0000B60C
+    public virtual void ragdollfunction()
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.ragdoll, this.transform.position, Quaternion.identity);
-		gameObject.transform.eulerAngles = this.transform.eulerAngles;
-		if ((Rigidbody)this.GetComponent(typeof(Rigidbody)))
-		{
-			((Rigidbody)this.GetComponent(typeof(Rigidbody))).velocity = this.ragdollvelocity;
-		}
-		int i = 0;
-		Component[] componentsInChildren = gameObject.GetComponentsInChildren(typeof(Rigidbody));
-		int length = componentsInChildren.Length;
-		while (i < length)
-		{
-			((Rigidbody)componentsInChildren[i]).velocity = this.ragdollvelocity;
-			i++;
-		}
-		if ((AudioSource)gameObject.GetComponent(typeof(AudioSource)))
-		{
-			((AudioSource)gameObject.GetComponent(typeof(AudioSource))).Play();
-		}
-	}
+        SoldierRagdollFactory<SoldierRagdollView> ragdollFactory = new SoldierRagdollFactory<SoldierRagdollView>();
+
+        SoldierRagdollContext context = new SoldierRagdollContext(this.transform.position, transform.rotation, this.ragdollvelocity);
+
+        ragdollFactory.Create(context);
+    }
 
 	// Token: 0x06000117 RID: 279 RVA: 0x0000D504 File Offset: 0x0000B704
 	public virtual void catchfire()
@@ -398,9 +405,6 @@ public class DestructibleObjectScript : MonoBehaviour
 	// Token: 0x040001E6 RID: 486
 	public float dampenvelocity;
 
-	// Token: 0x040001E7 RID: 487
-	public GameObject gibs;
-
 	// Token: 0x040001E8 RID: 488
 	public GameObject ragdoll;
 
@@ -418,7 +422,6 @@ public class DestructibleObjectScript : MonoBehaviour
 	public bool allowfire;
 
 	// Token: 0x040001ED RID: 493
-	[HideInInspector]
 	public Vector3 ragdollvelocity;
 
 	// Token: 0x040001EE RID: 494

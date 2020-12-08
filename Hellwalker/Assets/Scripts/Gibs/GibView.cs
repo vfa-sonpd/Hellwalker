@@ -31,8 +31,6 @@ public class GibView : ObjectView
     void Awake()
     {
         particle = this.GetComponent<ParticleSystem>();
-
-        gameObject.name = "Gib " + gameObject.GetInstanceID();
     }
 
     // Update is called once per frame
@@ -44,7 +42,15 @@ public class GibView : ObjectView
     private async void OnEnable()
     {
         await Task.Delay(timer * 1000);
-        particle.Stop();
-        gameObject.SetActive(false);
+        try
+        {
+            particle.Stop();
+            gameObject.SetActive(false);
+        }
+        catch(System.Exception e)
+        {
+            Debug.Log(e.Message + "...should be harmless.");
+        }
+
     }
 }

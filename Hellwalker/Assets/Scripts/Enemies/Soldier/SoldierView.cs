@@ -6,23 +6,29 @@ public class SoldierView : ObjectView
 {
     [Header("References")]
     [SerializeField] private DestructibleObjectScript destructible;
+    [SerializeField] private float initialHP;
     public override void OnCreate(Context context)
     {
-        this.gameObject.name = "Soldier " + gameObject.GetInstanceID();
-        destructible.myhealth = 50;
+        destructible.doragdoll = false;
+        destructible.myhealth = initialHP;
     }
 
     // Start is called before the first frame update
     void Awake()
     {
         destructible = this.GetComponent<DestructibleObjectScript>();
+        initialHP = destructible.myhealth;
     }
 
     /// <summary>
     /// Kill this object
     /// </summary>
-    public void Suicide()
+    public void Suicide(bool doragdoll = false)
     {
+        if(doragdoll)
+        {
+            destructible.doragdoll = true;
+        }
         destructible.myhealth = 0;
     }
 }

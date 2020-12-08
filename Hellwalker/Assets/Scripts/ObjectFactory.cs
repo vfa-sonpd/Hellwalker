@@ -48,6 +48,9 @@ public abstract class ObjectFactory<T>
             {
                 returnee = GameObject.Instantiate(Resources.Load(path) as GameObject).GetComponent<T>();
 
+                // Set name
+                (returnee as ObjectView).name += " "+(returnee as ObjectView).GetInstanceID();
+
                 // Add the newly created object to pool
                 SharedPools[typeof(TKey)].Add(returnee);
             }
@@ -57,6 +60,9 @@ public abstract class ObjectFactory<T>
         else
         {
             returnee = GameObject.Instantiate(Resources.Load(path) as GameObject).GetComponent<T>();
+
+            // Set name
+            (returnee as ObjectView).name += " " + (returnee as ObjectView).GetInstanceID();
 
             // Make new pool and add to shared pools...
             pool = new List<T>();
