@@ -1,14 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public class GibContext : Context
+{
+    public float dampenValue;
 
+    public GibContext(Vector3 position, Quaternion rotation, float dampenValue)
+    {
+        this.position = position;
+        this.rotation = rotation;
+        this.dampenValue = dampenValue;
+    }
+}
 public class GibFactory<T> : ObjectFactory<T>
 {
-    private static List<GibView> gibPool = new List<GibView>();
-
     public override ObjectView Create(Context context)
     {
         GibView gib = CreateGib();
+
         gib.OnCreate(context);
 
         gib.transform.position = context.position;
@@ -26,25 +35,10 @@ public class GibFactory<T> : ObjectFactory<T>
     private GibView CreateGib()
     {
         //Load character
-        GibView soldier = Pooling();
-        if (!soldier)
-        {
-            soldier = InstantiateView<GibView>("Prefabs/Effects/Gib");
-            gibPool.Add(soldier);
-        }
-        return soldier;
+        GibView gib = InstantiateView<GibView>("Prefabs/Effects/Gib");
+
+        return gib;
     }
 
-    public GibView Pooling()
-    {
-        for (int i = 0; i < gibPool.Count; i++)
-        {
-            if (!gibPool[i].gameObject.activeInHierarchy)
-            {
-                gibPool[i].gameObject.SetActive(true);
-                return gibPool[i];
-            }
-        }
-        return null;
-    }
+
 }

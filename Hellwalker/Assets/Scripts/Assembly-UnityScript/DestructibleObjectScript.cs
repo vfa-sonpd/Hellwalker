@@ -163,12 +163,10 @@ public class DestructibleObjectScript : MonoBehaviour
 	// Token: 0x06000115 RID: 277 RVA: 0x0000D3B0 File Offset: 0x0000B5B0
 	public virtual void gib()
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.gibs, this.transform.position, Quaternion.Euler((float)-90, (float)0, (float)0));
-		if (this.dampen)
-		{
-			((ParticleSystem)gameObject.GetComponent(typeof(ParticleSystem))).startSpeed = this.dampenvelocity;
-		}
-	}
+        GibFactory<GibView> factory = new GibFactory<GibView>();
+        GibContext context = new GibContext(this.transform.position, Quaternion.Euler((float)-90, (float)0, (float)0), this.dampenvelocity);
+        factory.Create(context);
+    }
 
 	// Token: 0x06000116 RID: 278 RVA: 0x0000D40C File Offset: 0x0000B60C
 	public virtual void ragdollfunction()

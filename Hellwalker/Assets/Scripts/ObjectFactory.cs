@@ -5,6 +5,7 @@ using UnityEngine;
 public class Context
 {
     public Vector3 position;
+    public Quaternion rotation;
 
     public Context()
     {
@@ -13,6 +14,10 @@ public class Context
     public Context(Vector3 position)
     {
         this.position = position;
+    }
+    public Context(Quaternion rotation)
+    {
+        this.rotation = rotation;
     }
 }
 
