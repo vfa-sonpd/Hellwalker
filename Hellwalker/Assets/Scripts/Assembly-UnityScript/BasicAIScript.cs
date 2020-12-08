@@ -29,7 +29,6 @@ public class BasicAIScript : MonoBehaviour
 		this.idlesoundtimer = UnityEngine.Random.Range(this.idlesoundactivatetimerange.x, this.idlesoundactivatetimerange.y);
 	//	this.AddVarsToMoreArray();
 		this.sequencetimer = (float)0;
-        this.statscript = GameObject.FindObjectOfType<StatScript>();
 		this.AITimer = UnityEngine.Random.Range(0.1f, this.AIUpdateSpeed);
 		this.attacktimer = UnityEngine.Random.Range(this.attacktime / (float)4, this.attacktime / (float)2);
 		this.MyTarget = GameObject.Find("Player");
@@ -1103,7 +1102,7 @@ public class BasicAIScript : MonoBehaviour
 	public float ThisStoresBossStartingHealth;
 
 	// Token: 0x04000147 RID: 327
-	public StatScript statscript;
+	public StatData statscript;
 
 	// Token: 0x04000148 RID: 328
 	[HideInInspector]

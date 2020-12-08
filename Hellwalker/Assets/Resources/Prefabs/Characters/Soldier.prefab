@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructible: {fileID: 0}
+  initialHP: 0
 --- !u!95 &1402316856750483378
 Animator:
   serializedVersion: 3
@@ -554,7 +555,7 @@ MonoBehaviour:
   currentnavoffset: 0
   jumpvelocity: 0
   ThisStoresBossStartingHealth: 0
-  statscript: {fileID: 0}
+  statscript: {fileID: 11400000, guid: 326ffc133492af84a890b097d3bb3937, type: 2}
   rend: {fileID: 0}
   currentshotsequence: 0
   sequencetimer: 0
@@ -599,7 +600,6 @@ MonoBehaviour:
   myhealth: 51
   dampen: 0
   dampenvelocity: 5
-  gibs: {fileID: 1742015098130105, guid: 467b677a4589c294c9aec29dd7f3df04, type: 3}
   ragdoll: {fileID: 1736054606721086, guid: 3ff66e658ee5c0e468dceb6df15808dc, type: 3}
   fire: {fileID: 1220232222404056, guid: b3366e1ac01b16742b24d4f54314cf4b, type: 3}
   doragdoll: 0

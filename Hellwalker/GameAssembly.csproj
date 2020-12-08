@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\RVOAgent.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\EnemyData\EnemyData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\StatData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\WeaponData.cs" />
     <Compile Include="Assets\Scripts\SimpleAI.cs" />
     <Compile Include="Assets\Scripts\Singletons\Essential.cs" />

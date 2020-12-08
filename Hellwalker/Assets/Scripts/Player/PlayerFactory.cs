@@ -11,6 +11,7 @@ public class PlayerFactory<T> :  ObjectFactory<T>
         if (!playerView)
         {
             playerView = InstantiateView<PlayerView>("Prefabs/Characters/Player", true);
+            playerView.transform.position = context.position;
         }
         //Load context
         playerView.OnCreate(context);

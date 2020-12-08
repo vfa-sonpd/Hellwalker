@@ -118,15 +118,15 @@ public class DestructibleObjectScript : MonoBehaviour
 	{
 		if (this.transform.gameObject.tag == "EnemyTag")
 		{
-			StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
-			float num = (float)10 * Mathf.Ceil(statScript.multiplier) * Mathf.Clamp(statScript.difficultymultiplier, 0.001f, (float)4);
-			statScript.score = (int)((float)statScript.score + num);
-			statScript.multiplier += (float)statScript.addtomultiplier;
-			statScript.multiplier = Mathf.Ceil(statScript.multiplier);
-			if (statScript.endlessarena)
-			{
-				statScript.spawnpoints(this.transform.position, num);
-			}
+			//StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
+			//float num = (float)10 * Mathf.Ceil(statScript.multiplier) * Mathf.Clamp(statScript.difficultymultiplier, 0.001f, (float)4);
+			//statScript.score = (int)((float)statScript.score + num);
+			//statScript.multiplier += (float)statScript.addtomultiplier;
+			//statScript.multiplier = Mathf.Ceil(statScript.multiplier);
+			//if (statScript.endlessarena)
+			//{
+			//	statScript.spawnpoints(this.transform.position, num);
+			//}
 		}
 		this.transform.gameObject.active = false;
 		//UnityEngine.Object.Destroy(this.transform.gameObject);

@@ -8,9 +8,9 @@ public class LightTriggerOBJECTSCRIPT : MonoBehaviour
 	// Token: 0x06000294 RID: 660 RVA: 0x00018E64 File Offset: 0x00017064
 	public virtual void Start()
 	{
-		this.shade = (ShaderScript)GameObject.Find("FilteringSwitcher").GetComponent(typeof(ShaderScript));
-		this.masterscript = (LightTriggerMASTERSCRIPT)GameObject.Find("FilteringSwitcher").GetComponent(typeof(LightTriggerMASTERSCRIPT));
-		this.rend = (Renderer)this.GetComponent(typeof(Renderer));
+        this.shade = Essential.Instance.shaderScript;
+		this.masterscript = Essential.Instance.lightMASTERScript;
+        this.rend = (Renderer)this.GetComponent(typeof(Renderer));
 		this.triggersinrange = new int[this.masterscript.triggerlocation.Length];
 	}
 

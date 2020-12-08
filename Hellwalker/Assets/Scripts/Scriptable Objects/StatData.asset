@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dfdb04f4cf5134bbc83f7b28fd60ca, type: 3}
+  m_Name: StatData
+  m_EditorClassIdentifier: 
+  levelname: Unnamed
+  episodeandlevel: E#M#
+  partime: 00.00.00
+  difficultymultiplier: 1
+  difficulty: 1
+  addtomultiplier: 1
+  multiplierdecayspeed: 4
+  multiplierlimit: 99

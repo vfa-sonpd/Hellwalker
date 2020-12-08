@@ -21,7 +21,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator PlayerGoForward()
         {
-            var asyncLoadLevel = SceneManager.LoadSceneAsync("RefractorScene", LoadSceneMode.Single);
+            var asyncLoadLevel = SceneManager.LoadSceneAsync("GreyboxScene", LoadSceneMode.Single);
 
             while (!asyncLoadLevel.isDone)
             {
@@ -29,7 +29,7 @@ namespace Tests
             }
 
             PlayerFactory<PlayerView> playerFactory = new PlayerFactory<PlayerView>();
-            PlayerView playerView = (PlayerView)playerFactory.Create();
+            PlayerView playerView = (PlayerView)playerFactory.Create(new Context(Vector3.zero));
 
             playerView.ControllerOverride(InputControllerOverride.FORWARD);
 
@@ -43,7 +43,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator SoldierPoolingTest()
         {
-            var asyncLoadLevel = SceneManager.LoadSceneAsync("RefractorScene", LoadSceneMode.Single);
+            var asyncLoadLevel = SceneManager.LoadSceneAsync("GreyboxScene", LoadSceneMode.Single);
 
             while (!asyncLoadLevel.isDone)
             {
@@ -57,13 +57,13 @@ namespace Tests
 
             for (int j = 0; j < 5; j++)
             {
-                float xPos = -83f;
+                float xPos = 3;
 
                 // Start spawning soldiers...
                 for (int i = 0; i < 5; i++)
                 {
-                    list.Add(factory.Create(new Context(new Vector3(xPos, -175f, 396))) as SoldierView);
-                    xPos -= 2;
+                    list.Add(factory.Create(new Context(new Vector3(xPos, 1, 5))) as SoldierView);
+                    xPos -= 1;
                 }
 
                 yield return new WaitForSeconds(0.5f);

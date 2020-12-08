@@ -8,7 +8,7 @@ public class DisableLightForLowSpecMode : MonoBehaviour
 	// Token: 0x0600012A RID: 298 RVA: 0x0000DC60 File Offset: 0x0000BE60
 	public virtual void Start()
 	{
-		this.s = (LowSpecModeScript)GameObject.Find("FilteringSwitcher").GetComponent(typeof(LowSpecModeScript));
+        this.s = Essential.Instance.lowSpecModeScript;
 		this.plight = (Light)this.GetComponent(typeof(Light));
 	}
 

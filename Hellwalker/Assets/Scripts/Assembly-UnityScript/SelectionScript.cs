@@ -440,6 +440,7 @@ public class SelectionScript : MonoBehaviour
 	// Token: 0x060003E3 RID: 995 RVA: 0x00027158 File Offset: 0x00025358
 	public virtual void startlevel()
 	{
+        return;
 		PersistScript persistScript = (PersistScript)GameObject.Find("PERSIST").GetComponent(typeof(PersistScript));
 		//StatScript statScript = (StatScript)GameObject.Find("StatObject").GetComponent(typeof(StatScript));
 		//PlayerHealthManagement playerHealthManagement = (PlayerHealthManagement)GameObject.Find("Player").GetComponent(typeof(PlayerHealthManagement));
