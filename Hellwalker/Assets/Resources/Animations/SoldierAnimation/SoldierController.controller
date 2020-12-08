@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GasMaskController
+  m_Name: SoldierController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: AttackTrigger
@@ -56,9 +56,9 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.3980388
   m_TransitionOffset: 0.8855861
-  m_ExitTime: 2.435014
+  m_ExitTime: 0
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -105,7 +105,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.9
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -201,7 +201,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6148f59f92805764aa26bf6c65a26545, type: 2}
+  m_Motion: {fileID: -3780516532778130023, guid: 185573a32d7517b41b3529d02fc96f56,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -228,7 +229,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 77ea9ea2f6f68c442b39d29b8ac73063, type: 2}
+  m_Motion: {fileID: -7679398311863407691, guid: c089c347161e9e94db564b19fbe736d4,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -255,7 +257,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1ebb4858462a4f149b8928cd2e5fed95, type: 2}
+  m_Motion: {fileID: 8396282574230831903, guid: 170fe84d0ed7dd843811ceafd592120b,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

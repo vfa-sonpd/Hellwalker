@@ -71,7 +71,7 @@ namespace Tests
                 // Start forcing them to suicide...
                 foreach (SoldierView soldier in list)
                 {
-                    soldier.Suicide();
+                    soldier.Suicide(true);
                     yield return new WaitForSeconds(0.5f);
                 }
 

@@ -20,7 +20,7 @@ public class AnimatedRagdollScript : MonoBehaviour
 		if (this.switchtime <= (float)0)
 		{
 			this.switchtime = (float)0;
-			this.transform.gameObject.layer = 23;
+			//this.transform.gameObject.layer = 23;
 		}
 		this.freezetimer -= Time.deltaTime;
 		if (this.freezetimer <= (float)0)
