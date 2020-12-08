@@ -21,7 +21,7 @@ public class SelectionScript : MonoBehaviour
 	// Token: 0x060003DF RID: 991 RVA: 0x00024F48 File Offset: 0x00023148
 	public virtual void Start()
 	{
-		this.inputmanager = Essential.Instance.inputManager;
+        this.inputmanager = Essential.Instance.inputManager;
         this.weapontogetto = 0;
 		this.lastselectedweapon = 1;
 		this.havedaikatana = false;
