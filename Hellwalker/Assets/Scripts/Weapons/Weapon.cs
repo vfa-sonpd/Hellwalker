@@ -25,6 +25,8 @@ public class Weapon : MonoBehaviour {
     public bool didattack;
     public float AttackDelayTimer = 0;
 
+    private HitPartsFactory<HitPartsView> hitPartsFactory;
+
     // Use this for initialization
     protected virtual void Start () {
 
@@ -43,6 +45,8 @@ public class Weapon : MonoBehaviour {
         animator = WeaponAnimator.GetComponent<Animator>();
         // End initialize to scene objects
         AttackDelayTimer = .25f;
+        // Initialize Factory
+        hitPartsFactory = new HitPartsFactory<HitPartsView>();
     }
 
     /// <summary>
@@ -228,7 +232,8 @@ public class Weapon : MonoBehaviour {
                     ((Rigidbody)gameObject2.GetComponent(typeof(Rigidbody))).velocity = this.transform.forward * (float)20 + this.transform.up * (float)10;
                     ((Rigidbody)gameObject2.GetComponent(typeof(Rigidbody))).angularVelocity = this.transform.forward * (float)20;
                 }
-                GameObject gameObject6 = UnityEngine.Object.Instantiate<GameObject>(weaponData.hitparticles, raycastHit.point, Quaternion.identity);
+                //GameObject gameObject6 = UnityEngine.Object.Instantiate<GameObject>(weaponData.hitparticles, raycastHit.point, Quaternion.identity);hitPartsFactory
+                GameObject gameObject6 = hitPartsFactory.Create(new Context(raycastHit.point, Quaternion.identity)).gameObject;
                 gameObject6.transform.forward = raycastHit.normal;
                 ((ParticleSystem)gameObject6.GetComponent(typeof(ParticleSystem))).startColor = startColor;
                 if (gameObject2.tag == "EnemyTag")

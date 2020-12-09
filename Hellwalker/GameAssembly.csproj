@@ -271,6 +271,8 @@
     <Compile Include="Assets\Scripts\Assembly-UnityScript\ZoomScript.cs" />
     <Compile Include="Assets\Scripts\Assembly-UnityScript\grinderscript.cs" />
     <Compile Include="Assets\Scripts\Assembly-UnityScript\visceracookscript.cs" />
+    <Compile Include="Assets\Scripts\Effects\HitParts\HitPartsFactory.cs" />
+    <Compile Include="Assets\Scripts\Effects\HitParts\HitPartsView.cs" />
     <Compile Include="Assets\Scripts\Enemies\Soldier\SoldierFactory.cs" />
     <Compile Include="Assets\Scripts\Enemies\Soldier\SoldierRagdollFactory.cs" />
     <Compile Include="Assets\Scripts\Enemies\Soldier\SoldierRagdollView.cs" />

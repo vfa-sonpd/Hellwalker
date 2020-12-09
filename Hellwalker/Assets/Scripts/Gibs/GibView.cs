@@ -51,6 +51,5 @@ public class GibView : ObjectView
         {
             Debug.Log(e.Message + "...should be harmless.");
         }
-
     }
 }

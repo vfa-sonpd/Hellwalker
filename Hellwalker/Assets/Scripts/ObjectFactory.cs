@@ -19,6 +19,11 @@ public class Context
     {
         this.rotation = rotation;
     }
+    public Context(Vector3 position,Quaternion rotation)
+    {
+        this.position = position;
+        this.rotation = rotation;
+    }
 }
 
 public abstract class ObjectFactory<T>

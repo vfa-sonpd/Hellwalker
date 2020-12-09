@@ -50,9 +50,6 @@ public class WeaponData : ScriptableObject
     // Token: 0x040000B5 RID: 181
     public Color ragdollbloodcolor;
 
-    // Token: 0x040000AF RID: 175
-    public GameObject hitparticles;
-
     // Token: 0x04000054 RID: 84
     public LayerMask bloodsplatlayers;
 
