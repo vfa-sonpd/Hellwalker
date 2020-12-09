@@ -164,7 +164,7 @@ public class DestructibleObjectScript : MonoBehaviour
 	public virtual void gib()
 	{
         GibFactory<GibView> factory = new GibFactory<GibView>();
-        GibContext context = new GibContext(this.transform.position, Quaternion.Euler((float)-90, (float)0, (float)0), this.dampenvelocity);
+        GibContext context = new GibContext(this.transform.position + Vector3.up, Quaternion.Euler((float)-90, (float)0, (float)0), this.dampenvelocity);
         factory.Create(context);
     }
     //public virtual void ragdollfunction()

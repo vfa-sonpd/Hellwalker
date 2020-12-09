@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -16,25 +17,25 @@ MonoBehaviour:
   pickedUp: 1
   equipped: 0
   tracerobject: {fileID: 1433386132710876, guid: aba8fc9620263544782c8fc382d5f215,
-    type: 2}
+    type: 3}
   hitlayers:
     serializedVersion: 2
-    m_Bits: 4286794239
-  bloodarcs: {fileID: 1496266995615193, guid: baa4d44ad79ecf74392a4bba4f4aecd8, type: 2}
+    m_Bits: 26429751
+  bloodarcs: {fileID: 1496266995615193, guid: baa4d44ad79ecf74392a4bba4f4aecd8, type: 3}
   defaultparticlecolor: {r: 0.8235294, g: 0.7254902, b: 0.5764706, a: 1}
   defaulthitsound: {fileID: 8300000, guid: aacda219baede6a4c9e5c4f178b7d2dd, type: 3}
   spawndust: 0
   spawndecals: 0
   ragdollbloodcolor: {r: 0, g: 0, b: 0, a: 0}
   hitparticles: {fileID: 1235954377352856, guid: c660014e37ba1334ea911eb0ac9205da,
-    type: 2}
+    type: 3}
   bloodsplatlayers:
     serializedVersion: 2
     m_Bits: 0
   bulletholes: {fileID: 1869727255983958, guid: 4291337de5ea04e4883065736ed8f7dc,
-    type: 2}
+    type: 3}
   dynamicbloodsplats: {fileID: 1240201520744944, guid: 7b47a1b7dcbcb7d479e6f7dfe05d5493,
-    type: 2}
+    type: 3}
   traceroffset: 0.25
   inputmanager: {fileID: 0}
   FireSpeed: 1
@@ -48,5 +49,5 @@ MonoBehaviour:
   doattack: 0
   didattack: 0
   weaponPrefab: {fileID: 1803281070957964, guid: b8dbca7653ad2fe4a99783f2878f93bb,
-    type: 2}
+    type: 3}
   weaponObject: {fileID: 0}

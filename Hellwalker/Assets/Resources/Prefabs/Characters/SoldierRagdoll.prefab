@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff3da74f4d52e14481749e3742c5237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 10
   destructible: {fileID: 0}
   initialHP: 0
   bloodMistParticle: {fileID: 0}
