@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 16
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animancer.Examples", "Animancer.Examples.csproj", "{C14EF530-C400-0EE1-2AA2-FBC9512418B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAssembly", "GameAssembly.csproj", "{32189652-D9CA-AA41-85BC-C9F403630323}"
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ootii.Demos", "ootii.Demos.csproj", "{0CF98C15-1C10-0ACF-C766-AA4067A2177B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{2C708665-8C8F-4EC5-FE98-F1867CC46223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{05781188-29A4-6FB4-9852-282F49DE385D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx.Examples", "UniRx.Examples.csproj", "{F6A1DB23-2609-7FEE-C8CA-AB3C8470DCB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{E1A83738-A042-6C5A-D5CC-8B577E13C892}"
 EndProject
@@ -79,6 +83,14 @@ Global
 		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C708665-8C8F-4EC5-FE98-F1867CC46223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05781188-29A4-6FB4-9852-282F49DE385D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05781188-29A4-6FB4-9852-282F49DE385D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05781188-29A4-6FB4-9852-282F49DE385D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05781188-29A4-6FB4-9852-282F49DE385D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A1DB23-2609-7FEE-C8CA-AB3C8470DCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A1DB23-2609-7FEE-C8CA-AB3C8470DCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A1DB23-2609-7FEE-C8CA-AB3C8470DCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A1DB23-2609-7FEE-C8CA-AB3C8470DCB5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A83738-A042-6C5A-D5CC-8B577E13C892}.Release|Any CPU.ActiveCfg = Release|Any CPU
